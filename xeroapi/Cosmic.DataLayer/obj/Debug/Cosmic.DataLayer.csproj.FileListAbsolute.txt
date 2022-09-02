@@ -1,0 +1,13 @@
+D:\Projects\xero_au\xero_au\xeroapi\Cosmic.DataLayer\bin\Debug\Cosmic.DataLayer.dll.config
+D:\Projects\xero_au\xero_au\xeroapi\Cosmic.DataLayer\bin\Debug\Cosmic.DataLayer.dll
+D:\Projects\xero_au\xero_au\xeroapi\Cosmic.DataLayer\bin\Debug\Cosmic.DataLayer.pdb
+D:\Projects\xero_au\xero_au\xeroapi\Cosmic.DataLayer\bin\Debug\EntityFramework.dll
+D:\Projects\xero_au\xero_au\xeroapi\Cosmic.DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\xero_au\xero_au\xeroapi\Cosmic.DataLayer\bin\Debug\EntityFramework.xml
+D:\Projects\xero_au\xero_au\xeroapi\Cosmic.DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\xero_au\xero_au\xeroapi\Cosmic.DataLayer\obj\Debug\Cosmic.DataLayer.Properties.Resources.resources
+D:\Projects\xero_au\xero_au\xeroapi\Cosmic.DataLayer\obj\Debug\Cosmic.DataLayer.csproj.GenerateResource.cache
+D:\Projects\xero_au\xero_au\xeroapi\Cosmic.DataLayer\obj\Debug\Cosmic.DataLayer.csproj.CoreCompileInputs.cache
+D:\Projects\xero_au\xero_au\xeroapi\Cosmic.DataLayer\obj\Debug\Cosmic.DataLayer.csproj.CopyComplete
+D:\Projects\xero_au\xero_au\xeroapi\Cosmic.DataLayer\obj\Debug\Cosmic.DataLayer.dll
+D:\Projects\xero_au\xero_au\xeroapi\Cosmic.DataLayer\obj\Debug\Cosmic.DataLayer.pdb

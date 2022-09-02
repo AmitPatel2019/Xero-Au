@@ -1,0 +1,1530 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="XS_XEROModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AccountMaster">
+    <Key>
+      <PropertyRef Name="AccountID" />
+    </Key>
+    <Property Name="AccountID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PlatformID" Type="int" />
+    <Property Name="UserName" Type="varchar" MaxLength="30" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="CountryOfOrigin" Type="varchar" MaxLength="3" />
+    <Property Name="Phone" Type="varchar" MaxLength="20" />
+    <Property Name="Add1" Type="varchar" MaxLength="100" />
+    <Property Name="Add2" Type="varchar" MaxLength="100" />
+    <Property Name="Add3" Type="varchar" MaxLength="50" />
+    <Property Name="City" Type="varchar" MaxLength="30" />
+    <Property Name="State" Type="varchar" MaxLength="30" />
+    <Property Name="Zip" Type="varchar" MaxLength="10" />
+    <Property Name="Country" Type="varchar" MaxLength="50" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="ActivationCode" Type="varchar" MaxLength="10" />
+    <Property Name="AddedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ConfigSetting">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Data" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="ErrorLog">
+    <Key>
+      <PropertyRef Name="ErrorLogID" />
+    </Key>
+    <Property Name="ErrorLogID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountID" Type="int" />
+    <Property Name="PlatformID" Type="int" />
+    <Property Name="LoginID" Type="int" />
+    <Property Name="ReckonFileID" Type="int" />
+    <Property Name="QboConnectID" Type="int" />
+    <Property Name="Controller" Type="varchar" MaxLength="50" />
+    <Property Name="Method" Type="varchar" MaxLength="50" />
+    <Property Name="ErrorMessage" Type="varchar(max)" />
+    <Property Name="ErrorStackTrace" Type="varchar(max)" />
+    <Property Name="ErrorLogDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'XS_XERO.dbo.EzzyAccount' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="EzzyAccount">
+          <Property Name="EzzyUserName" Type="varchar" MaxLength="50" />
+          <Property Name="EzzyPass" Type="varchar" MaxLength="50" />
+          <Property Name="LastUpdated" Type="datetime" />
+        </EntityType>-->
+  <EntityType Name="FileSQLMasters">
+    <Key>
+      <PropertyRef Name="SqlID" />
+    </Key>
+    <Property Name="SqlID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountID" Type="int" />
+    <Property Name="SqlServerName" Type="nvarchar(max)" />
+    <Property Name="SqlDataBaseName" Type="nvarchar(max)" />
+    <Property Name="SqlAuthenticationMode" Type="bit" />
+    <Property Name="SqlUserName" Type="nvarchar(max)" />
+    <Property Name="SqlPassword" Type="nvarchar(max)" />
+    <Property Name="AddedDte" Type="datetime" />
+    <Property Name="UpdatedDte" Type="datetime" />
+  </EntityType>
+  <EntityType Name="LoginMaster">
+    <Key>
+      <PropertyRef Name="LoginID" />
+    </Key>
+    <Property Name="LoginID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountID" Type="int" />
+    <Property Name="PlatformID" Type="int" />
+    <Property Name="UserName" Type="varchar" MaxLength="30" />
+    <Property Name="EmailAddress" Type="varchar" MaxLength="40" />
+    <Property Name="Password" Type="varchar(max)" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="Token" Type="varchar" MaxLength="500" />
+    <Property Name="TokenExpiredDate" Type="datetime" />
+    <Property Name="IPAddress" Type="varchar" MaxLength="30" />
+    <Property Name="LastLogin" Type="datetime" />
+    <Property Name="RoleID" Type="int" />
+    <Property Name="DeActivetedOn" Type="datetime" />
+    <Property Name="ActivationCode" Type="nvarchar" MaxLength="10" />
+    <Property Name="TokenAvailFor" Type="int" />
+    <Property Name="IsEzUploadRequired" Type="bit" />
+    <Property Name="EzUploadDone" Type="datetime" />
+    <Property Name="AddedBy" Type="int" />
+    <Property Name="AddedOn" Type="datetime" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="UpdatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="PlanMaster">
+    <Key>
+      <PropertyRef Name="PlanID" />
+    </Key>
+    <Property Name="PlanID" Type="int" Nullable="false" />
+    <Property Name="PlanName" Type="varchar" MaxLength="50" />
+    <Property Name="PlanDescription" Type="varchar(max)" />
+    <Property Name="TrialDays" Type="int" />
+    <Property Name="TrialPdf" Type="int" />
+    <Property Name="PaidPdf" Type="int" />
+    <Property Name="RatePerYearGST" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="RatePerYearSubTotal" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="RatePerYearTotal" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="IsPaidPlan" Type="bit" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="PlatformMaster">
+    <Key>
+      <PropertyRef Name="PlatformID" />
+    </Key>
+    <Property Name="PlatformID" Type="int" Nullable="false" />
+    <Property Name="PlatformCode" Type="varchar" MaxLength="5" />
+    <Property Name="PlatformName" Type="varchar" MaxLength="250" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="Active" Type="bit" />
+  </EntityType>
+  <EntityType Name="QboChartOfAccount">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountID" Type="int" />
+    <Property Name="QboConnectID" Type="int" />
+    <Property Name="QboAccountID" Type="varchar" MaxLength="20" />
+    <Property Name="FullyQualifiedNameField" Type="varchar" MaxLength="100" />
+    <Property Name="AccountSubTypeField" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="QBODocument">
+    <Key>
+      <PropertyRef Name="DocumentID" />
+    </Key>
+    <Property Name="DocumentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountID" Type="int" />
+    <Property Name="QboConnectID" Type="int" />
+    <Property Name="QboInvoiceID" Type="varchar" MaxLength="20" />
+    <Property Name="QboVendorID" Type="varchar" MaxLength="20" />
+    <Property Name="QboVendorName" Type="varchar" MaxLength="150" />
+    <Property Name="QboInvoiceDate" Type="datetime" />
+    <Property Name="ScanInvoiceID" Type="int" />
+    <Property Name="ScanFile_Name" Type="varchar" MaxLength="150" />
+    <Property Name="ScanBlob_Url" Type="varchar(max)" />
+    <Property Name="ScanABNNumber" Type="varchar" MaxLength="20" />
+    <Property Name="ScanRefNumber" Type="varchar" MaxLength="50" />
+    <Property Name="ScanDocType" Type="varchar" MaxLength="20" />
+    <Property Name="ScanSubTotal" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="ScanChargeTotal" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="ScanDocumentTotal" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="ScanTag" Type="varchar" MaxLength="20" />
+    <Property Name="ScanInvoiceDate" Type="datetime" />
+    <Property Name="ScanPurchaseOrder" Type="varchar" MaxLength="50" />
+    <Property Name="ScanVendorName" Type="varchar" MaxLength="150" />
+    <Property Name="ScanInvoiceTotal" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="ScanTaxTotal" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="ScanDocClassification" Type="varchar" MaxLength="50" />
+    <Property Name="ScanServiceStatus" Type="varchar" MaxLength="20" />
+    <Property Name="ScanServiceMessage" Type="varchar(max)" />
+    <Property Name="UploadedDate" Type="datetime" />
+    <Property Name="QBOError" Type="varchar(max)" />
+    <Property Name="AspSessionID" Type="varchar(max)" />
+    <Property Name="Approved" Type="bit" />
+    <Property Name="Deleted" Type="bit" />
+    <Property Name="QboBillAddedOn" Type="datetime" />
+    <Property Name="QboBillAddedBy" Type="int" />
+  </EntityType>
+  <EntityType Name="QboDocumentLine">
+    <Key>
+      <PropertyRef Name="DocumentLineID" />
+    </Key>
+    <Property Name="DocumentLineID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DocumentID" Type="int" />
+    <Property Name="QboAccountID" Type="varchar" MaxLength="20" />
+    <Property Name="QboAccountName" Type="varchar" MaxLength="150" />
+    <Property Name="QboClassID" Type="varchar" MaxLength="20" />
+    <Property Name="QboClassName" Type="varchar" MaxLength="50" />
+    <Property Name="QboJobID" Type="varchar" MaxLength="20" />
+    <Property Name="QboJobName" Type="varchar" MaxLength="150" />
+    <Property Name="ScanDescription" Type="varchar(max)" />
+    <Property Name="ScanArticle_Code" Type="varchar(max)" />
+    <Property Name="ScanGL_Code" Type="varchar" MaxLength="10" />
+    <Property Name="ScanGST" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="ScanTax_Code" Type="varchar" MaxLength="10" />
+    <Property Name="ScanTracking" Type="varchar(max)" />
+    <Property Name="ScanUnit_Measure" Type="varchar" MaxLength="10" />
+    <Property Name="ScanUnit_Price" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="Scan_Quantity" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="Scan_Total" Type="decimal" Precision="18" Scale="4" />
+  </EntityType>
+  <EntityType Name="QBOEzzyAccount">
+    <Key>
+      <PropertyRef Name="QBOEzzyID" />
+    </Key>
+    <Property Name="QBOEzzyID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountID" Type="int" />
+    <Property Name="QboConnectID" Type="int" />
+    <Property Name="EzzyUserName" Type="varchar" MaxLength="50" />
+    <Property Name="EzzyPassword" Type="varchar" MaxLength="20" />
+    <Property Name="EzzyEmailAddress" Type="varchar" MaxLength="100" />
+    <Property Name="AddedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="QBOMaster">
+    <Key>
+      <PropertyRef Name="QboID" />
+    </Key>
+    <Property Name="QboID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountID" Type="int" />
+    <Property Name="RealmId" Type="varchar(max)" />
+    <Property Name="AccessToken" Type="varchar(max)" />
+    <Property Name="AccessTokenExpiresIn" Type="datetime" />
+    <Property Name="RefreshToken" Type="varchar(max)" />
+    <Property Name="RefreshTokenExpiresIn" Type="datetime" />
+    <Property Name="IdentityToken" Type="varchar(max)" />
+    <Property Name="CompanyName" Type="varchar" MaxLength="1024" />
+    <Property Name="LeagalName" Type="varchar" MaxLength="1024" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="PrimaryPhone" Type="varchar" MaxLength="20" />
+    <Property Name="WebAddr" Type="varchar" MaxLength="1000" />
+    <Property Name="Country" Type="varchar" MaxLength="30" />
+    <Property Name="AddedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="QboTax">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountID" Type="int" />
+    <Property Name="QboConnectID" Type="int" />
+    <Property Name="TaxName" Type="varchar" MaxLength="50" />
+    <Property Name="TaxID" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="QboVendor">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountID" Type="int" />
+    <Property Name="QboConnectID" Type="int" />
+    <Property Name="QboAccountID" Type="varchar" MaxLength="20" />
+    <Property Name="QboVendorID" Type="varchar" MaxLength="20" />
+    <Property Name="DisplayNameField" Type="varchar" MaxLength="150" />
+    <Property Name="CityField" Type="varchar" MaxLength="50" />
+    <Property Name="CountrySubDivisionCodeField" Type="varchar" MaxLength="50" />
+    <Property Name="PostalCodeField" Type="varchar" MaxLength="15" />
+    <Property Name="CountryField" Type="varchar" MaxLength="50" />
+    <Property Name="PrimaryPhone" Type="varchar" MaxLength="20" />
+    <Property Name="PrimaryEmailAddr" Type="varchar" MaxLength="100" />
+    <Property Name="TaxIdentifier" Type="varchar" MaxLength="20" />
+    <Property Name="AddedBy" Type="int" />
+    <Property Name="AddedDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ReckonDesktopMaster">
+    <Key>
+      <PropertyRef Name="ReckonFileID" />
+    </Key>
+    <Property Name="ReckonFileID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountID" Type="int" />
+    <Property Name="CompanyName" Type="varchar" MaxLength="100" />
+    <Property Name="LegalCompanyName" Type="varchar" MaxLength="100" />
+    <Property Name="IsSampleCompany" Type="bit" />
+    <Property Name="Phone" Type="varchar" MaxLength="20" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="Addr1" Type="varchar" MaxLength="100" />
+    <Property Name="Addr2" Type="varchar" MaxLength="100" />
+    <Property Name="Addr3" Type="varchar" MaxLength="100" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="State" Type="varchar" MaxLength="30" />
+    <Property Name="PostalCode" Type="varchar" MaxLength="20" />
+    <Property Name="Country" Type="varchar" MaxLength="50" />
+    <Property Name="FilePath" Type="varchar" MaxLength="500" />
+    <Property Name="AddedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="AdddeBy" Type="int" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="IsUsingJobCosting" Type="bit" />
+  </EntityType>
+  <EntityType Name="ReckonDocument">
+    <Key>
+      <PropertyRef Name="ReckonDocumentID" />
+    </Key>
+    <Property Name="ReckonDocumentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountID" Type="int" />
+    <Property Name="ReckonFileID" Type="int" />
+    <Property Name="ScanInvoiceID" Type="int" />
+    <Property Name="TxnID" Type="varchar" MaxLength="50" />
+    <Property Name="ScanPdfPath" Type="varchar(max)" />
+    <Property Name="InvoiceNumber" Type="varchar" MaxLength="50" />
+    <Property Name="InvoiceType" Type="varchar" MaxLength="20" />
+    <Property Name="InvoiceDate" Type="datetime" />
+    <Property Name="VendorName" Type="varchar" MaxLength="150" />
+    <Property Name="InvoiceTotal" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="TaxTotal" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="UploadedDate" Type="datetime" />
+    <Property Name="ReckonError" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="ReckonEzzyAccount">
+    <Key>
+      <PropertyRef Name="RCEzzyID" />
+    </Key>
+    <Property Name="RCEzzyID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountID" Type="int" />
+    <Property Name="ReckonFileID" Type="int" />
+    <Property Name="EzzyEmailAddress" Type="varchar" MaxLength="50" />
+    <Property Name="EzzyUserName" Type="varchar" MaxLength="30" />
+    <Property Name="EzzyPassword" Type="varchar" MaxLength="20" />
+    <Property Name="AddedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ReckonFileUserAccess">
+    <Key>
+      <PropertyRef Name="ReckonUserAccessID" />
+    </Key>
+    <Property Name="ReckonUserAccessID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" />
+    <Property Name="ReckonFileID" Type="int" />
+    <Property Name="IsAccess" Type="bit" />
+  </EntityType>
+  <EntityType Name="ReckonVendorDefault">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountID" Type="int" />
+    <Property Name="ReckonFileID" Type="int" />
+    <Property Name="VendorListID" Type="varchar" MaxLength="50" />
+    <Property Name="DefaultExpenseListID" Type="varchar" MaxLength="50" />
+    <Property Name="DefaultExpenseAccount" Type="varchar" MaxLength="250" />
+    <Property Name="DefaultItemListID" Type="varchar" MaxLength="50" />
+    <Property Name="DefaultItem" Type="varchar" MaxLength="250" />
+    <Property Name="AddedBy" Type="int" />
+    <Property Name="AddedDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="StripePayment">
+    <Key>
+      <PropertyRef Name="StripePaymentID" />
+    </Key>
+    <Property Name="StripePaymentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountID" Type="int" />
+    <Property Name="PlanID" Type="int" />
+    <Property Name="StripeID" Type="varchar" MaxLength="500" />
+    <Property Name="StripeBalanceTxnID" Type="varchar" MaxLength="500" />
+    <Property Name="StripeIsPaid" Type="bit" />
+    <Property Name="StripeStatus" Type="varchar" MaxLength="30" />
+    <Property Name="Amount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="StripeDateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="SubscriptionMaster">
+    <Key>
+      <PropertyRef Name="SubscriptionID" />
+    </Key>
+    <Property Name="SubscriptionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountID" Type="int" />
+    <Property Name="PlanID" Type="int" />
+    <Property Name="StartYear" Type="int" />
+    <Property Name="StartMonth" Type="int" />
+    <Property Name="StartDay" Type="int" />
+    <Property Name="StartDateTime" Type="datetime" />
+    <Property Name="TrialDays" Type="int" />
+    <Property Name="TrialPdf" Type="int" />
+    <Property Name="PaidPdf" Type="int" />
+  </EntityType>
+  <EntityType Name="XeroChartOfAccount">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountID" Type="int" />
+    <Property Name="XeroConnectID" Type="int" />
+    <Property Name="XeroAccountID" Type="varchar" MaxLength="50" />
+    <Property Name="FullyQualifiedNameField" Type="varchar" MaxLength="100" />
+    <Property Name="AccountSubTypeField" Type="varchar" MaxLength="50" />
+    <Property Name="AccountCode" Type="varchar" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="XeroDocument">
+    <Key>
+      <PropertyRef Name="DocumentID" />
+    </Key>
+    <Property Name="DocumentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountID" Type="int" />
+    <Property Name="XeroConnectID" Type="int" />
+    <Property Name="XeroInvoiceID" Type="varchar" MaxLength="50" />
+    <Property Name="XeroVendorID" Type="varchar" MaxLength="50" />
+    <Property Name="XeroVendorName" Type="varchar" MaxLength="150" />
+    <Property Name="XeroInvoiceDate" Type="datetime" />
+    <Property Name="ScanInvoiceID" Type="int" />
+    <Property Name="ScanFile_Name" Type="varchar" MaxLength="150" />
+    <Property Name="ScanBlob_Url" Type="varchar(max)" />
+    <Property Name="ScanABNNumber" Type="varchar" MaxLength="20" />
+    <Property Name="ScanRefNumber" Type="varchar" MaxLength="50" />
+    <Property Name="ScanDocType" Type="varchar" MaxLength="20" />
+    <Property Name="ScanSubTotal" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="ScanChargeTotal" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="ScanDocumentTotal" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="ScanTag" Type="varchar" MaxLength="20" />
+    <Property Name="ScanInvoiceDate" Type="datetime" />
+    <Property Name="ScanPurchaseOrder" Type="varchar" MaxLength="50" />
+    <Property Name="ScanVendorName" Type="varchar" MaxLength="150" />
+    <Property Name="ScanInvoiceTotal" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="ScanTaxTotal" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="ScanDocClassification" Type="varchar" MaxLength="50" />
+    <Property Name="ScanServiceStatus" Type="varchar" MaxLength="20" />
+    <Property Name="ScanServiceMessage" Type="varchar(max)" />
+    <Property Name="UploadedDate" Type="datetime" />
+    <Property Name="XeroError" Type="varchar(max)" />
+    <Property Name="AspSessionID" Type="varchar(max)" />
+    <Property Name="Approved" Type="bit" />
+    <Property Name="Deleted" Type="bit" />
+    <Property Name="XeroBillAddedOn" Type="datetime" />
+    <Property Name="XeroBillAddedBy" Type="int" />
+    <Property Name="Status" Type="int" />
+  </EntityType>
+  <EntityType Name="XeroDocumentLine">
+    <Key>
+      <PropertyRef Name="DocumentLineID" />
+    </Key>
+    <Property Name="DocumentLineID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DocumentID" Type="int" />
+    <Property Name="XeroAccountID" Type="varchar" MaxLength="50" />
+    <Property Name="XeroAccountName" Type="varchar" MaxLength="150" />
+    <Property Name="XeroClassID" Type="varchar" MaxLength="50" />
+    <Property Name="XeroClassName" Type="varchar" MaxLength="50" />
+    <Property Name="XeroJobID" Type="varchar" MaxLength="50" />
+    <Property Name="XeroJobName" Type="varchar" MaxLength="150" />
+    <Property Name="ScanDescription" Type="varchar(max)" />
+    <Property Name="ScanArticle_Code" Type="varchar(max)" />
+    <Property Name="ScanGL_Code" Type="varchar" MaxLength="10" />
+    <Property Name="ScanGST" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="ScanTax_Code" Type="varchar" MaxLength="10" />
+    <Property Name="ScanTracking" Type="varchar(max)" />
+    <Property Name="ScanUnit_Measure" Type="varchar" MaxLength="10" />
+    <Property Name="ScanUnit_Price" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="Scan_Quantity" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="Scan_Total" Type="decimal" Precision="18" Scale="4" />
+  </EntityType>
+  <EntityType Name="XeroEzzyAccount">
+    <Key>
+      <PropertyRef Name="XeroEzzyID" />
+    </Key>
+    <Property Name="XeroEzzyID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountID" Type="int" />
+    <Property Name="XeroConnectID" Type="int" />
+    <Property Name="EzzyUserName" Type="varchar" MaxLength="50" />
+    <Property Name="EzzyPassword" Type="varchar" MaxLength="20" />
+    <Property Name="EzzyEmailAddress" Type="varchar" MaxLength="100" />
+    <Property Name="AddedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="XeroMaster">
+    <Key>
+      <PropertyRef Name="XeroID" />
+    </Key>
+    <Property Name="XeroID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountID" Type="int" />
+    <Property Name="RealmId" Type="varchar(max)" />
+    <Property Name="OAuthToken" Type="varchar(max)" />
+    <Property Name="OAuthTokenSec" Type="varchar(max)" />
+    <Property Name="AccessToken" Type="varchar(max)" />
+    <Property Name="AccessTokenExpiresIn" Type="datetime" />
+    <Property Name="RefreshToken" Type="varchar(max)" />
+    <Property Name="RefreshTokenExpiresIn" Type="datetime" />
+    <Property Name="IdentityToken" Type="varchar(max)" />
+    <Property Name="CompanyName" Type="varchar" MaxLength="1024" />
+    <Property Name="LeagalName" Type="varchar" MaxLength="1024" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="PrimaryPhone" Type="varchar" MaxLength="20" />
+    <Property Name="WebAddr" Type="varchar" MaxLength="1000" />
+    <Property Name="Country" Type="varchar" MaxLength="30" />
+    <Property Name="AddedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="ShortCode" Type="varchar" MaxLength="30" />
+    <Property Name="IsAuthrorize" Type="bit" />
+    <Property Name="SessionHandle" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="XeroTax">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountID" Type="int" />
+    <Property Name="XeroConnectID" Type="int" />
+    <Property Name="TaxName" Type="varchar" MaxLength="50" />
+    <Property Name="TaxID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="XeroVendor">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountID" Type="int" />
+    <Property Name="XeroConnectID" Type="int" />
+    <Property Name="XeroAccountID" Type="varchar" MaxLength="50" />
+    <Property Name="XeroVendorID" Type="varchar" MaxLength="50" />
+    <Property Name="DisplayNameField" Type="varchar" MaxLength="150" />
+    <Property Name="CityField" Type="varchar" MaxLength="50" />
+    <Property Name="CountrySubDivisionCodeField" Type="varchar" MaxLength="50" />
+    <Property Name="PostalCodeField" Type="varchar" MaxLength="15" />
+    <Property Name="CountryField" Type="varchar" MaxLength="50" />
+    <Property Name="PrimaryPhone" Type="varchar" MaxLength="20" />
+    <Property Name="PrimaryEmailAddr" Type="varchar" MaxLength="100" />
+    <Property Name="TaxIdentifier" Type="varchar" MaxLength="20" />
+    <Property Name="AddedBy" Type="int" />
+    <Property Name="AddedDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <Function Name="uspActivateAccount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Password" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspAdminGetReckonDocument" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="ReckonFiID" Type="int" Mode="In" />
+    <Parameter Name="month" Type="int" Mode="In" />
+    <Parameter Name="Year" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspAdminGetReckonDocumentByPlatformAndAccount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="account" Type="int" Mode="In" />
+    <Parameter Name="reckonfileid" Type="int" Mode="In" />
+    <Parameter Name="month" Type="int" Mode="In" />
+    <Parameter Name="Year" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspAdminGetStripePayment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="month" Type="int" Mode="In" />
+    <Parameter Name="Year" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspAdminpGetAccountMaster" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspAdminpGetAccountMasterByPlatformAndPlan" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Platform" Type="int" Mode="In" />
+    <Parameter Name="Plan" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspAdminpGetLoginMasterByAccountID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspAdminpGetReckonMasterByAccountID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="LoginID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspAdminpGetReckonMasterByAccountIDAndPlatform" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="PlatformID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspAdminpGetStripePaymentByAccountID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="PlanID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspAdminSavePlan" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PlanID" Type="int" Mode="In" />
+    <Parameter Name="PlanName" Type="nvarchar" Mode="In" />
+    <Parameter Name="PlanDescription" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="TrialDays" Type="int" Mode="In" />
+    <Parameter Name="TrialPdf" Type="int" Mode="In" />
+    <Parameter Name="PaidPdf" Type="int" Mode="In" />
+    <Parameter Name="RatePerYearGST" Type="int" Mode="In" />
+    <Parameter Name="RatePerYearSubTotal" Type="int" Mode="In" />
+    <Parameter Name="RatePerYearTotal" Type="int" Mode="In" />
+    <Parameter Name="IsPaidPlan" Type="bit" Mode="In" />
+    <Parameter Name="IsActive" Type="bit" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+    <Parameter Name="IdentityValue" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="uspApproveQboDocument" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DocumentID" Type="int" Mode="In" />
+    <Parameter Name="Approve" Type="bit" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspApproveXeroDocument" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DocumentID" Type="int" Mode="In" />
+    <Parameter Name="Approve" Type="bit" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspChangePassword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="ExistsPassword" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="NewPassword" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspCheckXeroToken" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="XeroID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspDeleteQboDocument" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="QboConnectID" Type="int" Mode="In" />
+    <Parameter Name="DocumentID" Type="int" Mode="In" />
+    <Parameter Name="IsDeleted" Type="bit" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspDeleteXeroDocument" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="QboConnectID" Type="int" Mode="In" />
+    <Parameter Name="DocumentID" Type="int" Mode="In" />
+    <Parameter Name="IsDeleted" Type="bit" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspEditQboDocumentLine" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DocumentID" Type="int" Mode="In" />
+    <Parameter Name="DocumentLineID" Type="int" Mode="In" />
+    <Parameter Name="ScanDescription" Type="varchar(max)" Mode="In" />
+    <Parameter Name="ScanGST" Type="decimal" Mode="In" />
+    <Parameter Name="ScanUnit_Price" Type="decimal" Mode="In" />
+    <Parameter Name="Scan_Quantity" Type="decimal" Mode="In" />
+    <Parameter Name="Scan_Total" Type="decimal" Mode="In" />
+    <Parameter Name="ScanInvoiceTotal" Type="decimal" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspEditXeroDocumentLine" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DocumentID" Type="int" Mode="In" />
+    <Parameter Name="DocumentLineID" Type="int" Mode="In" />
+    <Parameter Name="ScanDescription" Type="varchar(max)" Mode="In" />
+    <Parameter Name="ScanGST" Type="decimal" Mode="In" />
+    <Parameter Name="ScanUnit_Price" Type="decimal" Mode="In" />
+    <Parameter Name="Scan_Quantity" Type="decimal" Mode="In" />
+    <Parameter Name="Scan_Total" Type="decimal" Mode="In" />
+    <Parameter Name="ScanInvoiceTotal" Type="decimal" Mode="In" />
+    <Parameter Name="ScanPurchaseOrder" Type="varchar" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetAccount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetAccountByAccountID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetByte" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="uspGetEzzyLogin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetFileSQLMasters" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetFileSQLMastersByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Uid" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetLoginByUserName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserName" Type="varchar" Mode="In" />
+    <Parameter Name="PlatformID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetLoginMaster" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetLoginMasterByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Uid" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetLoginMasterByToken" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Token" Type="varchar" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetLoginMasterByUserName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserName" Type="varchar" Mode="In" />
+    <Parameter Name="PlatformID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetMaxEzzyAccountID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar(max)" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetMaxEzzyQboAccountID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar(max)" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetMaxEzzyXeroAccountID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar(max)" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetPaymentByAccountID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetPlan" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetPlanByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PlanID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetPlatformMaster" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetPlatformMasterByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Uid" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetQboChartOfAccount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="QboConnectID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetQboDocumentById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="qboDocumentID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetQboDocumentHistory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="QboConnectID" Type="int" Mode="In" />
+    <Parameter Name="Month" Type="int" Mode="In" />
+    <Parameter Name="Year" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetQboDocumentLineToApprove" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="QboConnectID" Type="int" Mode="In" />
+    <Parameter Name="Approved" Type="bit" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetQboDocumentToApprove" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="QboConnectID" Type="int" Mode="In" />
+    <Parameter Name="AspSessionID" Type="varchar(max)" Mode="In" />
+    <Parameter Name="Approved" Type="bit" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetQboDocumentToBill" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="QboConnectID" Type="int" Mode="In" />
+    <Parameter Name="Approved" Type="bit" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetQboDocumentToProcess" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="QboConnectID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetQboDocumentToRead" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="QboConnectID" Type="int" Mode="In" />
+    <Parameter Name="AspSessionID" Type="varchar(max)" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetQBOMasterByAccountAndConnectID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="QboConnectID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar(max)" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetQBOMasterByAccountID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar(max)" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetQBOScanningLogin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="QboConnectID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetQboTax" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="QboConnectID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetQboVendor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="QboConnectID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetRCScanningLogin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="ReckonFileID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetReckonDesktopByAccountID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetReckonDocument" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="ReckonFileID" Type="int" Mode="In" />
+    <Parameter Name="Month" Type="int" Mode="In" />
+    <Parameter Name="Year" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetReckonFileByAccountID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="LoginID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetReckonVendDefault" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="ReckonFileID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetReconDesktopMasterByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Uid" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetSubscriptionByAccountID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetSubUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetUsedPaidPDF" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="PlatformID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetUsedTrialPDF" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="PlatformID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetXeroChartOfAccount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="QboConnectID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetXeroDocumentById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="qboDocumentID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetXeroDocumentHistory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="QboConnectID" Type="int" Mode="In" />
+    <Parameter Name="Month" Type="int" Mode="In" />
+    <Parameter Name="Year" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetXeroDocumentHistoryByDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="QboConnectID" Type="int" Mode="In" />
+    <Parameter Name="Fromdate" Type="datetime" Mode="In" />
+    <Parameter Name="Todate" Type="datetime" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetXeroDocumentToApprove" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="QboConnectID" Type="int" Mode="In" />
+    <Parameter Name="AspSessionID" Type="varchar(max)" Mode="In" />
+    <Parameter Name="Approved" Type="bit" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetXeroDocumentToAuth" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="QboConnectID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetXeroDocumentToBill" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="QboConnectID" Type="int" Mode="In" />
+    <Parameter Name="Approved" Type="bit" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetXeroDocumentToProcess" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="QboConnectID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetXeroDocumentToRead" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="QboConnectID" Type="int" Mode="In" />
+    <Parameter Name="AspSessionID" Type="varchar(max)" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetXeroMasterByAccountAndConnectID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="XeroConnectID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar(max)" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetXeroMasterByAccountID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar(max)" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetXeroScanningLogin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="QboConnectID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetXeroTax" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="QboConnectID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspGetXeroVendor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="QboConnectID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspInsertQboDocument" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DocumentID" Type="int" Mode="In" />
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="QboConnectID" Type="int" Mode="In" />
+    <Parameter Name="QboInvoiceID" Type="varchar" Mode="In" />
+    <Parameter Name="QboVendorID" Type="varchar" Mode="In" />
+    <Parameter Name="QboVendorName" Type="varchar" Mode="In" />
+    <Parameter Name="QboInvoiceDate" Type="datetime" Mode="In" />
+    <Parameter Name="ScanInvoiceID" Type="int" Mode="In" />
+    <Parameter Name="ScanFile_Name" Type="varchar" Mode="In" />
+    <Parameter Name="ScanBlob_Url" Type="varchar(max)" Mode="In" />
+    <Parameter Name="ScanABNNumber" Type="varchar" Mode="In" />
+    <Parameter Name="ScanRefNumber" Type="varchar" Mode="In" />
+    <Parameter Name="ScanDocType" Type="varchar" Mode="In" />
+    <Parameter Name="ScanSubTotal" Type="decimal" Mode="In" />
+    <Parameter Name="ScanChargeTotal" Type="decimal" Mode="In" />
+    <Parameter Name="ScanDocumentTotal" Type="decimal" Mode="In" />
+    <Parameter Name="ScanTag" Type="varchar" Mode="In" />
+    <Parameter Name="ScanInvoiceDate" Type="datetime" Mode="In" />
+    <Parameter Name="ScanPurchaseOrder" Type="varchar" Mode="In" />
+    <Parameter Name="ScanVendorName" Type="varchar" Mode="In" />
+    <Parameter Name="ScanInvoiceTotal" Type="decimal" Mode="In" />
+    <Parameter Name="ScanTaxTotal" Type="decimal" Mode="In" />
+    <Parameter Name="ScanDocClassification" Type="varchar" Mode="In" />
+    <Parameter Name="ScanServiceStatus" Type="varchar" Mode="In" />
+    <Parameter Name="ScanServiceMessage" Type="varchar(max)" Mode="In" />
+    <Parameter Name="QBOError" Type="varchar(max)" Mode="In" />
+    <Parameter Name="AspSessionID" Type="varchar(max)" Mode="In" />
+    <Parameter Name="Approved" Type="bit" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+    <Parameter Name="identity" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="uspInsertQboDocumentLine" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DocumentID" Type="int" Mode="In" />
+    <Parameter Name="QboAccountID" Type="varchar" Mode="In" />
+    <Parameter Name="QboAccountName" Type="varchar" Mode="In" />
+    <Parameter Name="QboClassID" Type="varchar" Mode="In" />
+    <Parameter Name="QboClassName" Type="varchar" Mode="In" />
+    <Parameter Name="QboJobID" Type="varchar" Mode="In" />
+    <Parameter Name="QboJobName" Type="varchar" Mode="In" />
+    <Parameter Name="ScanDescription" Type="varchar(max)" Mode="In" />
+    <Parameter Name="ScanArticle_Code" Type="varchar(max)" Mode="In" />
+    <Parameter Name="ScanGL_Code" Type="varchar" Mode="In" />
+    <Parameter Name="ScanGST" Type="decimal" Mode="In" />
+    <Parameter Name="ScanTax_Code" Type="varchar" Mode="In" />
+    <Parameter Name="ScanTracking" Type="varchar(max)" Mode="In" />
+    <Parameter Name="ScanUnit_Measure" Type="varchar" Mode="In" />
+    <Parameter Name="ScanUnit_Price" Type="decimal" Mode="In" />
+    <Parameter Name="Scan_Quantity" Type="decimal" Mode="In" />
+    <Parameter Name="Scan_Total" Type="decimal" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+    <Parameter Name="identity" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="uspInsertXeroDocument" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DocumentID" Type="int" Mode="In" />
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="QboConnectID" Type="int" Mode="In" />
+    <Parameter Name="QboInvoiceID" Type="varchar" Mode="In" />
+    <Parameter Name="QboVendorID" Type="varchar" Mode="In" />
+    <Parameter Name="QboVendorName" Type="varchar" Mode="In" />
+    <Parameter Name="QboInvoiceDate" Type="datetime" Mode="In" />
+    <Parameter Name="ScanInvoiceID" Type="int" Mode="In" />
+    <Parameter Name="ScanFile_Name" Type="varchar" Mode="In" />
+    <Parameter Name="ScanBlob_Url" Type="varchar(max)" Mode="In" />
+    <Parameter Name="ScanABNNumber" Type="varchar" Mode="In" />
+    <Parameter Name="ScanRefNumber" Type="varchar" Mode="In" />
+    <Parameter Name="ScanDocType" Type="varchar" Mode="In" />
+    <Parameter Name="ScanSubTotal" Type="decimal" Mode="In" />
+    <Parameter Name="ScanChargeTotal" Type="decimal" Mode="In" />
+    <Parameter Name="ScanDocumentTotal" Type="decimal" Mode="In" />
+    <Parameter Name="ScanTag" Type="varchar" Mode="In" />
+    <Parameter Name="ScanInvoiceDate" Type="datetime" Mode="In" />
+    <Parameter Name="ScanPurchaseOrder" Type="varchar" Mode="In" />
+    <Parameter Name="ScanVendorName" Type="varchar" Mode="In" />
+    <Parameter Name="ScanInvoiceTotal" Type="decimal" Mode="In" />
+    <Parameter Name="ScanTaxTotal" Type="decimal" Mode="In" />
+    <Parameter Name="ScanDocClassification" Type="varchar" Mode="In" />
+    <Parameter Name="ScanServiceStatus" Type="varchar" Mode="In" />
+    <Parameter Name="ScanServiceMessage" Type="varchar(max)" Mode="In" />
+    <Parameter Name="QBOError" Type="varchar(max)" Mode="In" />
+    <Parameter Name="AspSessionID" Type="varchar(max)" Mode="In" />
+    <Parameter Name="Approved" Type="bit" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+    <Parameter Name="identity" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="uspInsertXeroDocumentLine" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DocumentID" Type="int" Mode="In" />
+    <Parameter Name="QboAccountID" Type="varchar" Mode="In" />
+    <Parameter Name="QboAccountName" Type="varchar" Mode="In" />
+    <Parameter Name="QboClassID" Type="varchar" Mode="In" />
+    <Parameter Name="QboClassName" Type="varchar" Mode="In" />
+    <Parameter Name="QboJobID" Type="varchar" Mode="In" />
+    <Parameter Name="QboJobName" Type="varchar" Mode="In" />
+    <Parameter Name="ScanDescription" Type="varchar(max)" Mode="In" />
+    <Parameter Name="ScanArticle_Code" Type="varchar(max)" Mode="In" />
+    <Parameter Name="ScanGL_Code" Type="varchar" Mode="In" />
+    <Parameter Name="ScanGST" Type="decimal" Mode="In" />
+    <Parameter Name="ScanTax_Code" Type="varchar" Mode="In" />
+    <Parameter Name="ScanTracking" Type="varchar(max)" Mode="In" />
+    <Parameter Name="ScanUnit_Measure" Type="varchar" Mode="In" />
+    <Parameter Name="ScanUnit_Price" Type="decimal" Mode="In" />
+    <Parameter Name="Scan_Quantity" Type="decimal" Mode="In" />
+    <Parameter Name="Scan_Total" Type="decimal" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+    <Parameter Name="identity" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="uspIsEzUploadRequired" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoginID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspSaveAccount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PlatformID" Type="int" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="CountryOfOrigin" Type="varchar" Mode="In" />
+    <Parameter Name="Phone" Type="nvarchar" Mode="In" />
+    <Parameter Name="Add1" Type="nvarchar" Mode="In" />
+    <Parameter Name="Add2" Type="nvarchar" Mode="In" />
+    <Parameter Name="Add3" Type="nvarchar" Mode="In" />
+    <Parameter Name="City" Type="nvarchar" Mode="In" />
+    <Parameter Name="State" Type="nvarchar" Mode="In" />
+    <Parameter Name="Zip" Type="nvarchar" Mode="In" />
+    <Parameter Name="Country" Type="nvarchar" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="Password" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ActivationCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspSaveErrorLog" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="PlatformID" Type="int" Mode="In" />
+    <Parameter Name="LoginID" Type="int" Mode="In" />
+    <Parameter Name="ReckonFileID" Type="int" Mode="In" />
+    <Parameter Name="QboConnectID" Type="int" Mode="In" />
+    <Parameter Name="Controller" Type="varchar" Mode="In" />
+    <Parameter Name="Method" Type="varchar" Mode="In" />
+    <Parameter Name="ErrorMessage" Type="varchar(max)" Mode="In" />
+    <Parameter Name="ErrorStackTrace" Type="varchar(max)" Mode="In" />
+    <Parameter Name="ErrorLogDate" Type="datetime" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar(max)" Mode="InOut" />
+  </Function>
+  <Function Name="uspSaveFileSql" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="SqlServerName" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="SqlDataBaseName" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="SqlAuthenticationMode" Type="bit" Mode="In" />
+    <Parameter Name="SqlUserName" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="SqlPassword" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="AddedDte" Type="datetime" Mode="In" />
+    <Parameter Name="UpdatedDte" Type="datetime" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspSaveLogin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="PlatformID" Type="int" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="EmailAddress" Type="nvarchar" Mode="In" />
+    <Parameter Name="Password" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="LoginID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+    <Parameter Name="IdentityValue" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="uspSavePFX" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Data" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspSavePlatform" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PlatformCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="PlatformName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Description" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Active" Type="bit" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspSaveQboChartOfAccount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="QboConnectID" Type="int" Mode="In" />
+    <Parameter Name="QboAccountID" Type="varchar" Mode="In" />
+    <Parameter Name="FullyQualifiedNameField" Type="varchar" Mode="In" />
+    <Parameter Name="AccountSubTypeField" Type="varchar" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspSaveQBOEzzyAccount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="QBOEzzyID" Type="int" Mode="In" />
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="QboConnectID" Type="int" Mode="In" />
+    <Parameter Name="EzzyUserName" Type="varchar" Mode="In" />
+    <Parameter Name="EzzyPassword" Type="varchar" Mode="In" />
+    <Parameter Name="EzzyEmailAddress" Type="varchar" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar(max)" Mode="InOut" />
+  </Function>
+  <Function Name="uspSaveQBOMaster" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="AccessToken" Type="varchar(max)" Mode="In" />
+    <Parameter Name="AccessTokenExpiresIn" Type="datetime" Mode="In" />
+    <Parameter Name="RealmId" Type="varchar(max)" Mode="In" />
+    <Parameter Name="RefreshToken" Type="varchar(max)" Mode="In" />
+    <Parameter Name="RefreshTokenExpiresIn" Type="datetime" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar(max)" Mode="InOut" />
+    <Parameter Name="identity" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="uspSaveQboTax" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="QboConnectID" Type="int" Mode="In" />
+    <Parameter Name="TaxID" Type="varchar" Mode="In" />
+    <Parameter Name="TaxName" Type="varchar" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspSaveQboVendor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="QboConnectID" Type="int" Mode="In" />
+    <Parameter Name="QboVendorID" Type="varchar" Mode="In" />
+    <Parameter Name="DisplayNameField" Type="varchar" Mode="In" />
+    <Parameter Name="CityField" Type="varchar" Mode="In" />
+    <Parameter Name="CountrySubDivisionCodeField" Type="varchar" Mode="In" />
+    <Parameter Name="PostalCodeField" Type="varchar" Mode="In" />
+    <Parameter Name="CountryField" Type="varchar" Mode="In" />
+    <Parameter Name="PrimaryPhone" Type="varchar" Mode="In" />
+    <Parameter Name="PrimaryEmailAddr" Type="varchar" Mode="In" />
+    <Parameter Name="TaxIdentifier" Type="varchar" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspSaveReckonDesktop" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ReckonFileID" Type="int" Mode="In" />
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="CompanyName" Type="varchar" Mode="In" />
+    <Parameter Name="LegalCompanyName" Type="varchar" Mode="In" />
+    <Parameter Name="IsSampleCompany" Type="bit" Mode="In" />
+    <Parameter Name="Phone" Type="varchar" Mode="In" />
+    <Parameter Name="Email" Type="varchar" Mode="In" />
+    <Parameter Name="Addr1" Type="varchar" Mode="In" />
+    <Parameter Name="Addr2" Type="varchar" Mode="In" />
+    <Parameter Name="Addr3" Type="varchar" Mode="In" />
+    <Parameter Name="City" Type="varchar" Mode="In" />
+    <Parameter Name="State" Type="varchar" Mode="In" />
+    <Parameter Name="PostalCode" Type="varchar" Mode="In" />
+    <Parameter Name="Country" Type="varchar" Mode="In" />
+    <Parameter Name="FilePath" Type="varchar" Mode="In" />
+    <Parameter Name="IsUsingJobCosting" Type="bit" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+    <Parameter Name="identity" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="uspSaveReckonDocument" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ReckonDocumentID" Type="int" Mode="In" />
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="ReckonFileID" Type="int" Mode="In" />
+    <Parameter Name="ScanInvoiceID" Type="int" Mode="In" />
+    <Parameter Name="TxnID" Type="varchar" Mode="In" />
+    <Parameter Name="ScanPdfPath" Type="varchar(max)" Mode="In" />
+    <Parameter Name="InvoiceNumber" Type="varchar" Mode="In" />
+    <Parameter Name="InvoiceType" Type="varchar" Mode="In" />
+    <Parameter Name="InvoiceDate" Type="datetime" Mode="In" />
+    <Parameter Name="VendorName" Type="varchar" Mode="In" />
+    <Parameter Name="InvoiceTotal" Type="decimal" Mode="In" />
+    <Parameter Name="TaxTotal" Type="decimal" Mode="In" />
+    <Parameter Name="UploadedDate" Type="datetime" Mode="In" />
+    <Parameter Name="ReckonError" Type="varchar(max)" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+    <Parameter Name="identity" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="uspSaveReckonEzzyAccount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="RCEzzyID" Type="int" Mode="In" />
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="ReckonFileID" Type="int" Mode="In" />
+    <Parameter Name="EzzyEmailAddress" Type="varchar" Mode="In" />
+    <Parameter Name="EzzyUserName" Type="varchar" Mode="In" />
+    <Parameter Name="EzzyPassword" Type="varchar" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar(max)" Mode="InOut" />
+  </Function>
+  <Function Name="uspSaveReckonVendorDefault" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="int" Mode="In" />
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="ReckonFileID" Type="int" Mode="In" />
+    <Parameter Name="VendorListID" Type="varchar" Mode="In" />
+    <Parameter Name="DefaultExpense" Type="varchar" Mode="In" />
+    <Parameter Name="DefaultItem" Type="varchar" Mode="In" />
+    <Parameter Name="DefaultExpenseListID" Type="varchar" Mode="In" />
+    <Parameter Name="DefaultItemListID" Type="varchar" Mode="In" />
+    <Parameter Name="AddedBy" Type="int" Mode="In" />
+    <Parameter Name="AddedDate" Type="datetime" Mode="In" />
+    <Parameter Name="UpdatedBy" Type="int" Mode="In" />
+    <Parameter Name="UpdatedDate" Type="datetime" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspSaveRefreshedXeroToken" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="XeroConnectID" Type="int" Mode="In" />
+    <Parameter Name="OAuthToken" Type="varchar(max)" Mode="In" />
+    <Parameter Name="OAuthTokenSec" Type="varchar(max)" Mode="In" />
+    <Parameter Name="AccessToken" Type="varchar(max)" Mode="In" />
+    <Parameter Name="AccessTokenExpiresIn" Type="datetime" Mode="In" />
+    <Parameter Name="RefreshToken" Type="varchar(max)" Mode="In" />
+    <Parameter Name="RefreshTokenExpiresIn" Type="datetime" Mode="In" />
+    <Parameter Name="SessionHandle" Type="varchar(max)" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar(max)" Mode="InOut" />
+  </Function>
+  <Function Name="uspSaveStripePayment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="PlanID" Type="int" Mode="In" />
+    <Parameter Name="Amount" Type="decimal" Mode="In" />
+    <Parameter Name="StripeBalanceTxnID" Type="varchar(max)" Mode="In" />
+    <Parameter Name="StripeID" Type="varchar(max)" Mode="In" />
+    <Parameter Name="StripeIsPaid" Type="bit" Mode="In" />
+    <Parameter Name="StripeStatus" Type="varchar" Mode="In" />
+    <Parameter Name="StripeDateTime" Type="datetime" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+    <Parameter Name="identity" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="uspSaveXeroChartOfAccount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="QboConnectID" Type="int" Mode="In" />
+    <Parameter Name="QboAccountID" Type="varchar" Mode="In" />
+    <Parameter Name="FullyQualifiedNameField" Type="varchar" Mode="In" />
+    <Parameter Name="AccountSubTypeField" Type="varchar" Mode="In" />
+    <Parameter Name="AccountCode" Type="varchar" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspSaveXeroEzzyAccount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="XeroEzzyID" Type="int" Mode="In" />
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="XeroConnectID" Type="int" Mode="In" />
+    <Parameter Name="EzzyUserName" Type="varchar" Mode="In" />
+    <Parameter Name="EzzyPassword" Type="varchar" Mode="In" />
+    <Parameter Name="EzzyEmailAddress" Type="varchar" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar(max)" Mode="InOut" />
+  </Function>
+  <Function Name="uspSaveXeroMaster" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="OAuthToken" Type="varchar(max)" Mode="In" />
+    <Parameter Name="OAuthTokenSec" Type="varchar(max)" Mode="In" />
+    <Parameter Name="AccessToken" Type="varchar(max)" Mode="In" />
+    <Parameter Name="AccessTokenExpiresIn" Type="datetime" Mode="In" />
+    <Parameter Name="RealmId" Type="varchar(max)" Mode="In" />
+    <Parameter Name="RefreshToken" Type="varchar(max)" Mode="In" />
+    <Parameter Name="RefreshTokenExpiresIn" Type="datetime" Mode="In" />
+    <Parameter Name="SessionHandle" Type="varchar(max)" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar(max)" Mode="InOut" />
+    <Parameter Name="identity" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="uspSaveXeroTax" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="QboConnectID" Type="int" Mode="In" />
+    <Parameter Name="TaxID" Type="varchar" Mode="In" />
+    <Parameter Name="TaxName" Type="varchar" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspSaveXeroVendor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="QboConnectID" Type="int" Mode="In" />
+    <Parameter Name="QboVendorID" Type="varchar" Mode="In" />
+    <Parameter Name="DisplayNameField" Type="varchar" Mode="In" />
+    <Parameter Name="CityField" Type="varchar" Mode="In" />
+    <Parameter Name="CountrySubDivisionCodeField" Type="varchar" Mode="In" />
+    <Parameter Name="PostalCodeField" Type="varchar" Mode="In" />
+    <Parameter Name="CountryField" Type="varchar" Mode="In" />
+    <Parameter Name="PrimaryPhone" Type="varchar" Mode="In" />
+    <Parameter Name="PrimaryEmailAddr" Type="varchar" Mode="In" />
+    <Parameter Name="TaxIdentifier" Type="varchar" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspUpdateIsEzUploadRequired" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoginID" Type="int" Mode="In" />
+    <Parameter Name="IsEzUploadRequired" Type="bit" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspUpdateLogin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ActivationCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="LoginID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspUpdatePhoneByAccountID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="Phone" Type="varchar" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspUpdateQboBillID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DocumentID" Type="int" Mode="In" />
+    <Parameter Name="QboInvoiceID" Type="varchar" Mode="In" />
+    <Parameter Name="Error" Type="varchar(max)" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspUpdateQBOCompanyInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="RealmId" Type="varchar(max)" Mode="In" />
+    <Parameter Name="CompanyName" Type="varchar" Mode="In" />
+    <Parameter Name="LeagalName" Type="varchar" Mode="In" />
+    <Parameter Name="Email" Type="varchar" Mode="In" />
+    <Parameter Name="PrimaryPhone" Type="varchar" Mode="In" />
+    <Parameter Name="WebAddr" Type="varchar" Mode="In" />
+    <Parameter Name="Country" Type="varchar" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar(max)" Mode="InOut" />
+  </Function>
+  <Function Name="uspUpdateQboDocument" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DocumentID" Type="int" Mode="In" />
+    <Parameter Name="QboVendorID" Type="varchar" Mode="In" />
+    <Parameter Name="QboVendorName" Type="varchar" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspUpdateQboDocumentLine" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DocumentID" Type="int" Mode="In" />
+    <Parameter Name="DocumentLineID" Type="int" Mode="In" />
+    <Parameter Name="QboAccountID" Type="varchar" Mode="In" />
+    <Parameter Name="QboAccountName" Type="varchar" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspUpdateQboVendAcct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="QboConnectID" Type="int" Mode="In" />
+    <Parameter Name="QboVendorID" Type="varchar" Mode="In" />
+    <Parameter Name="QboAccountID" Type="varchar" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspUpdateReAuthrorizeByAccountID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="IsAuthrorize" Type="bit" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar(max)" Mode="InOut" />
+  </Function>
+  <Function Name="uspUpdateReckonFileUserAccess" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserID" Type="int" Mode="In" />
+    <Parameter Name="ReckonFileID" Type="int" Mode="In" />
+    <Parameter Name="IsAccess" Type="bit" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspUpdateToken" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoginID" Type="int" Mode="In" />
+    <Parameter Name="Token" Type="nvarchar" Mode="In" />
+    <Parameter Name="TokenExpiredDate" Type="datetime" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspUpdateXeroBillID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DocumentID" Type="int" Mode="In" />
+    <Parameter Name="QboInvoiceID" Type="varchar" Mode="In" />
+    <Parameter Name="Status" Type="int" Mode="In" />
+    <Parameter Name="Error" Type="varchar(max)" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspUpdateXeroCompanyInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="RealmId" Type="varchar(max)" Mode="In" />
+    <Parameter Name="CompanyName" Type="varchar" Mode="In" />
+    <Parameter Name="LeagalName" Type="varchar" Mode="In" />
+    <Parameter Name="Email" Type="varchar" Mode="In" />
+    <Parameter Name="PrimaryPhone" Type="varchar" Mode="In" />
+    <Parameter Name="WebAddr" Type="varchar" Mode="In" />
+    <Parameter Name="Country" Type="varchar" Mode="In" />
+    <Parameter Name="ShortCode" Type="varchar" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar(max)" Mode="InOut" />
+  </Function>
+  <Function Name="uspUpdateXeroDocument" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DocumentID" Type="int" Mode="In" />
+    <Parameter Name="QboVendorID" Type="varchar" Mode="In" />
+    <Parameter Name="QboVendorName" Type="varchar" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspUpdateXeroDocumentLine" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DocumentID" Type="int" Mode="In" />
+    <Parameter Name="DocumentLineID" Type="int" Mode="In" />
+    <Parameter Name="QboAccountID" Type="varchar" Mode="In" />
+    <Parameter Name="QboAccountName" Type="varchar" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspUpdateXeroVendAcct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="QboConnectID" Type="int" Mode="In" />
+    <Parameter Name="QboVendorID" Type="varchar" Mode="In" />
+    <Parameter Name="QboAccountID" Type="varchar" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspUpgradePlan" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="PlanID" Type="int" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspValidateActivationCode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="PlatformID" Type="int" Mode="In" />
+    <Parameter Name="Code" Type="nvarchar" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="uspVerifyUsernameandPassword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Password" Type="nvarchar" Mode="In" />
+    <Parameter Name="errNum" Type="int" Mode="InOut" />
+    <Parameter Name="errDesc" Type="varchar" Mode="InOut" />
+  </Function>
+  <EntityContainer Name="XS_XEROModelStoreContainer">
+    <EntitySet Name="AccountMaster" EntityType="Self.AccountMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ConfigSetting" EntityType="Self.ConfigSetting" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ErrorLog" EntityType="Self.ErrorLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FileSQLMasters" EntityType="Self.FileSQLMasters" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoginMaster" EntityType="Self.LoginMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PlanMaster" EntityType="Self.PlanMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PlatformMaster" EntityType="Self.PlatformMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QboChartOfAccount" EntityType="Self.QboChartOfAccount" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QBODocument" EntityType="Self.QBODocument" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QboDocumentLine" EntityType="Self.QboDocumentLine" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QBOEzzyAccount" EntityType="Self.QBOEzzyAccount" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QBOMaster" EntityType="Self.QBOMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QboTax" EntityType="Self.QboTax" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QboVendor" EntityType="Self.QboVendor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ReckonDesktopMaster" EntityType="Self.ReckonDesktopMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ReckonDocument" EntityType="Self.ReckonDocument" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ReckonEzzyAccount" EntityType="Self.ReckonEzzyAccount" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ReckonFileUserAccess" EntityType="Self.ReckonFileUserAccess" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ReckonVendorDefault" EntityType="Self.ReckonVendorDefault" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StripePayment" EntityType="Self.StripePayment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SubscriptionMaster" EntityType="Self.SubscriptionMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="XeroChartOfAccount" EntityType="Self.XeroChartOfAccount" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="XeroDocument" EntityType="Self.XeroDocument" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="XeroDocumentLine" EntityType="Self.XeroDocumentLine" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="XeroEzzyAccount" EntityType="Self.XeroEzzyAccount" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="XeroMaster" EntityType="Self.XeroMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="XeroTax" EntityType="Self.XeroTax" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="XeroVendor" EntityType="Self.XeroVendor" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

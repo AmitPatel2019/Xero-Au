@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d666b920-fef5-4e0c-993b-77bc31a4cb06" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://app.ezzydoc.com/EzzyService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EzzyService.xsd" MetadataType="Schema" ID="0cb5b8ce-30ce-485b-a074-93bff1b52596" SourceId="1" SourceUrl="http://app.ezzydoc.com/EzzyService.svc?xsd=xsd2" />
+    <MetadataFile FileName="EzzyService1.xsd" MetadataType="Schema" ID="32b1649f-45f6-47f5-b7a2-8293bc59fcff" SourceId="1" SourceUrl="http://app.ezzydoc.com/EzzyService.svc?xsd=xsd1" />
+    <MetadataFile FileName="EzzyService.wsdl" MetadataType="Wsdl" ID="34c54b3d-ccb7-4578-8f59-258113b296ab" SourceId="1" SourceUrl="http://app.ezzydoc.com/EzzyService.svc?wsdl" />
+    <MetadataFile FileName="EzzyService1.wsdl" MetadataType="Wsdl" ID="67405876-be4f-4554-98cf-3bdbd287e960" SourceId="1" SourceUrl="http://app.ezzydoc.com/EzzyService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="EzzyService2.xsd" MetadataType="Schema" ID="ff58b907-950a-4e75-96a2-9d4e469af116" SourceId="1" SourceUrl="http://app.ezzydoc.com/EzzyService.svc?xsd=xsd6" />
+    <MetadataFile FileName="EzzyService3.xsd" MetadataType="Schema" ID="2e74586a-997f-4710-9cbf-5e462fdfc2a6" SourceId="1" SourceUrl="http://app.ezzydoc.com/EzzyService.svc?xsd=xsd0" />
+    <MetadataFile FileName="EzzyService.disco" MetadataType="Disco" ID="3136b83d-d3ee-4250-a82f-3cecfdd67f65" SourceId="1" SourceUrl="http://app.ezzydoc.com/EzzyService.svc?disco" />
+    <MetadataFile FileName="EzzyService4.xsd" MetadataType="Schema" ID="04ffa21e-8b96-4dbe-a37d-c3427b72dfac" SourceId="1" SourceUrl="http://app.ezzydoc.com/EzzyService.svc?xsd=xsd5" />
+    <MetadataFile FileName="EzzyService5.xsd" MetadataType="Schema" ID="26145b6a-a7d6-492e-9772-799936d2beb3" SourceId="1" SourceUrl="http://app.ezzydoc.com/EzzyService.svc?xsd=xsd3" />
+    <MetadataFile FileName="EzzyService6.xsd" MetadataType="Schema" ID="9766f995-1ebd-44a3-a17b-f2c3dfdd60ad" SourceId="1" SourceUrl="http://app.ezzydoc.com/EzzyService.svc?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

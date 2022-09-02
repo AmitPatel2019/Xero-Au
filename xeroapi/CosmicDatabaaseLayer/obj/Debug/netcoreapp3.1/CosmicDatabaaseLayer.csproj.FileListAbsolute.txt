@@ -1,0 +1,13 @@
+D:\Projects\xero_au\xero_au\xeroapi\CosmicDatabaaseLayer\bin\Debug\netcoreapp3.1\CosmicDatabaaseLayer.exe
+D:\Projects\xero_au\xero_au\xeroapi\CosmicDatabaaseLayer\bin\Debug\netcoreapp3.1\CosmicDatabaaseLayer.deps.json
+D:\Projects\xero_au\xero_au\xeroapi\CosmicDatabaaseLayer\bin\Debug\netcoreapp3.1\CosmicDatabaaseLayer.runtimeconfig.json
+D:\Projects\xero_au\xero_au\xeroapi\CosmicDatabaaseLayer\bin\Debug\netcoreapp3.1\CosmicDatabaaseLayer.runtimeconfig.dev.json
+D:\Projects\xero_au\xero_au\xeroapi\CosmicDatabaaseLayer\bin\Debug\netcoreapp3.1\CosmicDatabaaseLayer.dll
+D:\Projects\xero_au\xero_au\xeroapi\CosmicDatabaaseLayer\bin\Debug\netcoreapp3.1\CosmicDatabaaseLayer.pdb
+D:\Projects\xero_au\xero_au\xeroapi\CosmicDatabaaseLayer\obj\Debug\netcoreapp3.1\CosmicDatabaaseLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\xero_au\xero_au\xeroapi\CosmicDatabaaseLayer\obj\Debug\netcoreapp3.1\CosmicDatabaaseLayer.AssemblyInfoInputs.cache
+D:\Projects\xero_au\xero_au\xeroapi\CosmicDatabaaseLayer\obj\Debug\netcoreapp3.1\CosmicDatabaaseLayer.AssemblyInfo.cs
+D:\Projects\xero_au\xero_au\xeroapi\CosmicDatabaaseLayer\obj\Debug\netcoreapp3.1\CosmicDatabaaseLayer.csproj.CoreCompileInputs.cache
+D:\Projects\xero_au\xero_au\xeroapi\CosmicDatabaaseLayer\obj\Debug\netcoreapp3.1\CosmicDatabaaseLayer.dll
+D:\Projects\xero_au\xero_au\xeroapi\CosmicDatabaaseLayer\obj\Debug\netcoreapp3.1\CosmicDatabaaseLayer.pdb
+D:\Projects\xero_au\xero_au\xeroapi\CosmicDatabaaseLayer\obj\Debug\netcoreapp3.1\CosmicDatabaaseLayer.genruntimeconfig.cache

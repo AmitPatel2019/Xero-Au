@@ -1,0 +1,30 @@
+import { Observable } from 'rxjs';
+import { AuthOptions } from '../../auth-options';
+import { CheckAuthService } from '../../check-auth.service';
+import { AuthWellKnownService } from '../../config/auth-well-known/auth-well-known.service';
+import { ConfigurationProvider } from '../../config/provider/config.provider';
+import { LoggerService } from '../../logging/logger.service';
+import { RedirectService } from '../../utils/redirect/redirect.service';
+import { UrlService } from '../../utils/url/url.service';
+import { LoginResponse } from '../login-response';
+import { PopupOptions } from '../popup/popup-options';
+import { PopUpService } from '../popup/popup.service';
+import { ResponseTypeValidationService } from '../response-type-validation/response-type-validation.service';
+import { ParService } from './par.service';
+import * as i0 from "@angular/core";
+export declare class ParLoginService {
+    private loggerService;
+    private responseTypeValidationService;
+    private urlService;
+    private redirectService;
+    private configurationProvider;
+    private authWellKnownService;
+    private popupService;
+    private checkAuthService;
+    private parService;
+    constructor(loggerService: LoggerService, responseTypeValidationService: ResponseTypeValidationService, urlService: UrlService, redirectService: RedirectService, configurationProvider: ConfigurationProvider, authWellKnownService: AuthWellKnownService, popupService: PopUpService, checkAuthService: CheckAuthService, parService: ParService);
+    loginPar(configId: string, authOptions?: AuthOptions): void;
+    loginWithPopUpPar(configId: string, authOptions?: AuthOptions, popupOptions?: PopupOptions): Observable<LoginResponse>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ParLoginService, never>;
+    static ɵprov: i0.ɵɵInjectableDeclaration<ParLoginService>;
+}

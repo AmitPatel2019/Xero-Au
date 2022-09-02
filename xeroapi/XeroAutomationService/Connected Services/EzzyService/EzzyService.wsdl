@@ -1,0 +1,1979 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="EzzyService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="CustomBinding_IEzzyService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="" location="http://app.ezzydoc.com/EzzyService.svc?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://app.ezzydoc.com/EzzyService.svc?xsd=xsd6" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://app.ezzydoc.com/EzzyService.svc?xsd=xsd0" />
+      <xsd:import schemaLocation="http://app.ezzydoc.com/EzzyService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://app.ezzydoc.com/EzzyService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EasyDoc.Web" />
+      <xsd:import schemaLocation="http://app.ezzydoc.com/EzzyService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/InvoiceEngine" />
+      <xsd:import schemaLocation="http://app.ezzydoc.com/EzzyService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/InvoiceApp.Web.ServiceObjects" />
+      <xsd:import schemaLocation="http://app.ezzydoc.com/EzzyService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IEzzyRest_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_LoginDevice_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoginDevice" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_LoginDevice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginDeviceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_LoginToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoginToken" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_LoginToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_getMyInvoiceQueue_InputMessage">
+    <wsdl:part name="parameters" element="tns:getMyInvoiceQueue" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_getMyInvoiceQueue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getMyInvoiceQueueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_getInvoiceHeaderBlocks_InputMessage">
+    <wsdl:part name="parameters" element="tns:getInvoiceHeaderBlocks" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_getInvoiceHeaderBlocks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getInvoiceHeaderBlocksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_getInvoiceRows_InputMessage">
+    <wsdl:part name="parameters" element="tns:getInvoiceRows" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_getInvoiceRows_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getInvoiceRowsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_addLearningCorrection_InputMessage">
+    <wsdl:part name="parameters" element="tns:addLearningCorrection" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_addLearningCorrection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addLearningCorrectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_getInvoiceDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:getInvoiceDetails" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_getInvoiceDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getInvoiceDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_getEmailMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:getEmailMessage" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_getEmailMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getEmailMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_mySettingsForm_InputMessage">
+    <wsdl:part name="parameters" element="tns:mySettingsForm" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_mySettingsForm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:mySettingsFormResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_getFormData_InputMessage">
+    <wsdl:part name="parameters" element="tns:getFormData" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_getFormData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getFormDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_addLearning_InputMessage">
+    <wsdl:part name="parameters" element="tns:addLearning" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_addLearning_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addLearningResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_addLicense_InputMessage">
+    <wsdl:part name="parameters" element="tns:addLicense" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_addLicense_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addLicenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_checkLicense_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkLicense" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_checkLicense_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkLicenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_updateLicenseUsage_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateLicenseUsage" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_updateLicenseUsage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateLicenseUsageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_getDocumentClassification_InputMessage">
+    <wsdl:part name="parameters" element="tns:getDocumentClassification" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_getDocumentClassification_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getDocumentClassificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_workflowStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:workflowStatus" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_workflowStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:workflowStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_MyEnterpriseUsage_InputMessage">
+    <wsdl:part name="parameters" element="tns:MyEnterpriseUsage" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_MyEnterpriseUsage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MyEnterpriseUsageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_MyEnterpriseUsageDetailed_InputMessage">
+    <wsdl:part name="parameters" element="tns:MyEnterpriseUsageDetailed" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_MyEnterpriseUsageDetailed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MyEnterpriseUsageDetailedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_moveToRecycleBin_InputMessage">
+    <wsdl:part name="parameters" element="tns:moveToRecycleBin" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_moveToRecycleBin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:moveToRecycleBinResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_addAllContacts_InputMessage">
+    <wsdl:part name="parameters" element="tns:addAllContacts" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_addAllContacts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addAllContactsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_uploadInvoiceImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:uploadInvoiceImage" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_uploadInvoiceImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:uploadInvoiceImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_addInvoicePayment_InputMessage">
+    <wsdl:part name="parameters" element="tns:addInvoicePayment" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_addInvoicePayment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addInvoicePaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_uploadAppImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:uploadAppImage" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_uploadAppImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:uploadAppImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_addLearningRule_InputMessage">
+    <wsdl:part name="parameters" element="tns:addLearningRule" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_addLearningRule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addLearningRuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_updatePayment_InputMessage">
+    <wsdl:part name="parameters" element="tns:updatePayment" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_updatePayment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updatePaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_uploadPhoto_InputMessage">
+    <wsdl:part name="parameters" element="tns:uploadPhoto" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_uploadPhoto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:uploadPhotoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_uploadPhotoReview_InputMessage">
+    <wsdl:part name="parameters" element="tns:uploadPhotoReview" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_uploadPhotoReview_OutputMessage">
+    <wsdl:part name="parameters" element="tns:uploadPhotoReviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_uploadPhotoWithNotes_InputMessage">
+    <wsdl:part name="parameters" element="tns:uploadPhotoWithNotes" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_uploadPhotoWithNotes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:uploadPhotoWithNotesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_removeContacts_InputMessage">
+    <wsdl:part name="parameters" element="tns:removeContacts" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_removeContacts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:removeContactsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_approve_InputMessage">
+    <wsdl:part name="parameters" element="tns:approve" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_approve_OutputMessage">
+    <wsdl:part name="parameters" element="tns:approveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_rejectInvoice_InputMessage">
+    <wsdl:part name="parameters" element="tns:rejectInvoice" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_rejectInvoice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:rejectInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_finishExternalTask_InputMessage">
+    <wsdl:part name="parameters" element="tns:finishExternalTask" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyRest_finishExternalTask_OutputMessage">
+    <wsdl:part name="parameters" element="tns:finishExternalTaskResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IEzzyRest">
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEzzyRest/Login" message="tns:IEzzyRest_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEzzyRest/LoginResponse" message="tns:IEzzyRest_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginDevice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEzzyRest/LoginDevice" message="tns:IEzzyRest_LoginDevice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEzzyRest/LoginDeviceResponse" message="tns:IEzzyRest_LoginDevice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEzzyRest/LoginToken" message="tns:IEzzyRest_LoginToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEzzyRest/LoginTokenResponse" message="tns:IEzzyRest_LoginToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMyInvoiceQueue">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEzzyRest/getMyInvoiceQueue" message="tns:IEzzyRest_getMyInvoiceQueue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEzzyRest/getMyInvoiceQueueResponse" message="tns:IEzzyRest_getMyInvoiceQueue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getInvoiceHeaderBlocks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEzzyRest/getInvoiceHeaderBlocks" message="tns:IEzzyRest_getInvoiceHeaderBlocks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEzzyRest/getInvoiceHeaderBlocksResponse" message="tns:IEzzyRest_getInvoiceHeaderBlocks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getInvoiceRows">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEzzyRest/getInvoiceRows" message="tns:IEzzyRest_getInvoiceRows_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEzzyRest/getInvoiceRowsResponse" message="tns:IEzzyRest_getInvoiceRows_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addLearningCorrection">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEzzyRest/addLearningCorrection" message="tns:IEzzyRest_addLearningCorrection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEzzyRest/addLearningCorrectionResponse" message="tns:IEzzyRest_addLearningCorrection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getInvoiceDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEzzyRest/getInvoiceDetails" message="tns:IEzzyRest_getInvoiceDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEzzyRest/getInvoiceDetailsResponse" message="tns:IEzzyRest_getInvoiceDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getEmailMessage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEzzyRest/getEmailMessage" message="tns:IEzzyRest_getEmailMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEzzyRest/getEmailMessageResponse" message="tns:IEzzyRest_getEmailMessage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="mySettingsForm">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEzzyRest/mySettingsForm" message="tns:IEzzyRest_mySettingsForm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEzzyRest/mySettingsFormResponse" message="tns:IEzzyRest_mySettingsForm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getFormData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEzzyRest/getFormData" message="tns:IEzzyRest_getFormData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEzzyRest/getFormDataResponse" message="tns:IEzzyRest_getFormData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addLearning">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEzzyRest/addLearning" message="tns:IEzzyRest_addLearning_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEzzyRest/addLearningResponse" message="tns:IEzzyRest_addLearning_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addLicense">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEzzyRest/addLicense" message="tns:IEzzyRest_addLicense_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEzzyRest/addLicenseResponse" message="tns:IEzzyRest_addLicense_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkLicense">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEzzyRest/checkLicense" message="tns:IEzzyRest_checkLicense_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEzzyRest/checkLicenseResponse" message="tns:IEzzyRest_checkLicense_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateLicenseUsage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEzzyRest/updateLicenseUsage" message="tns:IEzzyRest_updateLicenseUsage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEzzyRest/updateLicenseUsageResponse" message="tns:IEzzyRest_updateLicenseUsage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDocumentClassification">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEzzyRest/getDocumentClassification" message="tns:IEzzyRest_getDocumentClassification_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEzzyRest/getDocumentClassificationResponse" message="tns:IEzzyRest_getDocumentClassification_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="workflowStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEzzyRest/workflowStatus" message="tns:IEzzyRest_workflowStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEzzyRest/workflowStatusResponse" message="tns:IEzzyRest_workflowStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MyEnterpriseUsage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEzzyRest/MyEnterpriseUsage" message="tns:IEzzyRest_MyEnterpriseUsage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEzzyRest/MyEnterpriseUsageResponse" message="tns:IEzzyRest_MyEnterpriseUsage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MyEnterpriseUsageDetailed">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEzzyRest/MyEnterpriseUsageDetailed" message="tns:IEzzyRest_MyEnterpriseUsageDetailed_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEzzyRest/MyEnterpriseUsageDetailedResponse" message="tns:IEzzyRest_MyEnterpriseUsageDetailed_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="moveToRecycleBin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEzzyRest/moveToRecycleBin" message="tns:IEzzyRest_moveToRecycleBin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEzzyRest/moveToRecycleBinResponse" message="tns:IEzzyRest_moveToRecycleBin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addAllContacts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEzzyRest/addAllContacts" message="tns:IEzzyRest_addAllContacts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEzzyRest/addAllContactsResponse" message="tns:IEzzyRest_addAllContacts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="uploadInvoiceImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEzzyRest/uploadInvoiceImage" message="tns:IEzzyRest_uploadInvoiceImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEzzyRest/uploadInvoiceImageResponse" message="tns:IEzzyRest_uploadInvoiceImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addInvoicePayment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEzzyRest/addInvoicePayment" message="tns:IEzzyRest_addInvoicePayment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEzzyRest/addInvoicePaymentResponse" message="tns:IEzzyRest_addInvoicePayment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="uploadAppImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEzzyRest/uploadAppImage" message="tns:IEzzyRest_uploadAppImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEzzyRest/uploadAppImageResponse" message="tns:IEzzyRest_uploadAppImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addLearningRule">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEzzyRest/addLearningRule" message="tns:IEzzyRest_addLearningRule_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEzzyRest/addLearningRuleResponse" message="tns:IEzzyRest_addLearningRule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updatePayment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEzzyRest/updatePayment" message="tns:IEzzyRest_updatePayment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEzzyRest/updatePaymentResponse" message="tns:IEzzyRest_updatePayment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="uploadPhoto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEzzyRest/uploadPhoto" message="tns:IEzzyRest_uploadPhoto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEzzyRest/uploadPhotoResponse" message="tns:IEzzyRest_uploadPhoto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="uploadPhotoReview">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEzzyRest/uploadPhotoReview" message="tns:IEzzyRest_uploadPhotoReview_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEzzyRest/uploadPhotoReviewResponse" message="tns:IEzzyRest_uploadPhotoReview_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="uploadPhotoWithNotes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEzzyRest/uploadPhotoWithNotes" message="tns:IEzzyRest_uploadPhotoWithNotes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEzzyRest/uploadPhotoWithNotesResponse" message="tns:IEzzyRest_uploadPhotoWithNotes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="removeContacts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEzzyRest/removeContacts" message="tns:IEzzyRest_removeContacts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEzzyRest/removeContactsResponse" message="tns:IEzzyRest_removeContacts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="approve">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEzzyRest/approve" message="tns:IEzzyRest_approve_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEzzyRest/approveResponse" message="tns:IEzzyRest_approve_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="rejectInvoice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEzzyRest/rejectInvoice" message="tns:IEzzyRest_rejectInvoice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEzzyRest/rejectInvoiceResponse" message="tns:IEzzyRest_rejectInvoice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="finishExternalTask">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEzzyRest/finishExternalTask" message="tns:IEzzyRest_finishExternalTask_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEzzyRest/finishExternalTaskResponse" message="tns:IEzzyRest_finishExternalTask_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CustomBinding_IEzzyService" type="IEzzyService">
+    <wsp:PolicyReference URI="#CustomBinding_IEzzyService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="trialSubsciption">
+      <soap12:operation soapAction="urn:IEzzyService/trialSubsciption" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mySettingsForm">
+      <soap12:operation soapAction="urn:IEzzyService/mySettingsForm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="approverSettingsForm">
+      <soap12:operation soapAction="urn:IEzzyService/approverSettingsForm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteWorkflow">
+      <soap12:operation soapAction="urn:IEzzyService/deleteWorkflow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateWorkflow">
+      <soap12:operation soapAction="urn:IEzzyService/updateWorkflow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveWorkflow">
+      <soap12:operation soapAction="urn:IEzzyService/saveWorkflow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="activateWorkflow">
+      <soap12:operation soapAction="urn:IEzzyService/activateWorkflow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLogDetails">
+      <soap12:operation soapAction="urn:IEzzyService/getLogDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCorrespondenceForm">
+      <soap12:operation soapAction="urn:IEzzyService/getCorrespondenceForm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPictureForm">
+      <soap12:operation soapAction="urn:IEzzyService/getPictureForm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail">
+      <soap12:operation soapAction="urn:IEzzyService/SendEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getWorkflowDetails">
+      <soap12:operation soapAction="urn:IEzzyService/getWorkflowDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="allMyWorkflows">
+      <soap12:operation soapAction="urn:IEzzyService/allMyWorkflows" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addWorkTaskDetails">
+      <soap12:operation soapAction="urn:IEzzyService/addWorkTaskDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEmailMessage">
+      <soap12:operation soapAction="urn:IEzzyService/getEmailMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registerWorkflow">
+      <soap12:operation soapAction="urn:IEzzyService/registerWorkflow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSubscriptionDateEnterprise">
+      <soap12:operation soapAction="urn:IEzzyService/getSubscriptionDateEnterprise" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setUpXero">
+      <soap12:operation soapAction="urn:IEzzyService/setUpXero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setUpMYOB">
+      <soap12:operation soapAction="urn:IEzzyService/setUpMYOB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="savePromotionCode">
+      <soap12:operation soapAction="urn:IEzzyService/savePromotionCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeGroup">
+      <soap12:operation soapAction="urn:IEzzyService/removeGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="moveToRecycleBin">
+      <soap12:operation soapAction="urn:IEzzyService/moveToRecycleBin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="emptyRecycleBin">
+      <soap12:operation soapAction="urn:IEzzyService/emptyRecycleBin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="restoreDocuments">
+      <soap12:operation soapAction="urn:IEzzyService/restoreDocuments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteInvoice">
+      <soap12:operation soapAction="urn:IEzzyService/deleteInvoice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchDocuments">
+      <soap12:operation soapAction="urn:IEzzyService/searchDocuments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchMyDocuments">
+      <soap12:operation soapAction="urn:IEzzyService/searchMyDocuments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMyTemplates">
+      <soap12:operation soapAction="urn:IEzzyService/getMyTemplates" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMyDocuments">
+      <soap12:operation soapAction="urn:IEzzyService/getMyDocuments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMyRecentDocuments">
+      <soap12:operation soapAction="urn:IEzzyService/getMyRecentDocuments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMyInvoiceQueue">
+      <soap12:operation soapAction="urn:IEzzyService/getMyInvoiceQueue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addLearningRule">
+      <soap12:operation soapAction="urn:IEzzyService/addLearningRule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addLearningCorrection">
+      <soap12:operation soapAction="urn:IEzzyService/addLearningCorrection" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteLearningRule">
+      <soap12:operation soapAction="urn:IEzzyService/deleteLearningRule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addLearning">
+      <soap12:operation soapAction="urn:IEzzyService/addLearning" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addLicense">
+      <soap12:operation soapAction="urn:IEzzyService/addLicense" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkLicense">
+      <soap12:operation soapAction="urn:IEzzyService/checkLicense" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateLicenseUsage">
+      <soap12:operation soapAction="urn:IEzzyService/updateLicenseUsage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllMyInvoiceQueue">
+      <soap12:operation soapAction="urn:IEzzyService/getAllMyInvoiceQueue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllMyInvoiceQueue2">
+      <soap12:operation soapAction="urn:IEzzyService/getAllMyInvoiceQueue2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMyAttachments">
+      <soap12:operation soapAction="urn:IEzzyService/getMyAttachments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAttachments">
+      <soap12:operation soapAction="urn:IEzzyService/getAttachments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDocumentByName">
+      <soap12:operation soapAction="urn:IEzzyService/getDocumentByName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDocumentClassification">
+      <soap12:operation soapAction="urn:IEzzyService/getDocumentClassification" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDeletedDocuments">
+      <soap12:operation soapAction="urn:IEzzyService/getDeletedDocuments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="subscriptionDetails">
+      <soap12:operation soapAction="urn:IEzzyService/subscriptionDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="subscriptionDetails2">
+      <soap12:operation soapAction="urn:IEzzyService/subscriptionDetails2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="subscriptionDetailsEnterprise">
+      <soap12:operation soapAction="urn:IEzzyService/subscriptionDetailsEnterprise" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMyDocumentTree">
+      <soap12:operation soapAction="urn:IEzzyService/getMyDocumentTree" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReviewDocument">
+      <soap12:operation soapAction="urn:IEzzyService/getReviewDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="generatReviewDocument">
+      <soap12:operation soapAction="urn:IEzzyService/generatReviewDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MyGroupsUsers">
+      <soap12:operation soapAction="urn:IEzzyService/MyGroupsUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setReviewComplete">
+      <soap12:operation soapAction="urn:IEzzyService/setReviewComplete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMyDocumentTypes">
+      <soap12:operation soapAction="urn:IEzzyService/getMyDocumentTypes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMyApplications">
+      <soap12:operation soapAction="urn:IEzzyService/getMyApplications" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="disconnectMYOB">
+      <soap12:operation soapAction="urn:IEzzyService/disconnectMYOB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMySuppliers">
+      <soap12:operation soapAction="urn:IEzzyService/getMySuppliers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMySuppliersFilter">
+      <soap12:operation soapAction="urn:IEzzyService/getMySuppliersFilter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMySuppliers2">
+      <soap12:operation soapAction="urn:IEzzyService/getMySuppliers2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMyPurchaseOrders">
+      <soap12:operation soapAction="urn:IEzzyService/getMyPurchaseOrders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verifyTLS">
+      <soap12:operation soapAction="urn:IEzzyService/verifyTLS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSupplierPortal">
+      <soap12:operation soapAction="urn:IEzzyService/getSupplierPortal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createAPIKey">
+      <soap12:operation soapAction="urn:IEzzyService/createAPIKey" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createSupplierPortal">
+      <soap12:operation soapAction="urn:IEzzyService/createSupplierPortal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveMySettingsForm">
+      <soap12:operation soapAction="urn:IEzzyService/saveMySettingsForm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveHQSettingsForm">
+      <soap12:operation soapAction="urn:IEzzyService/saveHQSettingsForm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MyUsers">
+      <soap12:operation soapAction="urn:IEzzyService/MyUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MyGroupsUsage">
+      <soap12:operation soapAction="urn:IEzzyService/MyGroupsUsage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MyInvitedUsers">
+      <soap12:operation soapAction="urn:IEzzyService/MyInvitedUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserToGroup">
+      <soap12:operation soapAction="urn:IEzzyService/AddUserToGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelSubscription">
+      <soap12:operation soapAction="urn:IEzzyService/cancelSubscription" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inviteUser">
+      <soap12:operation soapAction="urn:IEzzyService/inviteUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registerNewUser">
+      <soap12:operation soapAction="urn:IEzzyService/registerNewUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registerNewUser2">
+      <soap12:operation soapAction="urn:IEzzyService/registerNewUser2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registerNewUser3">
+      <soap12:operation soapAction="urn:IEzzyService/registerNewUser3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registerNewUser4">
+      <soap12:operation soapAction="urn:IEzzyService/registerNewUser4" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="upgradeToPartnerPlan">
+      <soap12:operation soapAction="urn:IEzzyService/upgradeToPartnerPlan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="upgradeToHQ">
+      <soap12:operation soapAction="urn:IEzzyService/upgradeToHQ" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addNewUser">
+      <soap12:operation soapAction="urn:IEzzyService/addNewUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getWaitingApprovalBatch">
+      <soap12:operation soapAction="urn:IEzzyService/getWaitingApprovalBatch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="approveBatch">
+      <soap12:operation soapAction="urn:IEzzyService/approveBatch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="revokeUsers">
+      <soap12:operation soapAction="urn:IEzzyService/revokeUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getExportTarget">
+      <soap12:operation soapAction="urn:IEzzyService/getExportTarget" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getWorktaskStatus">
+      <soap12:operation soapAction="urn:IEzzyService/getWorktaskStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="testExportConnection">
+      <soap12:operation soapAction="urn:IEzzyService/testExportConnection" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkConnection">
+      <soap12:operation soapAction="urn:IEzzyService/checkConnection" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="disconnectConnection">
+      <soap12:operation soapAction="urn:IEzzyService/disconnectConnection" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="disconnectExport">
+      <soap12:operation soapAction="urn:IEzzyService/disconnectExport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isSupportUser">
+      <soap12:operation soapAction="urn:IEzzyService/isSupportUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveEmailRule">
+      <soap12:operation soapAction="urn:IEzzyService/saveEmailRule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEmailRule">
+      <soap12:operation soapAction="urn:IEzzyService/getEmailRule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addWorkTask">
+      <soap12:operation soapAction="urn:IEzzyService/addWorkTask" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoWork">
+      <soap12:operation soapAction="urn:IEzzyService/DoWork" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login2">
+      <soap12:operation soapAction="urn:IEzzyService/Login2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="urn:IEzzyService/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUser">
+      <soap12:operation soapAction="urn:IEzzyService/getUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logOut">
+      <soap12:operation soapAction="urn:IEzzyService/logOut" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="approve">
+      <soap12:operation soapAction="urn:IEzzyService/approve" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="approveInvoice">
+      <soap12:operation soapAction="urn:IEzzyService/approveInvoice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="restartInvoice">
+      <soap12:operation soapAction="urn:IEzzyService/restartInvoice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="finishReview">
+      <soap12:operation soapAction="urn:IEzzyService/finishReview" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="closeAllReview">
+      <soap12:operation soapAction="urn:IEzzyService/closeAllReview" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="approvePortalInvoice">
+      <soap12:operation soapAction="urn:IEzzyService/approvePortalInvoice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateFormData">
+      <soap12:operation soapAction="urn:IEzzyService/updateFormData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFormData">
+      <soap12:operation soapAction="urn:IEzzyService/getFormData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveLabel">
+      <soap12:operation soapAction="urn:IEzzyService/saveLabel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="myLabels">
+      <soap12:operation soapAction="urn:IEzzyService/myLabels" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchCache">
+      <soap12:operation soapAction="urn:IEzzyService/searchCache" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reclassifyInvoice">
+      <soap12:operation soapAction="urn:IEzzyService/reclassifyInvoice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelApproveInvoice">
+      <soap12:operation soapAction="urn:IEzzyService/cancelApproveInvoice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rejectInvoice">
+      <soap12:operation soapAction="urn:IEzzyService/rejectInvoice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addExternalTask">
+      <soap12:operation soapAction="urn:IEzzyService/addExternalTask" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="finishExternalTask">
+      <soap12:operation soapAction="urn:IEzzyService/finishExternalTask" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkChecksum">
+      <soap12:operation soapAction="urn:IEzzyService/checkChecksum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addCRMUser">
+      <soap12:operation soapAction="urn:IEzzyService/addCRMUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addCRMNote">
+      <soap12:operation soapAction="urn:IEzzyService/addCRMNote" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getQueueHash">
+      <soap12:operation soapAction="urn:IEzzyService/getQueueHash" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="workflowStatus">
+      <soap12:operation soapAction="urn:IEzzyService/workflowStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="allQueueStates">
+      <soap12:operation soapAction="urn:IEzzyService/allQueueStates" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="connectToXero">
+      <soap12:operation soapAction="urn:IEzzyService/connectToXero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="returnAllToWorkflow">
+      <soap12:operation soapAction="urn:IEzzyService/returnAllToWorkflow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeContacts">
+      <soap12:operation soapAction="urn:IEzzyService/removeContacts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MyEnterpriseUsage">
+      <soap12:operation soapAction="urn:IEzzyService/MyEnterpriseUsage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MyEnterpriseUsageDetailed">
+      <soap12:operation soapAction="urn:IEzzyService/MyEnterpriseUsageDetailed" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addContacts">
+      <soap12:operation soapAction="urn:IEzzyService/addContacts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="appendContacts">
+      <soap12:operation soapAction="urn:IEzzyService/appendContacts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addPurchaseOrders">
+      <soap12:operation soapAction="urn:IEzzyService/addPurchaseOrders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="copyWorkflow">
+      <soap12:operation soapAction="urn:IEzzyService/copyWorkflow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addFuzzyCodes">
+      <soap12:operation soapAction="urn:IEzzyService/addFuzzyCodes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveInvoice">
+      <soap12:operation soapAction="urn:IEzzyService/saveInvoice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMyStatistics">
+      <soap12:operation soapAction="urn:IEzzyService/getMyStatistics" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMyCaptures">
+      <soap12:operation soapAction="urn:IEzzyService/getMyCaptures" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="savePictureForm">
+      <soap12:operation soapAction="urn:IEzzyService/savePictureForm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateAllTags">
+      <soap12:operation soapAction="urn:IEzzyService/updateAllTags" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTracking">
+      <soap12:operation soapAction="urn:IEzzyService/getTracking" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTracking2">
+      <soap12:operation soapAction="urn:IEzzyService/getTracking2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveWorkflowSettings">
+      <soap12:operation soapAction="urn:IEzzyService/saveWorkflowSettings" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getWorkflowSettings">
+      <soap12:operation soapAction="urn:IEzzyService/getWorkflowSettings" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserNotes">
+      <soap12:operation soapAction="urn:IEzzyService/getUserNotes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCRMNotes">
+      <soap12:operation soapAction="urn:IEzzyService/getCRMNotes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateUser">
+      <soap12:operation soapAction="urn:IEzzyService/updateUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="renameUser">
+      <soap12:operation soapAction="urn:IEzzyService/renameUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getGLCodes">
+      <soap12:operation soapAction="urn:IEzzyService/getGLCodes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="refreshGLCache">
+      <soap12:operation soapAction="urn:IEzzyService/refreshGLCache" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveCorrespondenceForm">
+      <soap12:operation soapAction="urn:IEzzyService/saveCorrespondenceForm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveTag">
+      <soap12:operation soapAction="urn:IEzzyService/saveTag" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validatePaypal">
+      <soap12:operation soapAction="urn:IEzzyService/validatePaypal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="twoFactorEnabled">
+      <soap12:operation soapAction="urn:IEzzyService/twoFactorEnabled" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addUserNote">
+      <soap12:operation soapAction="urn:IEzzyService/addUserNote" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCreditCount">
+      <soap12:operation soapAction="urn:IEzzyService/getCreditCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSubscriptionDate">
+      <soap12:operation soapAction="urn:IEzzyService/getSubscriptionDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveDocumentStream">
+      <soap12:operation soapAction="urn:IEzzyService/saveDocumentStream" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveInvoiceHeaderandTable">
+      <soap12:operation soapAction="urn:IEzzyService/saveInvoiceHeaderandTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveInvoiceTable">
+      <soap12:operation soapAction="urn:IEzzyService/saveInvoiceTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendVerificationCode">
+      <soap12:operation soapAction="urn:IEzzyService/sendVerificationCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDocumentStream">
+      <soap12:operation soapAction="urn:IEzzyService/getDocumentStream" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="transferSubscription">
+      <soap12:operation soapAction="urn:IEzzyService/transferSubscription" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateGlobalLearning">
+      <soap12:operation soapAction="urn:IEzzyService/updateGlobalLearning" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStripeCustomer">
+      <soap12:operation soapAction="urn:IEzzyService/getStripeCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateStripeCustomer">
+      <soap12:operation soapAction="urn:IEzzyService/updateStripeCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteLearning">
+      <soap12:operation soapAction="urn:IEzzyService/deleteLearning" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="notJunkEmail">
+      <soap12:operation soapAction="urn:IEzzyService/notJunkEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="newInvoiceImage">
+      <soap12:operation soapAction="urn:IEzzyService/newInvoiceImage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addServer">
+      <soap12:operation soapAction="urn:IEzzyService/addServer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addApplication">
+      <soap12:operation soapAction="urn:IEzzyService/addApplication" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uploadAppImage">
+      <soap12:operation soapAction="urn:IEzzyService/uploadAppImage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="startApp">
+      <soap12:operation soapAction="urn:IEzzyService/startApp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uploadInvoiceImage">
+      <soap12:operation soapAction="urn:IEzzyService/uploadInvoiceImage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMyApprovers">
+      <soap12:operation soapAction="urn:IEzzyService/getMyApprovers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getApproverList">
+      <soap12:operation soapAction="urn:IEzzyService/getApproverList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveApproverList">
+      <soap12:operation soapAction="urn:IEzzyService/saveApproverList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changeApprover">
+      <soap12:operation soapAction="urn:IEzzyService/changeApprover" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInvoiceHeaderBlocks">
+      <soap12:operation soapAction="urn:IEzzyService/getInvoiceHeaderBlocks" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInvoiceRows">
+      <soap12:operation soapAction="urn:IEzzyService/getInvoiceRows" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllInvoiceBlocks">
+      <soap12:operation soapAction="urn:IEzzyService/getAllInvoiceBlocks" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInvoiceDetails">
+      <soap12:operation soapAction="urn:IEzzyService/getInvoiceDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInvoiceDetails2">
+      <soap12:operation soapAction="urn:IEzzyService/getInvoiceDetails2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EzzyService">
+    <wsdl:port name="CustomBinding_IEzzyService" binding="tns:CustomBinding_IEzzyService">
+      <soap12:address location="https://app.ezzydoc.com/EzzyService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>https://app.ezzydoc.com/EzzyService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

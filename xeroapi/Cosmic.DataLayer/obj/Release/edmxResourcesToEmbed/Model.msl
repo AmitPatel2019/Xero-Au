@@ -1,0 +1,2012 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="XS_XEROModelStoreContainer" CdmEntityContainer="XS_XEROEntities">
+    <EntitySetMapping Name="ConfigSettings">
+      <EntityTypeMapping TypeName="XS_XEROModel.ConfigSetting">
+        <MappingFragment StoreEntitySet="ConfigSetting">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ErrorLogs">
+      <EntityTypeMapping TypeName="XS_XEROModel.ErrorLog">
+        <MappingFragment StoreEntitySet="ErrorLog">
+          <ScalarProperty Name="ErrorLogID" ColumnName="ErrorLogID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="PlatformID" ColumnName="PlatformID" />
+          <ScalarProperty Name="LoginID" ColumnName="LoginID" />
+          <ScalarProperty Name="ReckonFileID" ColumnName="ReckonFileID" />
+          <ScalarProperty Name="QboConnectID" ColumnName="QboConnectID" />
+          <ScalarProperty Name="Controller" ColumnName="Controller" />
+          <ScalarProperty Name="Method" ColumnName="Method" />
+          <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+          <ScalarProperty Name="ErrorStackTrace" ColumnName="ErrorStackTrace" />
+          <ScalarProperty Name="ErrorLogDate" ColumnName="ErrorLogDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FileSQLMasters">
+      <EntityTypeMapping TypeName="XS_XEROModel.FileSQLMaster">
+        <MappingFragment StoreEntitySet="FileSQLMasters">
+          <ScalarProperty Name="SqlID" ColumnName="SqlID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="SqlServerName" ColumnName="SqlServerName" />
+          <ScalarProperty Name="SqlDataBaseName" ColumnName="SqlDataBaseName" />
+          <ScalarProperty Name="SqlAuthenticationMode" ColumnName="SqlAuthenticationMode" />
+          <ScalarProperty Name="SqlUserName" ColumnName="SqlUserName" />
+          <ScalarProperty Name="SqlPassword" ColumnName="SqlPassword" />
+          <ScalarProperty Name="AddedDte" ColumnName="AddedDte" />
+          <ScalarProperty Name="UpdatedDte" ColumnName="UpdatedDte" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoginMasters">
+      <EntityTypeMapping TypeName="XS_XEROModel.LoginMaster">
+        <MappingFragment StoreEntitySet="LoginMaster">
+          <ScalarProperty Name="LoginID" ColumnName="LoginID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="PlatformID" ColumnName="PlatformID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Token" ColumnName="Token" />
+          <ScalarProperty Name="TokenExpiredDate" ColumnName="TokenExpiredDate" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="LastLogin" ColumnName="LastLogin" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="DeActivetedOn" ColumnName="DeActivetedOn" />
+          <ScalarProperty Name="ActivationCode" ColumnName="ActivationCode" />
+          <ScalarProperty Name="TokenAvailFor" ColumnName="TokenAvailFor" />
+          <ScalarProperty Name="IsEzUploadRequired" ColumnName="IsEzUploadRequired" />
+          <ScalarProperty Name="EzUploadDone" ColumnName="EzUploadDone" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanMasters">
+      <EntityTypeMapping TypeName="XS_XEROModel.PlanMaster">
+        <MappingFragment StoreEntitySet="PlanMaster">
+          <ScalarProperty Name="PlanID" ColumnName="PlanID" />
+          <ScalarProperty Name="PlanName" ColumnName="PlanName" />
+          <ScalarProperty Name="PlanDescription" ColumnName="PlanDescription" />
+          <ScalarProperty Name="TrialDays" ColumnName="TrialDays" />
+          <ScalarProperty Name="TrialPdf" ColumnName="TrialPdf" />
+          <ScalarProperty Name="PaidPdf" ColumnName="PaidPdf" />
+          <ScalarProperty Name="RatePerYearGST" ColumnName="RatePerYearGST" />
+          <ScalarProperty Name="RatePerYearSubTotal" ColumnName="RatePerYearSubTotal" />
+          <ScalarProperty Name="RatePerYearTotal" ColumnName="RatePerYearTotal" />
+          <ScalarProperty Name="IsPaidPlan" ColumnName="IsPaidPlan" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlatformMasters">
+      <EntityTypeMapping TypeName="XS_XEROModel.PlatformMaster">
+        <MappingFragment StoreEntitySet="PlatformMaster">
+          <ScalarProperty Name="PlatformID" ColumnName="PlatformID" />
+          <ScalarProperty Name="PlatformCode" ColumnName="PlatformCode" />
+          <ScalarProperty Name="PlatformName" ColumnName="PlatformName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QboChartOfAccounts">
+      <EntityTypeMapping TypeName="XS_XEROModel.QboChartOfAccount">
+        <MappingFragment StoreEntitySet="QboChartOfAccount">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="QboConnectID" ColumnName="QboConnectID" />
+          <ScalarProperty Name="QboAccountID" ColumnName="QboAccountID" />
+          <ScalarProperty Name="FullyQualifiedNameField" ColumnName="FullyQualifiedNameField" />
+          <ScalarProperty Name="AccountSubTypeField" ColumnName="AccountSubTypeField" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QBODocuments">
+      <EntityTypeMapping TypeName="XS_XEROModel.QBODocument">
+        <MappingFragment StoreEntitySet="QBODocument">
+          <ScalarProperty Name="DocumentID" ColumnName="DocumentID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="QboConnectID" ColumnName="QboConnectID" />
+          <ScalarProperty Name="QboInvoiceID" ColumnName="QboInvoiceID" />
+          <ScalarProperty Name="QboVendorID" ColumnName="QboVendorID" />
+          <ScalarProperty Name="QboVendorName" ColumnName="QboVendorName" />
+          <ScalarProperty Name="QboInvoiceDate" ColumnName="QboInvoiceDate" />
+          <ScalarProperty Name="ScanInvoiceID" ColumnName="ScanInvoiceID" />
+          <ScalarProperty Name="ScanFile_Name" ColumnName="ScanFile_Name" />
+          <ScalarProperty Name="ScanBlob_Url" ColumnName="ScanBlob_Url" />
+          <ScalarProperty Name="ScanABNNumber" ColumnName="ScanABNNumber" />
+          <ScalarProperty Name="ScanRefNumber" ColumnName="ScanRefNumber" />
+          <ScalarProperty Name="ScanDocType" ColumnName="ScanDocType" />
+          <ScalarProperty Name="ScanSubTotal" ColumnName="ScanSubTotal" />
+          <ScalarProperty Name="ScanChargeTotal" ColumnName="ScanChargeTotal" />
+          <ScalarProperty Name="ScanDocumentTotal" ColumnName="ScanDocumentTotal" />
+          <ScalarProperty Name="ScanTag" ColumnName="ScanTag" />
+          <ScalarProperty Name="ScanInvoiceDate" ColumnName="ScanInvoiceDate" />
+          <ScalarProperty Name="ScanPurchaseOrder" ColumnName="ScanPurchaseOrder" />
+          <ScalarProperty Name="ScanVendorName" ColumnName="ScanVendorName" />
+          <ScalarProperty Name="ScanInvoiceTotal" ColumnName="ScanInvoiceTotal" />
+          <ScalarProperty Name="ScanTaxTotal" ColumnName="ScanTaxTotal" />
+          <ScalarProperty Name="ScanDocClassification" ColumnName="ScanDocClassification" />
+          <ScalarProperty Name="ScanServiceStatus" ColumnName="ScanServiceStatus" />
+          <ScalarProperty Name="ScanServiceMessage" ColumnName="ScanServiceMessage" />
+          <ScalarProperty Name="UploadedDate" ColumnName="UploadedDate" />
+          <ScalarProperty Name="QBOError" ColumnName="QBOError" />
+          <ScalarProperty Name="AspSessionID" ColumnName="AspSessionID" />
+          <ScalarProperty Name="Approved" ColumnName="Approved" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="QboBillAddedOn" ColumnName="QboBillAddedOn" />
+          <ScalarProperty Name="QboBillAddedBy" ColumnName="QboBillAddedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QboDocumentLines">
+      <EntityTypeMapping TypeName="XS_XEROModel.QboDocumentLine">
+        <MappingFragment StoreEntitySet="QboDocumentLine">
+          <ScalarProperty Name="DocumentLineID" ColumnName="DocumentLineID" />
+          <ScalarProperty Name="DocumentID" ColumnName="DocumentID" />
+          <ScalarProperty Name="QboAccountID" ColumnName="QboAccountID" />
+          <ScalarProperty Name="QboAccountName" ColumnName="QboAccountName" />
+          <ScalarProperty Name="QboClassID" ColumnName="QboClassID" />
+          <ScalarProperty Name="QboClassName" ColumnName="QboClassName" />
+          <ScalarProperty Name="QboJobID" ColumnName="QboJobID" />
+          <ScalarProperty Name="QboJobName" ColumnName="QboJobName" />
+          <ScalarProperty Name="ScanDescription" ColumnName="ScanDescription" />
+          <ScalarProperty Name="ScanArticle_Code" ColumnName="ScanArticle_Code" />
+          <ScalarProperty Name="ScanGL_Code" ColumnName="ScanGL_Code" />
+          <ScalarProperty Name="ScanGST" ColumnName="ScanGST" />
+          <ScalarProperty Name="ScanTax_Code" ColumnName="ScanTax_Code" />
+          <ScalarProperty Name="ScanTracking" ColumnName="ScanTracking" />
+          <ScalarProperty Name="ScanUnit_Measure" ColumnName="ScanUnit_Measure" />
+          <ScalarProperty Name="ScanUnit_Price" ColumnName="ScanUnit_Price" />
+          <ScalarProperty Name="Scan_Quantity" ColumnName="Scan_Quantity" />
+          <ScalarProperty Name="Scan_Total" ColumnName="Scan_Total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QBOEzzyAccounts">
+      <EntityTypeMapping TypeName="XS_XEROModel.QBOEzzyAccount">
+        <MappingFragment StoreEntitySet="QBOEzzyAccount">
+          <ScalarProperty Name="QBOEzzyID" ColumnName="QBOEzzyID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="QboConnectID" ColumnName="QboConnectID" />
+          <ScalarProperty Name="EzzyUserName" ColumnName="EzzyUserName" />
+          <ScalarProperty Name="EzzyPassword" ColumnName="EzzyPassword" />
+          <ScalarProperty Name="EzzyEmailAddress" ColumnName="EzzyEmailAddress" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QBOMasters">
+      <EntityTypeMapping TypeName="XS_XEROModel.QBOMaster">
+        <MappingFragment StoreEntitySet="QBOMaster">
+          <ScalarProperty Name="QboID" ColumnName="QboID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="RealmId" ColumnName="RealmId" />
+          <ScalarProperty Name="AccessToken" ColumnName="AccessToken" />
+          <ScalarProperty Name="AccessTokenExpiresIn" ColumnName="AccessTokenExpiresIn" />
+          <ScalarProperty Name="RefreshToken" ColumnName="RefreshToken" />
+          <ScalarProperty Name="RefreshTokenExpiresIn" ColumnName="RefreshTokenExpiresIn" />
+          <ScalarProperty Name="IdentityToken" ColumnName="IdentityToken" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="LeagalName" ColumnName="LeagalName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PrimaryPhone" ColumnName="PrimaryPhone" />
+          <ScalarProperty Name="WebAddr" ColumnName="WebAddr" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QboTaxes">
+      <EntityTypeMapping TypeName="XS_XEROModel.QboTax">
+        <MappingFragment StoreEntitySet="QboTax">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="QboConnectID" ColumnName="QboConnectID" />
+          <ScalarProperty Name="TaxName" ColumnName="TaxName" />
+          <ScalarProperty Name="TaxID" ColumnName="TaxID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QboVendors">
+      <EntityTypeMapping TypeName="XS_XEROModel.QboVendor">
+        <MappingFragment StoreEntitySet="QboVendor">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="QboConnectID" ColumnName="QboConnectID" />
+          <ScalarProperty Name="QboAccountID" ColumnName="QboAccountID" />
+          <ScalarProperty Name="QboVendorID" ColumnName="QboVendorID" />
+          <ScalarProperty Name="DisplayNameField" ColumnName="DisplayNameField" />
+          <ScalarProperty Name="CityField" ColumnName="CityField" />
+          <ScalarProperty Name="CountrySubDivisionCodeField" ColumnName="CountrySubDivisionCodeField" />
+          <ScalarProperty Name="PostalCodeField" ColumnName="PostalCodeField" />
+          <ScalarProperty Name="CountryField" ColumnName="CountryField" />
+          <ScalarProperty Name="PrimaryPhone" ColumnName="PrimaryPhone" />
+          <ScalarProperty Name="PrimaryEmailAddr" ColumnName="PrimaryEmailAddr" />
+          <ScalarProperty Name="TaxIdentifier" ColumnName="TaxIdentifier" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReckonDesktopMasters">
+      <EntityTypeMapping TypeName="XS_XEROModel.ReckonDesktopMaster">
+        <MappingFragment StoreEntitySet="ReckonDesktopMaster">
+          <ScalarProperty Name="ReckonFileID" ColumnName="ReckonFileID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="LegalCompanyName" ColumnName="LegalCompanyName" />
+          <ScalarProperty Name="IsSampleCompany" ColumnName="IsSampleCompany" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Addr1" ColumnName="Addr1" />
+          <ScalarProperty Name="Addr2" ColumnName="Addr2" />
+          <ScalarProperty Name="Addr3" ColumnName="Addr3" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="AdddeBy" ColumnName="AdddeBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsUsingJobCosting" ColumnName="IsUsingJobCosting" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReckonDocuments">
+      <EntityTypeMapping TypeName="XS_XEROModel.ReckonDocument">
+        <MappingFragment StoreEntitySet="ReckonDocument">
+          <ScalarProperty Name="ReckonDocumentID" ColumnName="ReckonDocumentID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="ReckonFileID" ColumnName="ReckonFileID" />
+          <ScalarProperty Name="ScanInvoiceID" ColumnName="ScanInvoiceID" />
+          <ScalarProperty Name="TxnID" ColumnName="TxnID" />
+          <ScalarProperty Name="ScanPdfPath" ColumnName="ScanPdfPath" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="InvoiceType" ColumnName="InvoiceType" />
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+          <ScalarProperty Name="VendorName" ColumnName="VendorName" />
+          <ScalarProperty Name="InvoiceTotal" ColumnName="InvoiceTotal" />
+          <ScalarProperty Name="TaxTotal" ColumnName="TaxTotal" />
+          <ScalarProperty Name="UploadedDate" ColumnName="UploadedDate" />
+          <ScalarProperty Name="ReckonError" ColumnName="ReckonError" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReckonEzzyAccounts">
+      <EntityTypeMapping TypeName="XS_XEROModel.ReckonEzzyAccount">
+        <MappingFragment StoreEntitySet="ReckonEzzyAccount">
+          <ScalarProperty Name="RCEzzyID" ColumnName="RCEzzyID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="ReckonFileID" ColumnName="ReckonFileID" />
+          <ScalarProperty Name="EzzyEmailAddress" ColumnName="EzzyEmailAddress" />
+          <ScalarProperty Name="EzzyUserName" ColumnName="EzzyUserName" />
+          <ScalarProperty Name="EzzyPassword" ColumnName="EzzyPassword" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReckonFileUserAccesses">
+      <EntityTypeMapping TypeName="XS_XEROModel.ReckonFileUserAccess">
+        <MappingFragment StoreEntitySet="ReckonFileUserAccess">
+          <ScalarProperty Name="ReckonUserAccessID" ColumnName="ReckonUserAccessID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ReckonFileID" ColumnName="ReckonFileID" />
+          <ScalarProperty Name="IsAccess" ColumnName="IsAccess" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReckonVendorDefaults">
+      <EntityTypeMapping TypeName="XS_XEROModel.ReckonVendorDefault">
+        <MappingFragment StoreEntitySet="ReckonVendorDefault">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="ReckonFileID" ColumnName="ReckonFileID" />
+          <ScalarProperty Name="VendorListID" ColumnName="VendorListID" />
+          <ScalarProperty Name="DefaultExpenseListID" ColumnName="DefaultExpenseListID" />
+          <ScalarProperty Name="DefaultExpenseAccount" ColumnName="DefaultExpenseAccount" />
+          <ScalarProperty Name="DefaultItemListID" ColumnName="DefaultItemListID" />
+          <ScalarProperty Name="DefaultItem" ColumnName="DefaultItem" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StripePayments">
+      <EntityTypeMapping TypeName="XS_XEROModel.StripePayment">
+        <MappingFragment StoreEntitySet="StripePayment">
+          <ScalarProperty Name="StripePaymentID" ColumnName="StripePaymentID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="PlanID" ColumnName="PlanID" />
+          <ScalarProperty Name="StripeID" ColumnName="StripeID" />
+          <ScalarProperty Name="StripeBalanceTxnID" ColumnName="StripeBalanceTxnID" />
+          <ScalarProperty Name="StripeIsPaid" ColumnName="StripeIsPaid" />
+          <ScalarProperty Name="StripeStatus" ColumnName="StripeStatus" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="StripeDateTime" ColumnName="StripeDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubscriptionMasters">
+      <EntityTypeMapping TypeName="XS_XEROModel.SubscriptionMaster">
+        <MappingFragment StoreEntitySet="SubscriptionMaster">
+          <ScalarProperty Name="SubscriptionID" ColumnName="SubscriptionID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="PlanID" ColumnName="PlanID" />
+          <ScalarProperty Name="StartYear" ColumnName="StartYear" />
+          <ScalarProperty Name="StartMonth" ColumnName="StartMonth" />
+          <ScalarProperty Name="StartDay" ColumnName="StartDay" />
+          <ScalarProperty Name="StartDateTime" ColumnName="StartDateTime" />
+          <ScalarProperty Name="TrialDays" ColumnName="TrialDays" />
+          <ScalarProperty Name="TrialPdf" ColumnName="TrialPdf" />
+          <ScalarProperty Name="PaidPdf" ColumnName="PaidPdf" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="XeroChartOfAccounts">
+      <EntityTypeMapping TypeName="XS_XEROModel.XeroChartOfAccount">
+        <MappingFragment StoreEntitySet="XeroChartOfAccount">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="XeroConnectID" ColumnName="XeroConnectID" />
+          <ScalarProperty Name="XeroAccountID" ColumnName="XeroAccountID" />
+          <ScalarProperty Name="FullyQualifiedNameField" ColumnName="FullyQualifiedNameField" />
+          <ScalarProperty Name="AccountSubTypeField" ColumnName="AccountSubTypeField" />
+          <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="XeroDocuments">
+      <EntityTypeMapping TypeName="XS_XEROModel.XeroDocument">
+        <MappingFragment StoreEntitySet="XeroDocument">
+          <ScalarProperty Name="DocumentID" ColumnName="DocumentID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="XeroConnectID" ColumnName="XeroConnectID" />
+          <ScalarProperty Name="XeroInvoiceID" ColumnName="XeroInvoiceID" />
+          <ScalarProperty Name="XeroVendorID" ColumnName="XeroVendorID" />
+          <ScalarProperty Name="XeroVendorName" ColumnName="XeroVendorName" />
+          <ScalarProperty Name="XeroInvoiceDate" ColumnName="XeroInvoiceDate" />
+          <ScalarProperty Name="ScanInvoiceID" ColumnName="ScanInvoiceID" />
+          <ScalarProperty Name="ScanFile_Name" ColumnName="ScanFile_Name" />
+          <ScalarProperty Name="ScanBlob_Url" ColumnName="ScanBlob_Url" />
+          <ScalarProperty Name="ScanABNNumber" ColumnName="ScanABNNumber" />
+          <ScalarProperty Name="ScanRefNumber" ColumnName="ScanRefNumber" />
+          <ScalarProperty Name="ScanDocType" ColumnName="ScanDocType" />
+          <ScalarProperty Name="ScanSubTotal" ColumnName="ScanSubTotal" />
+          <ScalarProperty Name="ScanChargeTotal" ColumnName="ScanChargeTotal" />
+          <ScalarProperty Name="ScanDocumentTotal" ColumnName="ScanDocumentTotal" />
+          <ScalarProperty Name="ScanTag" ColumnName="ScanTag" />
+          <ScalarProperty Name="ScanInvoiceDate" ColumnName="ScanInvoiceDate" />
+          <ScalarProperty Name="ScanPurchaseOrder" ColumnName="ScanPurchaseOrder" />
+          <ScalarProperty Name="ScanVendorName" ColumnName="ScanVendorName" />
+          <ScalarProperty Name="ScanInvoiceTotal" ColumnName="ScanInvoiceTotal" />
+          <ScalarProperty Name="ScanTaxTotal" ColumnName="ScanTaxTotal" />
+          <ScalarProperty Name="ScanDocClassification" ColumnName="ScanDocClassification" />
+          <ScalarProperty Name="ScanServiceStatus" ColumnName="ScanServiceStatus" />
+          <ScalarProperty Name="ScanServiceMessage" ColumnName="ScanServiceMessage" />
+          <ScalarProperty Name="UploadedDate" ColumnName="UploadedDate" />
+          <ScalarProperty Name="XeroError" ColumnName="XeroError" />
+          <ScalarProperty Name="AspSessionID" ColumnName="AspSessionID" />
+          <ScalarProperty Name="Approved" ColumnName="Approved" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="XeroBillAddedOn" ColumnName="XeroBillAddedOn" />
+          <ScalarProperty Name="XeroBillAddedBy" ColumnName="XeroBillAddedBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="XeroDocumentLines">
+      <EntityTypeMapping TypeName="XS_XEROModel.XeroDocumentLine">
+        <MappingFragment StoreEntitySet="XeroDocumentLine">
+          <ScalarProperty Name="DocumentLineID" ColumnName="DocumentLineID" />
+          <ScalarProperty Name="DocumentID" ColumnName="DocumentID" />
+          <ScalarProperty Name="XeroAccountID" ColumnName="XeroAccountID" />
+          <ScalarProperty Name="XeroAccountName" ColumnName="XeroAccountName" />
+          <ScalarProperty Name="XeroClassID" ColumnName="XeroClassID" />
+          <ScalarProperty Name="XeroClassName" ColumnName="XeroClassName" />
+          <ScalarProperty Name="XeroJobID" ColumnName="XeroJobID" />
+          <ScalarProperty Name="XeroJobName" ColumnName="XeroJobName" />
+          <ScalarProperty Name="ScanDescription" ColumnName="ScanDescription" />
+          <ScalarProperty Name="ScanArticle_Code" ColumnName="ScanArticle_Code" />
+          <ScalarProperty Name="ScanGL_Code" ColumnName="ScanGL_Code" />
+          <ScalarProperty Name="ScanGST" ColumnName="ScanGST" />
+          <ScalarProperty Name="ScanTax_Code" ColumnName="ScanTax_Code" />
+          <ScalarProperty Name="ScanTracking" ColumnName="ScanTracking" />
+          <ScalarProperty Name="ScanUnit_Measure" ColumnName="ScanUnit_Measure" />
+          <ScalarProperty Name="ScanUnit_Price" ColumnName="ScanUnit_Price" />
+          <ScalarProperty Name="Scan_Quantity" ColumnName="Scan_Quantity" />
+          <ScalarProperty Name="Scan_Total" ColumnName="Scan_Total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="XeroEzzyAccounts">
+      <EntityTypeMapping TypeName="XS_XEROModel.XeroEzzyAccount">
+        <MappingFragment StoreEntitySet="XeroEzzyAccount">
+          <ScalarProperty Name="XeroEzzyID" ColumnName="XeroEzzyID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="XeroConnectID" ColumnName="XeroConnectID" />
+          <ScalarProperty Name="EzzyUserName" ColumnName="EzzyUserName" />
+          <ScalarProperty Name="EzzyPassword" ColumnName="EzzyPassword" />
+          <ScalarProperty Name="EzzyEmailAddress" ColumnName="EzzyEmailAddress" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="XeroMasters">
+      <EntityTypeMapping TypeName="XS_XEROModel.XeroMaster">
+        <MappingFragment StoreEntitySet="XeroMaster">
+          <ScalarProperty Name="XeroID" ColumnName="XeroID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="RealmId" ColumnName="RealmId" />
+          <ScalarProperty Name="OAuthToken" ColumnName="OAuthToken" />
+          <ScalarProperty Name="OAuthTokenSec" ColumnName="OAuthTokenSec" />
+          <ScalarProperty Name="AccessToken" ColumnName="AccessToken" />
+          <ScalarProperty Name="AccessTokenExpiresIn" ColumnName="AccessTokenExpiresIn" />
+          <ScalarProperty Name="RefreshToken" ColumnName="RefreshToken" />
+          <ScalarProperty Name="RefreshTokenExpiresIn" ColumnName="RefreshTokenExpiresIn" />
+          <ScalarProperty Name="IdentityToken" ColumnName="IdentityToken" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="LeagalName" ColumnName="LeagalName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PrimaryPhone" ColumnName="PrimaryPhone" />
+          <ScalarProperty Name="WebAddr" ColumnName="WebAddr" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="ShortCode" ColumnName="ShortCode" />
+          <ScalarProperty Name="IsAuthrorize" ColumnName="IsAuthrorize" />
+          <ScalarProperty Name="SessionHandle" ColumnName="SessionHandle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="XeroTaxes">
+      <EntityTypeMapping TypeName="XS_XEROModel.XeroTax">
+        <MappingFragment StoreEntitySet="XeroTax">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="XeroConnectID" ColumnName="XeroConnectID" />
+          <ScalarProperty Name="TaxName" ColumnName="TaxName" />
+          <ScalarProperty Name="TaxID" ColumnName="TaxID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="XeroVendors">
+      <EntityTypeMapping TypeName="XS_XEROModel.XeroVendor">
+        <MappingFragment StoreEntitySet="XeroVendor">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="XeroConnectID" ColumnName="XeroConnectID" />
+          <ScalarProperty Name="XeroAccountID" ColumnName="XeroAccountID" />
+          <ScalarProperty Name="XeroVendorID" ColumnName="XeroVendorID" />
+          <ScalarProperty Name="DisplayNameField" ColumnName="DisplayNameField" />
+          <ScalarProperty Name="CityField" ColumnName="CityField" />
+          <ScalarProperty Name="CountrySubDivisionCodeField" ColumnName="CountrySubDivisionCodeField" />
+          <ScalarProperty Name="PostalCodeField" ColumnName="PostalCodeField" />
+          <ScalarProperty Name="CountryField" ColumnName="CountryField" />
+          <ScalarProperty Name="PrimaryPhone" ColumnName="PrimaryPhone" />
+          <ScalarProperty Name="PrimaryEmailAddr" ColumnName="PrimaryEmailAddr" />
+          <ScalarProperty Name="TaxIdentifier" ColumnName="TaxIdentifier" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="uspActivateAccount" FunctionName="XS_XEROModel.Store.uspActivateAccount" />
+    <FunctionImportMapping FunctionImportName="uspAdminGetReckonDocument" FunctionName="XS_XEROModel.Store.uspAdminGetReckonDocument">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspAdminGetReckonDocument_Result">
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+          <ScalarProperty Name="VendorName" ColumnName="VendorName" />
+          <ScalarProperty Name="InvoiceTotal" ColumnName="InvoiceTotal" />
+          <ScalarProperty Name="TaxTotal" ColumnName="TaxTotal" />
+          <ScalarProperty Name="UploadedDate" ColumnName="UploadedDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspAdminGetReckonDocumentByPlatformAndAccount" FunctionName="XS_XEROModel.Store.uspAdminGetReckonDocumentByPlatformAndAccount">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspAdminGetReckonDocumentByPlatformAndAccount_Result">
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+          <ScalarProperty Name="VendorName" ColumnName="VendorName" />
+          <ScalarProperty Name="InvoiceTotal" ColumnName="InvoiceTotal" />
+          <ScalarProperty Name="TaxTotal" ColumnName="TaxTotal" />
+          <ScalarProperty Name="UploadedDate" ColumnName="UploadedDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspAdminGetStripePayment" FunctionName="XS_XEROModel.Store.uspAdminGetStripePayment">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspAdminGetStripePayment_Result">
+          <ScalarProperty Name="StripePaymentID" ColumnName="StripePaymentID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="PlanID" ColumnName="PlanID" />
+          <ScalarProperty Name="StripeID" ColumnName="StripeID" />
+          <ScalarProperty Name="StripeBalanceTxnID" ColumnName="StripeBalanceTxnID" />
+          <ScalarProperty Name="StripeIsPaid" ColumnName="StripeIsPaid" />
+          <ScalarProperty Name="StripeStatus" ColumnName="StripeStatus" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="StripeDateTime" ColumnName="StripeDateTime" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspAdminpGetAccountMaster" FunctionName="XS_XEROModel.Store.uspAdminpGetAccountMaster">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspAdminpGetAccountMaster_Result">
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="PlatformID" ColumnName="PlatformID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="CountryOfOrigin" ColumnName="CountryOfOrigin" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Add1" ColumnName="Add1" />
+          <ScalarProperty Name="Add2" ColumnName="Add2" />
+          <ScalarProperty Name="Add3" ColumnName="Add3" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="ActivationCode" ColumnName="ActivationCode" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspAdminpGetAccountMasterByPlatformAndPlan" FunctionName="XS_XEROModel.Store.uspAdminpGetAccountMasterByPlatformAndPlan">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspAdminpGetAccountMasterByPlatformAndPlan_Result">
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="PlatformID" ColumnName="PlatformID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="CountryOfOrigin" ColumnName="CountryOfOrigin" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Add1" ColumnName="Add1" />
+          <ScalarProperty Name="Add2" ColumnName="Add2" />
+          <ScalarProperty Name="Add3" ColumnName="Add3" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="ActivationCode" ColumnName="ActivationCode" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="SubscriptionID" ColumnName="SubscriptionID" />
+          <ScalarProperty Name="AccountID1" ColumnName="AccountID1" />
+          <ScalarProperty Name="PlanID" ColumnName="PlanID" />
+          <ScalarProperty Name="StartYear" ColumnName="StartYear" />
+          <ScalarProperty Name="StartMonth" ColumnName="StartMonth" />
+          <ScalarProperty Name="StartDay" ColumnName="StartDay" />
+          <ScalarProperty Name="StartDateTime" ColumnName="StartDateTime" />
+          <ScalarProperty Name="TrialDays" ColumnName="TrialDays" />
+          <ScalarProperty Name="TrialPdf" ColumnName="TrialPdf" />
+          <ScalarProperty Name="PaidPdf" ColumnName="PaidPdf" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspAdminpGetLoginMasterByAccountID" FunctionName="XS_XEROModel.Store.uspAdminpGetLoginMasterByAccountID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspAdminpGetLoginMasterByAccountID_Result">
+          <ScalarProperty Name="LoginID" ColumnName="LoginID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="PlatformID" ColumnName="PlatformID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Token" ColumnName="Token" />
+          <ScalarProperty Name="TokenExpiredDate" ColumnName="TokenExpiredDate" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="LastLogin" ColumnName="LastLogin" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="DeActivetedOn" ColumnName="DeActivetedOn" />
+          <ScalarProperty Name="ActivationCode" ColumnName="ActivationCode" />
+          <ScalarProperty Name="TokenAvailFor" ColumnName="TokenAvailFor" />
+          <ScalarProperty Name="IsEzUploadRequired" ColumnName="IsEzUploadRequired" />
+          <ScalarProperty Name="EzUploadDone" ColumnName="EzUploadDone" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspAdminpGetReckonMasterByAccountID" FunctionName="XS_XEROModel.Store.uspAdminpGetReckonMasterByAccountID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspAdminpGetReckonMasterByAccountID_Result">
+          <ScalarProperty Name="ReckonFileID" ColumnName="ReckonFileID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="LegalCompanyName" ColumnName="LegalCompanyName" />
+          <ScalarProperty Name="IsSampleCompany" ColumnName="IsSampleCompany" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Addr1" ColumnName="Addr1" />
+          <ScalarProperty Name="Addr2" ColumnName="Addr2" />
+          <ScalarProperty Name="Addr3" ColumnName="Addr3" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="AdddeBy" ColumnName="AdddeBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsUsingJobCosting" ColumnName="IsUsingJobCosting" />
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspAdminpGetReckonMasterByAccountIDAndPlatform" FunctionName="XS_XEROModel.Store.uspAdminpGetReckonMasterByAccountIDAndPlatform">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspAdminpGetReckonMasterByAccountIDAndPlatform_Result">
+          <ScalarProperty Name="ReckonFileID" ColumnName="ReckonFileID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="LegalCompanyName" ColumnName="LegalCompanyName" />
+          <ScalarProperty Name="IsSampleCompany" ColumnName="IsSampleCompany" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Addr1" ColumnName="Addr1" />
+          <ScalarProperty Name="Addr2" ColumnName="Addr2" />
+          <ScalarProperty Name="Addr3" ColumnName="Addr3" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="AdddeBy" ColumnName="AdddeBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsUsingJobCosting" ColumnName="IsUsingJobCosting" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspAdminpGetStripePaymentByAccountID" FunctionName="XS_XEROModel.Store.uspAdminpGetStripePaymentByAccountID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspAdminpGetStripePaymentByAccountID_Result">
+          <ScalarProperty Name="StripePaymentID" ColumnName="StripePaymentID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="PlanID" ColumnName="PlanID" />
+          <ScalarProperty Name="StripeID" ColumnName="StripeID" />
+          <ScalarProperty Name="StripeBalanceTxnID" ColumnName="StripeBalanceTxnID" />
+          <ScalarProperty Name="StripeIsPaid" ColumnName="StripeIsPaid" />
+          <ScalarProperty Name="StripeStatus" ColumnName="StripeStatus" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="StripeDateTime" ColumnName="StripeDateTime" />
+          <ScalarProperty Name="PlanID1" ColumnName="PlanID1" />
+          <ScalarProperty Name="PlanName" ColumnName="PlanName" />
+          <ScalarProperty Name="PlanDescription" ColumnName="PlanDescription" />
+          <ScalarProperty Name="TrialDays" ColumnName="TrialDays" />
+          <ScalarProperty Name="TrialPdf" ColumnName="TrialPdf" />
+          <ScalarProperty Name="PaidPdf" ColumnName="PaidPdf" />
+          <ScalarProperty Name="RatePerYearGST" ColumnName="RatePerYearGST" />
+          <ScalarProperty Name="RatePerYearSubTotal" ColumnName="RatePerYearSubTotal" />
+          <ScalarProperty Name="RatePerYearTotal" ColumnName="RatePerYearTotal" />
+          <ScalarProperty Name="IsPaidPlan" ColumnName="IsPaidPlan" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspAdminSavePlan" FunctionName="XS_XEROModel.Store.uspAdminSavePlan" />
+    <FunctionImportMapping FunctionImportName="uspApproveQboDocument" FunctionName="XS_XEROModel.Store.uspApproveQboDocument" />
+    <FunctionImportMapping FunctionImportName="uspApproveXeroDocument" FunctionName="XS_XEROModel.Store.uspApproveXeroDocument" />
+    <FunctionImportMapping FunctionImportName="uspChangePassword" FunctionName="XS_XEROModel.Store.uspChangePassword" />
+    <FunctionImportMapping FunctionImportName="uspCheckXeroToken" FunctionName="XS_XEROModel.Store.uspCheckXeroToken" />
+    <FunctionImportMapping FunctionImportName="uspDeleteQboDocument" FunctionName="XS_XEROModel.Store.uspDeleteQboDocument" />
+    <FunctionImportMapping FunctionImportName="uspDeleteXeroDocument" FunctionName="XS_XEROModel.Store.uspDeleteXeroDocument" />
+    <FunctionImportMapping FunctionImportName="uspEditQboDocumentLine" FunctionName="XS_XEROModel.Store.uspEditQboDocumentLine" />
+    <FunctionImportMapping FunctionImportName="uspEditXeroDocumentLine" FunctionName="XS_XEROModel.Store.uspEditXeroDocumentLine" />
+    <FunctionImportMapping FunctionImportName="uspGetAccount" FunctionName="XS_XEROModel.Store.uspGetAccount">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetAccount_Result">
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="PlatformID" ColumnName="PlatformID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="CountryOfOrigin" ColumnName="CountryOfOrigin" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Add1" ColumnName="Add1" />
+          <ScalarProperty Name="Add2" ColumnName="Add2" />
+          <ScalarProperty Name="Add3" ColumnName="Add3" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="ActivationCode" ColumnName="ActivationCode" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetAccountByAccountID" FunctionName="XS_XEROModel.Store.uspGetAccountByAccountID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetAccountByAccountID_Result">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Add1" ColumnName="Add1" />
+          <ScalarProperty Name="Add2" ColumnName="Add2" />
+          <ScalarProperty Name="Add3" ColumnName="Add3" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="PlanName" ColumnName="PlanName" />
+          <ScalarProperty Name="StartDateTime" ColumnName="StartDateTime" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetByte" FunctionName="XS_XEROModel.Store.uspGetByte">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetByte_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetEzzyLogin" FunctionName="XS_XEROModel.Store.uspGetEzzyLogin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetEzzyLogin_Result">
+          <ScalarProperty Name="EzzyUserName" ColumnName="EzzyUserName" />
+          <ScalarProperty Name="EzzyPass" ColumnName="EzzyPass" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetFileSQLMasters" FunctionName="XS_XEROModel.Store.uspGetFileSQLMasters">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetFileSQLMasters_Result">
+          <ScalarProperty Name="SqlID" ColumnName="SqlID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="SqlServerName" ColumnName="SqlServerName" />
+          <ScalarProperty Name="SqlDataBaseName" ColumnName="SqlDataBaseName" />
+          <ScalarProperty Name="SqlAuthenticationMode" ColumnName="SqlAuthenticationMode" />
+          <ScalarProperty Name="SqlUserName" ColumnName="SqlUserName" />
+          <ScalarProperty Name="SqlPassword" ColumnName="SqlPassword" />
+          <ScalarProperty Name="AddedDte" ColumnName="AddedDte" />
+          <ScalarProperty Name="UpdatedDte" ColumnName="UpdatedDte" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetFileSQLMastersByID" FunctionName="XS_XEROModel.Store.uspGetFileSQLMastersByID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetFileSQLMastersByID_Result">
+          <ScalarProperty Name="SqlID" ColumnName="SqlID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="SqlServerName" ColumnName="SqlServerName" />
+          <ScalarProperty Name="SqlDataBaseName" ColumnName="SqlDataBaseName" />
+          <ScalarProperty Name="SqlAuthenticationMode" ColumnName="SqlAuthenticationMode" />
+          <ScalarProperty Name="SqlUserName" ColumnName="SqlUserName" />
+          <ScalarProperty Name="SqlPassword" ColumnName="SqlPassword" />
+          <ScalarProperty Name="AddedDte" ColumnName="AddedDte" />
+          <ScalarProperty Name="UpdatedDte" ColumnName="UpdatedDte" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetLoginByUserName" FunctionName="XS_XEROModel.Store.uspGetLoginByUserName">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetLoginByUserName_Result">
+          <ScalarProperty Name="LoginID" ColumnName="LoginID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="PlatformID" ColumnName="PlatformID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Token" ColumnName="Token" />
+          <ScalarProperty Name="TokenExpiredDate" ColumnName="TokenExpiredDate" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="LastLogin" ColumnName="LastLogin" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="DeActivetedOn" ColumnName="DeActivetedOn" />
+          <ScalarProperty Name="ActivationCode" ColumnName="ActivationCode" />
+          <ScalarProperty Name="TokenAvailFor" ColumnName="TokenAvailFor" />
+          <ScalarProperty Name="IsEzUploadRequired" ColumnName="IsEzUploadRequired" />
+          <ScalarProperty Name="EzUploadDone" ColumnName="EzUploadDone" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetLoginMaster" FunctionName="XS_XEROModel.Store.uspGetLoginMaster">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetLoginMaster_Result">
+          <ScalarProperty Name="LoginID" ColumnName="LoginID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="PlatformID" ColumnName="PlatformID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Token" ColumnName="Token" />
+          <ScalarProperty Name="TokenExpiredDate" ColumnName="TokenExpiredDate" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="LastLogin" ColumnName="LastLogin" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="DeActivetedOn" ColumnName="DeActivetedOn" />
+          <ScalarProperty Name="ActivationCode" ColumnName="ActivationCode" />
+          <ScalarProperty Name="TokenAvailFor" ColumnName="TokenAvailFor" />
+          <ScalarProperty Name="IsEzUploadRequired" ColumnName="IsEzUploadRequired" />
+          <ScalarProperty Name="EzUploadDone" ColumnName="EzUploadDone" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetLoginMasterByID" FunctionName="XS_XEROModel.Store.uspGetLoginMasterByID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetLoginMasterByID_Result">
+          <ScalarProperty Name="LoginID" ColumnName="LoginID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="PlatformID" ColumnName="PlatformID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Token" ColumnName="Token" />
+          <ScalarProperty Name="TokenExpiredDate" ColumnName="TokenExpiredDate" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="LastLogin" ColumnName="LastLogin" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="DeActivetedOn" ColumnName="DeActivetedOn" />
+          <ScalarProperty Name="ActivationCode" ColumnName="ActivationCode" />
+          <ScalarProperty Name="TokenAvailFor" ColumnName="TokenAvailFor" />
+          <ScalarProperty Name="IsEzUploadRequired" ColumnName="IsEzUploadRequired" />
+          <ScalarProperty Name="EzUploadDone" ColumnName="EzUploadDone" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetLoginMasterByToken" FunctionName="XS_XEROModel.Store.uspGetLoginMasterByToken">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetLoginMasterByToken_Result">
+          <ScalarProperty Name="LoginID" ColumnName="LoginID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="PlatformID" ColumnName="PlatformID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Token" ColumnName="Token" />
+          <ScalarProperty Name="TokenExpiredDate" ColumnName="TokenExpiredDate" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="LastLogin" ColumnName="LastLogin" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="DeActivetedOn" ColumnName="DeActivetedOn" />
+          <ScalarProperty Name="ActivationCode" ColumnName="ActivationCode" />
+          <ScalarProperty Name="TokenAvailFor" ColumnName="TokenAvailFor" />
+          <ScalarProperty Name="IsEzUploadRequired" ColumnName="IsEzUploadRequired" />
+          <ScalarProperty Name="EzUploadDone" ColumnName="EzUploadDone" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CountryOfOrigin" ColumnName="CountryOfOrigin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetLoginMasterByUserName" FunctionName="XS_XEROModel.Store.uspGetLoginMasterByUserName">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetLoginMasterByUserName_Result">
+          <ScalarProperty Name="LoginID" ColumnName="LoginID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="PlatformID" ColumnName="PlatformID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Token" ColumnName="Token" />
+          <ScalarProperty Name="TokenExpiredDate" ColumnName="TokenExpiredDate" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="LastLogin" ColumnName="LastLogin" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="DeActivetedOn" ColumnName="DeActivetedOn" />
+          <ScalarProperty Name="ActivationCode" ColumnName="ActivationCode" />
+          <ScalarProperty Name="TokenAvailFor" ColumnName="TokenAvailFor" />
+          <ScalarProperty Name="IsEzUploadRequired" ColumnName="IsEzUploadRequired" />
+          <ScalarProperty Name="EzUploadDone" ColumnName="EzUploadDone" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetMaxEzzyAccountID" FunctionName="XS_XEROModel.Store.uspGetMaxEzzyAccountID" />
+    <FunctionImportMapping FunctionImportName="uspGetMaxEzzyQboAccountID" FunctionName="XS_XEROModel.Store.uspGetMaxEzzyQboAccountID" />
+    <FunctionImportMapping FunctionImportName="uspGetMaxEzzyXeroAccountID" FunctionName="XS_XEROModel.Store.uspGetMaxEzzyXeroAccountID" />
+    <FunctionImportMapping FunctionImportName="uspGetPaymentByAccountID" FunctionName="XS_XEROModel.Store.uspGetPaymentByAccountID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetPaymentByAccountID_Result">
+          <ScalarProperty Name="StripePaymentID" ColumnName="StripePaymentID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="PlanID" ColumnName="PlanID" />
+          <ScalarProperty Name="StripeID" ColumnName="StripeID" />
+          <ScalarProperty Name="StripeBalanceTxnID" ColumnName="StripeBalanceTxnID" />
+          <ScalarProperty Name="StripeIsPaid" ColumnName="StripeIsPaid" />
+          <ScalarProperty Name="StripeStatus" ColumnName="StripeStatus" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="StripeDateTime" ColumnName="StripeDateTime" />
+          <ScalarProperty Name="PlanName" ColumnName="PlanName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetPlan" FunctionName="XS_XEROModel.Store.uspGetPlan">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetPlan_Result">
+          <ScalarProperty Name="PlanID" ColumnName="PlanID" />
+          <ScalarProperty Name="PlanName" ColumnName="PlanName" />
+          <ScalarProperty Name="PlanDescription" ColumnName="PlanDescription" />
+          <ScalarProperty Name="TrialDays" ColumnName="TrialDays" />
+          <ScalarProperty Name="TrialPdf" ColumnName="TrialPdf" />
+          <ScalarProperty Name="PaidPdf" ColumnName="PaidPdf" />
+          <ScalarProperty Name="RatePerYearGST" ColumnName="RatePerYearGST" />
+          <ScalarProperty Name="RatePerYearSubTotal" ColumnName="RatePerYearSubTotal" />
+          <ScalarProperty Name="RatePerYearTotal" ColumnName="RatePerYearTotal" />
+          <ScalarProperty Name="IsPaidPlan" ColumnName="IsPaidPlan" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetPlanByID" FunctionName="XS_XEROModel.Store.uspGetPlanByID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetPlanByID_Result">
+          <ScalarProperty Name="PlanID" ColumnName="PlanID" />
+          <ScalarProperty Name="PlanName" ColumnName="PlanName" />
+          <ScalarProperty Name="PlanDescription" ColumnName="PlanDescription" />
+          <ScalarProperty Name="TrialDays" ColumnName="TrialDays" />
+          <ScalarProperty Name="TrialPdf" ColumnName="TrialPdf" />
+          <ScalarProperty Name="PaidPdf" ColumnName="PaidPdf" />
+          <ScalarProperty Name="RatePerYearGST" ColumnName="RatePerYearGST" />
+          <ScalarProperty Name="RatePerYearSubTotal" ColumnName="RatePerYearSubTotal" />
+          <ScalarProperty Name="RatePerYearTotal" ColumnName="RatePerYearTotal" />
+          <ScalarProperty Name="IsPaidPlan" ColumnName="IsPaidPlan" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetPlatformMaster" FunctionName="XS_XEROModel.Store.uspGetPlatformMaster">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetPlatformMaster_Result">
+          <ScalarProperty Name="PlatformID" ColumnName="PlatformID" />
+          <ScalarProperty Name="PlatformCode" ColumnName="PlatformCode" />
+          <ScalarProperty Name="PlatformName" ColumnName="PlatformName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetPlatformMasterByID" FunctionName="XS_XEROModel.Store.uspGetPlatformMasterByID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetPlatformMasterByID_Result">
+          <ScalarProperty Name="PlatformID" ColumnName="PlatformID" />
+          <ScalarProperty Name="PlatformCode" ColumnName="PlatformCode" />
+          <ScalarProperty Name="PlatformName" ColumnName="PlatformName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetQboChartOfAccount" FunctionName="XS_XEROModel.Store.uspGetQboChartOfAccount">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetQboChartOfAccount_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="QboConnectID" ColumnName="QboConnectID" />
+          <ScalarProperty Name="QboAccountID" ColumnName="QboAccountID" />
+          <ScalarProperty Name="FullyQualifiedNameField" ColumnName="FullyQualifiedNameField" />
+          <ScalarProperty Name="AccountSubTypeField" ColumnName="AccountSubTypeField" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetQboDocumentById" FunctionName="XS_XEROModel.Store.uspGetQboDocumentById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetQboDocumentById_Result">
+          <ScalarProperty Name="DocumentID" ColumnName="DocumentID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="QboConnectID" ColumnName="QboConnectID" />
+          <ScalarProperty Name="QboInvoiceID" ColumnName="QboInvoiceID" />
+          <ScalarProperty Name="QboVendorID" ColumnName="QboVendorID" />
+          <ScalarProperty Name="QboVendorName" ColumnName="QboVendorName" />
+          <ScalarProperty Name="QboInvoiceDate" ColumnName="QboInvoiceDate" />
+          <ScalarProperty Name="ScanInvoiceID" ColumnName="ScanInvoiceID" />
+          <ScalarProperty Name="ScanFile_Name" ColumnName="ScanFile_Name" />
+          <ScalarProperty Name="ScanBlob_Url" ColumnName="ScanBlob_Url" />
+          <ScalarProperty Name="ScanABNNumber" ColumnName="ScanABNNumber" />
+          <ScalarProperty Name="ScanRefNumber" ColumnName="ScanRefNumber" />
+          <ScalarProperty Name="ScanDocType" ColumnName="ScanDocType" />
+          <ScalarProperty Name="ScanSubTotal" ColumnName="ScanSubTotal" />
+          <ScalarProperty Name="ScanChargeTotal" ColumnName="ScanChargeTotal" />
+          <ScalarProperty Name="ScanDocumentTotal" ColumnName="ScanDocumentTotal" />
+          <ScalarProperty Name="ScanTag" ColumnName="ScanTag" />
+          <ScalarProperty Name="ScanInvoiceDate" ColumnName="ScanInvoiceDate" />
+          <ScalarProperty Name="ScanPurchaseOrder" ColumnName="ScanPurchaseOrder" />
+          <ScalarProperty Name="ScanVendorName" ColumnName="ScanVendorName" />
+          <ScalarProperty Name="ScanInvoiceTotal" ColumnName="ScanInvoiceTotal" />
+          <ScalarProperty Name="ScanTaxTotal" ColumnName="ScanTaxTotal" />
+          <ScalarProperty Name="ScanDocClassification" ColumnName="ScanDocClassification" />
+          <ScalarProperty Name="ScanServiceStatus" ColumnName="ScanServiceStatus" />
+          <ScalarProperty Name="ScanServiceMessage" ColumnName="ScanServiceMessage" />
+          <ScalarProperty Name="UploadedDate" ColumnName="UploadedDate" />
+          <ScalarProperty Name="QBOError" ColumnName="QBOError" />
+          <ScalarProperty Name="AspSessionID" ColumnName="AspSessionID" />
+          <ScalarProperty Name="Approved" ColumnName="Approved" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="QboBillAddedOn" ColumnName="QboBillAddedOn" />
+          <ScalarProperty Name="QboBillAddedBy" ColumnName="QboBillAddedBy" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetQboDocumentHistory" FunctionName="XS_XEROModel.Store.uspGetQboDocumentHistory">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetQboDocumentHistory_Result">
+          <ScalarProperty Name="QboVendorName" ColumnName="QboVendorName" />
+          <ScalarProperty Name="QboInvoiceID" ColumnName="QboInvoiceID" />
+          <ScalarProperty Name="QboInvoiceDate" ColumnName="QboInvoiceDate" />
+          <ScalarProperty Name="ScanDocType" ColumnName="ScanDocType" />
+          <ScalarProperty Name="QboVendorID" ColumnName="QboVendorID" />
+          <ScalarProperty Name="ScanABNNumber" ColumnName="ScanABNNumber" />
+          <ScalarProperty Name="ScanInvoiceTotal" ColumnName="ScanInvoiceTotal" />
+          <ScalarProperty Name="ScanTaxTotal" ColumnName="ScanTaxTotal" />
+          <ScalarProperty Name="ScanFile_Name" ColumnName="ScanFile_Name" />
+          <ScalarProperty Name="ScanSubTotal" ColumnName="ScanSubTotal" />
+          <ScalarProperty Name="ScanRefNumber" ColumnName="ScanRefNumber" />
+          <ScalarProperty Name="ScanPurchaseOrder" ColumnName="ScanPurchaseOrder" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetQboDocumentLineToApprove" FunctionName="XS_XEROModel.Store.uspGetQboDocumentLineToApprove">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetQboDocumentLineToApprove_Result">
+          <ScalarProperty Name="DocumentLineID" ColumnName="DocumentLineID" />
+          <ScalarProperty Name="DocumentID" ColumnName="DocumentID" />
+          <ScalarProperty Name="QboAccountID" ColumnName="QboAccountID" />
+          <ScalarProperty Name="QboAccountName" ColumnName="QboAccountName" />
+          <ScalarProperty Name="QboClassID" ColumnName="QboClassID" />
+          <ScalarProperty Name="QboClassName" ColumnName="QboClassName" />
+          <ScalarProperty Name="QboJobID" ColumnName="QboJobID" />
+          <ScalarProperty Name="QboJobName" ColumnName="QboJobName" />
+          <ScalarProperty Name="ScanDescription" ColumnName="ScanDescription" />
+          <ScalarProperty Name="ScanArticle_Code" ColumnName="ScanArticle_Code" />
+          <ScalarProperty Name="ScanGL_Code" ColumnName="ScanGL_Code" />
+          <ScalarProperty Name="ScanGST" ColumnName="ScanGST" />
+          <ScalarProperty Name="ScanTax_Code" ColumnName="ScanTax_Code" />
+          <ScalarProperty Name="ScanTracking" ColumnName="ScanTracking" />
+          <ScalarProperty Name="ScanUnit_Measure" ColumnName="ScanUnit_Measure" />
+          <ScalarProperty Name="ScanUnit_Price" ColumnName="ScanUnit_Price" />
+          <ScalarProperty Name="Scan_Quantity" ColumnName="Scan_Quantity" />
+          <ScalarProperty Name="Scan_Total" ColumnName="Scan_Total" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetQboDocumentToApprove" FunctionName="XS_XEROModel.Store.uspGetQboDocumentToApprove">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetQboDocumentToApprove_Result">
+          <ScalarProperty Name="DocumentID" ColumnName="DocumentID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="QboConnectID" ColumnName="QboConnectID" />
+          <ScalarProperty Name="QboInvoiceID" ColumnName="QboInvoiceID" />
+          <ScalarProperty Name="QboVendorID" ColumnName="QboVendorID" />
+          <ScalarProperty Name="QboVendorName" ColumnName="QboVendorName" />
+          <ScalarProperty Name="QboInvoiceDate" ColumnName="QboInvoiceDate" />
+          <ScalarProperty Name="ScanInvoiceID" ColumnName="ScanInvoiceID" />
+          <ScalarProperty Name="ScanFile_Name" ColumnName="ScanFile_Name" />
+          <ScalarProperty Name="ScanBlob_Url" ColumnName="ScanBlob_Url" />
+          <ScalarProperty Name="ScanABNNumber" ColumnName="ScanABNNumber" />
+          <ScalarProperty Name="ScanRefNumber" ColumnName="ScanRefNumber" />
+          <ScalarProperty Name="ScanDocType" ColumnName="ScanDocType" />
+          <ScalarProperty Name="ScanSubTotal" ColumnName="ScanSubTotal" />
+          <ScalarProperty Name="ScanChargeTotal" ColumnName="ScanChargeTotal" />
+          <ScalarProperty Name="ScanDocumentTotal" ColumnName="ScanDocumentTotal" />
+          <ScalarProperty Name="ScanTag" ColumnName="ScanTag" />
+          <ScalarProperty Name="ScanInvoiceDate" ColumnName="ScanInvoiceDate" />
+          <ScalarProperty Name="ScanPurchaseOrder" ColumnName="ScanPurchaseOrder" />
+          <ScalarProperty Name="ScanVendorName" ColumnName="ScanVendorName" />
+          <ScalarProperty Name="ScanInvoiceTotal" ColumnName="ScanInvoiceTotal" />
+          <ScalarProperty Name="ScanTaxTotal" ColumnName="ScanTaxTotal" />
+          <ScalarProperty Name="ScanDocClassification" ColumnName="ScanDocClassification" />
+          <ScalarProperty Name="ScanServiceStatus" ColumnName="ScanServiceStatus" />
+          <ScalarProperty Name="ScanServiceMessage" ColumnName="ScanServiceMessage" />
+          <ScalarProperty Name="UploadedDate" ColumnName="UploadedDate" />
+          <ScalarProperty Name="QBOError" ColumnName="QBOError" />
+          <ScalarProperty Name="AspSessionID" ColumnName="AspSessionID" />
+          <ScalarProperty Name="Approved" ColumnName="Approved" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="QboBillAddedOn" ColumnName="QboBillAddedOn" />
+          <ScalarProperty Name="QboBillAddedBy" ColumnName="QboBillAddedBy" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetQboDocumentToBill" FunctionName="XS_XEROModel.Store.uspGetQboDocumentToBill">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetQboDocumentToBill_Result">
+          <ScalarProperty Name="DocumentLineID" ColumnName="DocumentLineID" />
+          <ScalarProperty Name="DocumentID" ColumnName="DocumentID" />
+          <ScalarProperty Name="QboAccountID" ColumnName="QboAccountID" />
+          <ScalarProperty Name="QboAccountName" ColumnName="QboAccountName" />
+          <ScalarProperty Name="QboClassID" ColumnName="QboClassID" />
+          <ScalarProperty Name="QboClassName" ColumnName="QboClassName" />
+          <ScalarProperty Name="QboJobID" ColumnName="QboJobID" />
+          <ScalarProperty Name="QboJobName" ColumnName="QboJobName" />
+          <ScalarProperty Name="ScanDescription" ColumnName="ScanDescription" />
+          <ScalarProperty Name="ScanArticle_Code" ColumnName="ScanArticle_Code" />
+          <ScalarProperty Name="ScanGL_Code" ColumnName="ScanGL_Code" />
+          <ScalarProperty Name="ScanGST" ColumnName="ScanGST" />
+          <ScalarProperty Name="ScanTax_Code" ColumnName="ScanTax_Code" />
+          <ScalarProperty Name="ScanTracking" ColumnName="ScanTracking" />
+          <ScalarProperty Name="ScanUnit_Measure" ColumnName="ScanUnit_Measure" />
+          <ScalarProperty Name="ScanUnit_Price" ColumnName="ScanUnit_Price" />
+          <ScalarProperty Name="Scan_Quantity" ColumnName="Scan_Quantity" />
+          <ScalarProperty Name="Scan_Total" ColumnName="Scan_Total" />
+          <ScalarProperty Name="QboVendorName" ColumnName="QboVendorName" />
+          <ScalarProperty Name="QboVendorID" ColumnName="QboVendorID" />
+          <ScalarProperty Name="ScanABNNumber" ColumnName="ScanABNNumber" />
+          <ScalarProperty Name="ScanInvoiceTotal" ColumnName="ScanInvoiceTotal" />
+          <ScalarProperty Name="ScanTaxTotal" ColumnName="ScanTaxTotal" />
+          <ScalarProperty Name="ScanFile_Name" ColumnName="ScanFile_Name" />
+          <ScalarProperty Name="ScanSubTotal" ColumnName="ScanSubTotal" />
+          <ScalarProperty Name="ScanRefNumber" ColumnName="ScanRefNumber" />
+          <ScalarProperty Name="ScanDocClassification" ColumnName="ScanDocClassification" />
+          <ScalarProperty Name="ScanDocType" ColumnName="ScanDocType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetQboDocumentToProcess" FunctionName="XS_XEROModel.Store.uspGetQboDocumentToProcess">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetQboDocumentToProcess_Result">
+          <ScalarProperty Name="DocumentID" ColumnName="DocumentID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="QboConnectID" ColumnName="QboConnectID" />
+          <ScalarProperty Name="QboInvoiceID" ColumnName="QboInvoiceID" />
+          <ScalarProperty Name="QboVendorID" ColumnName="QboVendorID" />
+          <ScalarProperty Name="QboVendorName" ColumnName="QboVendorName" />
+          <ScalarProperty Name="QboInvoiceDate" ColumnName="QboInvoiceDate" />
+          <ScalarProperty Name="ScanInvoiceID" ColumnName="ScanInvoiceID" />
+          <ScalarProperty Name="ScanFile_Name" ColumnName="ScanFile_Name" />
+          <ScalarProperty Name="ScanBlob_Url" ColumnName="ScanBlob_Url" />
+          <ScalarProperty Name="ScanABNNumber" ColumnName="ScanABNNumber" />
+          <ScalarProperty Name="ScanRefNumber" ColumnName="ScanRefNumber" />
+          <ScalarProperty Name="ScanDocType" ColumnName="ScanDocType" />
+          <ScalarProperty Name="ScanSubTotal" ColumnName="ScanSubTotal" />
+          <ScalarProperty Name="ScanChargeTotal" ColumnName="ScanChargeTotal" />
+          <ScalarProperty Name="ScanDocumentTotal" ColumnName="ScanDocumentTotal" />
+          <ScalarProperty Name="ScanTag" ColumnName="ScanTag" />
+          <ScalarProperty Name="ScanInvoiceDate" ColumnName="ScanInvoiceDate" />
+          <ScalarProperty Name="ScanPurchaseOrder" ColumnName="ScanPurchaseOrder" />
+          <ScalarProperty Name="ScanVendorName" ColumnName="ScanVendorName" />
+          <ScalarProperty Name="ScanInvoiceTotal" ColumnName="ScanInvoiceTotal" />
+          <ScalarProperty Name="ScanTaxTotal" ColumnName="ScanTaxTotal" />
+          <ScalarProperty Name="ScanDocClassification" ColumnName="ScanDocClassification" />
+          <ScalarProperty Name="ScanServiceStatus" ColumnName="ScanServiceStatus" />
+          <ScalarProperty Name="ScanServiceMessage" ColumnName="ScanServiceMessage" />
+          <ScalarProperty Name="UploadedDate" ColumnName="UploadedDate" />
+          <ScalarProperty Name="QBOError" ColumnName="QBOError" />
+          <ScalarProperty Name="AspSessionID" ColumnName="AspSessionID" />
+          <ScalarProperty Name="Approved" ColumnName="Approved" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="QboBillAddedOn" ColumnName="QboBillAddedOn" />
+          <ScalarProperty Name="QboBillAddedBy" ColumnName="QboBillAddedBy" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetQboDocumentToRead" FunctionName="XS_XEROModel.Store.uspGetQboDocumentToRead">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetQboDocumentToRead_Result">
+          <ScalarProperty Name="DocumentID" ColumnName="DocumentID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="QboConnectID" ColumnName="QboConnectID" />
+          <ScalarProperty Name="QboInvoiceID" ColumnName="QboInvoiceID" />
+          <ScalarProperty Name="QboVendorID" ColumnName="QboVendorID" />
+          <ScalarProperty Name="QboVendorName" ColumnName="QboVendorName" />
+          <ScalarProperty Name="QboInvoiceDate" ColumnName="QboInvoiceDate" />
+          <ScalarProperty Name="ScanInvoiceID" ColumnName="ScanInvoiceID" />
+          <ScalarProperty Name="ScanFile_Name" ColumnName="ScanFile_Name" />
+          <ScalarProperty Name="ScanBlob_Url" ColumnName="ScanBlob_Url" />
+          <ScalarProperty Name="ScanABNNumber" ColumnName="ScanABNNumber" />
+          <ScalarProperty Name="ScanRefNumber" ColumnName="ScanRefNumber" />
+          <ScalarProperty Name="ScanDocType" ColumnName="ScanDocType" />
+          <ScalarProperty Name="ScanSubTotal" ColumnName="ScanSubTotal" />
+          <ScalarProperty Name="ScanChargeTotal" ColumnName="ScanChargeTotal" />
+          <ScalarProperty Name="ScanDocumentTotal" ColumnName="ScanDocumentTotal" />
+          <ScalarProperty Name="ScanTag" ColumnName="ScanTag" />
+          <ScalarProperty Name="ScanInvoiceDate" ColumnName="ScanInvoiceDate" />
+          <ScalarProperty Name="ScanPurchaseOrder" ColumnName="ScanPurchaseOrder" />
+          <ScalarProperty Name="ScanVendorName" ColumnName="ScanVendorName" />
+          <ScalarProperty Name="ScanInvoiceTotal" ColumnName="ScanInvoiceTotal" />
+          <ScalarProperty Name="ScanTaxTotal" ColumnName="ScanTaxTotal" />
+          <ScalarProperty Name="ScanDocClassification" ColumnName="ScanDocClassification" />
+          <ScalarProperty Name="ScanServiceStatus" ColumnName="ScanServiceStatus" />
+          <ScalarProperty Name="ScanServiceMessage" ColumnName="ScanServiceMessage" />
+          <ScalarProperty Name="UploadedDate" ColumnName="UploadedDate" />
+          <ScalarProperty Name="QBOError" ColumnName="QBOError" />
+          <ScalarProperty Name="AspSessionID" ColumnName="AspSessionID" />
+          <ScalarProperty Name="Approved" ColumnName="Approved" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="QboBillAddedOn" ColumnName="QboBillAddedOn" />
+          <ScalarProperty Name="QboBillAddedBy" ColumnName="QboBillAddedBy" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetQBOMasterByAccountAndConnectID" FunctionName="XS_XEROModel.Store.uspGetQBOMasterByAccountAndConnectID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetQBOMasterByAccountAndConnectID_Result">
+          <ScalarProperty Name="QboID" ColumnName="QboID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="RealmId" ColumnName="RealmId" />
+          <ScalarProperty Name="AccessToken" ColumnName="AccessToken" />
+          <ScalarProperty Name="AccessTokenExpiresIn" ColumnName="AccessTokenExpiresIn" />
+          <ScalarProperty Name="RefreshToken" ColumnName="RefreshToken" />
+          <ScalarProperty Name="RefreshTokenExpiresIn" ColumnName="RefreshTokenExpiresIn" />
+          <ScalarProperty Name="IdentityToken" ColumnName="IdentityToken" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="LeagalName" ColumnName="LeagalName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PrimaryPhone" ColumnName="PrimaryPhone" />
+          <ScalarProperty Name="WebAddr" ColumnName="WebAddr" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetQBOMasterByAccountID" FunctionName="XS_XEROModel.Store.uspGetQBOMasterByAccountID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetQBOMasterByAccountID_Result">
+          <ScalarProperty Name="QboID" ColumnName="QboID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="RealmId" ColumnName="RealmId" />
+          <ScalarProperty Name="AccessToken" ColumnName="AccessToken" />
+          <ScalarProperty Name="AccessTokenExpiresIn" ColumnName="AccessTokenExpiresIn" />
+          <ScalarProperty Name="RefreshToken" ColumnName="RefreshToken" />
+          <ScalarProperty Name="RefreshTokenExpiresIn" ColumnName="RefreshTokenExpiresIn" />
+          <ScalarProperty Name="IdentityToken" ColumnName="IdentityToken" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="LeagalName" ColumnName="LeagalName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PrimaryPhone" ColumnName="PrimaryPhone" />
+          <ScalarProperty Name="WebAddr" ColumnName="WebAddr" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetQBOScanningLogin" FunctionName="XS_XEROModel.Store.uspGetQBOScanningLogin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetQBOScanningLogin_Result">
+          <ScalarProperty Name="QBOEzzyID" ColumnName="QBOEzzyID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="QboConnectID" ColumnName="QboConnectID" />
+          <ScalarProperty Name="EzzyUserName" ColumnName="EzzyUserName" />
+          <ScalarProperty Name="EzzyPassword" ColumnName="EzzyPassword" />
+          <ScalarProperty Name="EzzyEmailAddress" ColumnName="EzzyEmailAddress" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetQboTax" FunctionName="XS_XEROModel.Store.uspGetQboTax">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetQboTax_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="QboConnectID" ColumnName="QboConnectID" />
+          <ScalarProperty Name="TaxName" ColumnName="TaxName" />
+          <ScalarProperty Name="TaxID" ColumnName="TaxID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetQboVendor" FunctionName="XS_XEROModel.Store.uspGetQboVendor">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetQboVendor_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="QboConnectID" ColumnName="QboConnectID" />
+          <ScalarProperty Name="QboAccountID" ColumnName="QboAccountID" />
+          <ScalarProperty Name="QboVendorID" ColumnName="QboVendorID" />
+          <ScalarProperty Name="DisplayNameField" ColumnName="DisplayNameField" />
+          <ScalarProperty Name="CityField" ColumnName="CityField" />
+          <ScalarProperty Name="CountrySubDivisionCodeField" ColumnName="CountrySubDivisionCodeField" />
+          <ScalarProperty Name="PostalCodeField" ColumnName="PostalCodeField" />
+          <ScalarProperty Name="CountryField" ColumnName="CountryField" />
+          <ScalarProperty Name="PrimaryPhone" ColumnName="PrimaryPhone" />
+          <ScalarProperty Name="PrimaryEmailAddr" ColumnName="PrimaryEmailAddr" />
+          <ScalarProperty Name="TaxIdentifier" ColumnName="TaxIdentifier" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetRCScanningLogin" FunctionName="XS_XEROModel.Store.uspGetRCScanningLogin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetRCScanningLogin_Result">
+          <ScalarProperty Name="RCEzzyID" ColumnName="RCEzzyID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="ReckonFileID" ColumnName="ReckonFileID" />
+          <ScalarProperty Name="EzzyEmailAddress" ColumnName="EzzyEmailAddress" />
+          <ScalarProperty Name="EzzyUserName" ColumnName="EzzyUserName" />
+          <ScalarProperty Name="EzzyPassword" ColumnName="EzzyPassword" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetReckonDesktopByAccountID" FunctionName="XS_XEROModel.Store.uspGetReckonDesktopByAccountID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetReckonDesktopByAccountID_Result">
+          <ScalarProperty Name="ReckonFileID" ColumnName="ReckonFileID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="LegalCompanyName" ColumnName="LegalCompanyName" />
+          <ScalarProperty Name="IsSampleCompany" ColumnName="IsSampleCompany" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Addr1" ColumnName="Addr1" />
+          <ScalarProperty Name="Addr2" ColumnName="Addr2" />
+          <ScalarProperty Name="Addr3" ColumnName="Addr3" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="AdddeBy" ColumnName="AdddeBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsUsingJobCosting" ColumnName="IsUsingJobCosting" />
+          <ScalarProperty Name="ReckonUserAccessID" ColumnName="ReckonUserAccessID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ReckonFileID1" ColumnName="ReckonFileID1" />
+          <ScalarProperty Name="IsAccess" ColumnName="IsAccess" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetReckonDocument" FunctionName="XS_XEROModel.Store.uspGetReckonDocument">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetReckonDocument_Result">
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+          <ScalarProperty Name="VendorName" ColumnName="VendorName" />
+          <ScalarProperty Name="InvoiceTotal" ColumnName="InvoiceTotal" />
+          <ScalarProperty Name="TaxTotal" ColumnName="TaxTotal" />
+          <ScalarProperty Name="TxnID" ColumnName="TxnID" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="InvoiceDate1" ColumnName="InvoiceDate1" />
+          <ScalarProperty Name="UploadedDate" ColumnName="UploadedDate" />
+          <ScalarProperty Name="InvoiceType" ColumnName="InvoiceType" />
+          <ScalarProperty Name="ScanPdfPath" ColumnName="ScanPdfPath" />
+          <ScalarProperty Name="ReckonDocumentID" ColumnName="ReckonDocumentID" />
+          <ScalarProperty Name="ScanInvoiceID" ColumnName="ScanInvoiceID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetReckonFileByAccountID" FunctionName="XS_XEROModel.Store.uspGetReckonFileByAccountID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetReckonFileByAccountID_Result">
+          <ScalarProperty Name="ReckonFileID" ColumnName="ReckonFileID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="LegalCompanyName" ColumnName="LegalCompanyName" />
+          <ScalarProperty Name="IsSampleCompany" ColumnName="IsSampleCompany" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Addr1" ColumnName="Addr1" />
+          <ScalarProperty Name="Addr2" ColumnName="Addr2" />
+          <ScalarProperty Name="Addr3" ColumnName="Addr3" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="AdddeBy" ColumnName="AdddeBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsUsingJobCosting" ColumnName="IsUsingJobCosting" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetReckonVendDefault" FunctionName="XS_XEROModel.Store.uspGetReckonVendDefault">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetReckonVendDefault_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="ReckonFileID" ColumnName="ReckonFileID" />
+          <ScalarProperty Name="VendorListID" ColumnName="VendorListID" />
+          <ScalarProperty Name="DefaultExpenseListID" ColumnName="DefaultExpenseListID" />
+          <ScalarProperty Name="DefaultExpenseAccount" ColumnName="DefaultExpenseAccount" />
+          <ScalarProperty Name="DefaultItemListID" ColumnName="DefaultItemListID" />
+          <ScalarProperty Name="DefaultItem" ColumnName="DefaultItem" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetReconDesktopMasterByID" FunctionName="XS_XEROModel.Store.uspGetReconDesktopMasterByID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetReconDesktopMasterByID_Result">
+          <ScalarProperty Name="ReckonFileID" ColumnName="ReckonFileID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="LegalCompanyName" ColumnName="LegalCompanyName" />
+          <ScalarProperty Name="IsSampleCompany" ColumnName="IsSampleCompany" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Addr1" ColumnName="Addr1" />
+          <ScalarProperty Name="Addr2" ColumnName="Addr2" />
+          <ScalarProperty Name="Addr3" ColumnName="Addr3" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="AdddeBy" ColumnName="AdddeBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsUsingJobCosting" ColumnName="IsUsingJobCosting" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetSubscriptionByAccountID" FunctionName="XS_XEROModel.Store.uspGetSubscriptionByAccountID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetSubscriptionByAccountID_Result">
+          <ScalarProperty Name="SubscriptionID" ColumnName="SubscriptionID" />
+          <ScalarProperty Name="StartYear" ColumnName="StartYear" />
+          <ScalarProperty Name="StartMonth" ColumnName="StartMonth" />
+          <ScalarProperty Name="StartDay" ColumnName="StartDay" />
+          <ScalarProperty Name="StartDateTime" ColumnName="StartDateTime" />
+          <ScalarProperty Name="PlanID" ColumnName="PlanID" />
+          <ScalarProperty Name="PlanName" ColumnName="PlanName" />
+          <ScalarProperty Name="PlanDescription" ColumnName="PlanDescription" />
+          <ScalarProperty Name="TrialDays" ColumnName="TrialDays" />
+          <ScalarProperty Name="RatePerYearTotal" ColumnName="RatePerYearTotal" />
+          <ScalarProperty Name="RatePerYearGST" ColumnName="RatePerYearGST" />
+          <ScalarProperty Name="RatePerYearSubTotal" ColumnName="RatePerYearSubTotal" />
+          <ScalarProperty Name="TrialPdf" ColumnName="TrialPdf" />
+          <ScalarProperty Name="IsPaidPlan" ColumnName="IsPaidPlan" />
+          <ScalarProperty Name="TotalAllocatePDF" ColumnName="TotalAllocatePDF" />
+          <ScalarProperty Name="ExpiringOn" ColumnName="ExpiringOn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetSubUser" FunctionName="XS_XEROModel.Store.uspGetSubUser">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetSubUser_Result">
+          <ScalarProperty Name="LoginID" ColumnName="LoginID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="PlatformID" ColumnName="PlatformID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Token" ColumnName="Token" />
+          <ScalarProperty Name="TokenExpiredDate" ColumnName="TokenExpiredDate" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="LastLogin" ColumnName="LastLogin" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="DeActivetedOn" ColumnName="DeActivetedOn" />
+          <ScalarProperty Name="ActivationCode" ColumnName="ActivationCode" />
+          <ScalarProperty Name="TokenAvailFor" ColumnName="TokenAvailFor" />
+          <ScalarProperty Name="IsEzUploadRequired" ColumnName="IsEzUploadRequired" />
+          <ScalarProperty Name="EzUploadDone" ColumnName="EzUploadDone" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetUsedPaidPDF" FunctionName="XS_XEROModel.Store.uspGetUsedPaidPDF" />
+    <FunctionImportMapping FunctionImportName="uspGetUsedTrialPDF" FunctionName="XS_XEROModel.Store.uspGetUsedTrialPDF" />
+    <FunctionImportMapping FunctionImportName="uspGetXeroChartOfAccount" FunctionName="XS_XEROModel.Store.uspGetXeroChartOfAccount">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetXeroChartOfAccount_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="XeroConnectID" ColumnName="XeroConnectID" />
+          <ScalarProperty Name="XeroAccountID" ColumnName="XeroAccountID" />
+          <ScalarProperty Name="FullyQualifiedNameField" ColumnName="FullyQualifiedNameField" />
+          <ScalarProperty Name="AccountSubTypeField" ColumnName="AccountSubTypeField" />
+          <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetXeroDocumentById" FunctionName="XS_XEROModel.Store.uspGetXeroDocumentById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetXeroDocumentById_Result">
+          <ScalarProperty Name="DocumentID" ColumnName="DocumentID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="XeroConnectID" ColumnName="XeroConnectID" />
+          <ScalarProperty Name="XeroInvoiceID" ColumnName="XeroInvoiceID" />
+          <ScalarProperty Name="XeroVendorID" ColumnName="XeroVendorID" />
+          <ScalarProperty Name="XeroVendorName" ColumnName="XeroVendorName" />
+          <ScalarProperty Name="XeroInvoiceDate" ColumnName="XeroInvoiceDate" />
+          <ScalarProperty Name="ScanInvoiceID" ColumnName="ScanInvoiceID" />
+          <ScalarProperty Name="ScanFile_Name" ColumnName="ScanFile_Name" />
+          <ScalarProperty Name="ScanBlob_Url" ColumnName="ScanBlob_Url" />
+          <ScalarProperty Name="ScanABNNumber" ColumnName="ScanABNNumber" />
+          <ScalarProperty Name="ScanRefNumber" ColumnName="ScanRefNumber" />
+          <ScalarProperty Name="ScanDocType" ColumnName="ScanDocType" />
+          <ScalarProperty Name="ScanSubTotal" ColumnName="ScanSubTotal" />
+          <ScalarProperty Name="ScanChargeTotal" ColumnName="ScanChargeTotal" />
+          <ScalarProperty Name="ScanDocumentTotal" ColumnName="ScanDocumentTotal" />
+          <ScalarProperty Name="ScanTag" ColumnName="ScanTag" />
+          <ScalarProperty Name="ScanInvoiceDate" ColumnName="ScanInvoiceDate" />
+          <ScalarProperty Name="ScanPurchaseOrder" ColumnName="ScanPurchaseOrder" />
+          <ScalarProperty Name="ScanVendorName" ColumnName="ScanVendorName" />
+          <ScalarProperty Name="ScanInvoiceTotal" ColumnName="ScanInvoiceTotal" />
+          <ScalarProperty Name="ScanTaxTotal" ColumnName="ScanTaxTotal" />
+          <ScalarProperty Name="ScanDocClassification" ColumnName="ScanDocClassification" />
+          <ScalarProperty Name="ScanServiceStatus" ColumnName="ScanServiceStatus" />
+          <ScalarProperty Name="ScanServiceMessage" ColumnName="ScanServiceMessage" />
+          <ScalarProperty Name="UploadedDate" ColumnName="UploadedDate" />
+          <ScalarProperty Name="XeroError" ColumnName="XeroError" />
+          <ScalarProperty Name="AspSessionID" ColumnName="AspSessionID" />
+          <ScalarProperty Name="Approved" ColumnName="Approved" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="XeroBillAddedOn" ColumnName="XeroBillAddedOn" />
+          <ScalarProperty Name="XeroBillAddedBy" ColumnName="XeroBillAddedBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetXeroDocumentHistory" FunctionName="XS_XEROModel.Store.uspGetXeroDocumentHistory">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetXeroDocumentHistory_Result">
+          <ScalarProperty Name="XeroVendorName" ColumnName="XeroVendorName" />
+          <ScalarProperty Name="XeroInvoiceID" ColumnName="XeroInvoiceID" />
+          <ScalarProperty Name="XeroInvoiceDate" ColumnName="XeroInvoiceDate" />
+          <ScalarProperty Name="ScanDocType" ColumnName="ScanDocType" />
+          <ScalarProperty Name="XeroVendorID" ColumnName="XeroVendorID" />
+          <ScalarProperty Name="ScanABNNumber" ColumnName="ScanABNNumber" />
+          <ScalarProperty Name="ScanInvoiceTotal" ColumnName="ScanInvoiceTotal" />
+          <ScalarProperty Name="ScanTaxTotal" ColumnName="ScanTaxTotal" />
+          <ScalarProperty Name="ScanFile_Name" ColumnName="ScanFile_Name" />
+          <ScalarProperty Name="ScanSubTotal" ColumnName="ScanSubTotal" />
+          <ScalarProperty Name="ScanRefNumber" ColumnName="ScanRefNumber" />
+          <ScalarProperty Name="ScanPurchaseOrder" ColumnName="ScanPurchaseOrder" />
+          <ScalarProperty Name="ScanInvoiceDate" ColumnName="ScanInvoiceDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetXeroDocumentHistoryByDate" FunctionName="XS_XEROModel.Store.uspGetXeroDocumentHistoryByDate">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetXeroDocumentHistoryByDate_Result">
+          <ScalarProperty Name="XeroVendorName" ColumnName="XeroVendorName" />
+          <ScalarProperty Name="XeroInvoiceID" ColumnName="XeroInvoiceID" />
+          <ScalarProperty Name="XeroInvoiceDate" ColumnName="XeroInvoiceDate" />
+          <ScalarProperty Name="ScanDocType" ColumnName="ScanDocType" />
+          <ScalarProperty Name="XeroVendorID" ColumnName="XeroVendorID" />
+          <ScalarProperty Name="ScanABNNumber" ColumnName="ScanABNNumber" />
+          <ScalarProperty Name="ScanInvoiceTotal" ColumnName="ScanInvoiceTotal" />
+          <ScalarProperty Name="ScanTaxTotal" ColumnName="ScanTaxTotal" />
+          <ScalarProperty Name="ScanFile_Name" ColumnName="ScanFile_Name" />
+          <ScalarProperty Name="ScanSubTotal" ColumnName="ScanSubTotal" />
+          <ScalarProperty Name="ScanRefNumber" ColumnName="ScanRefNumber" />
+          <ScalarProperty Name="ScanPurchaseOrder" ColumnName="ScanPurchaseOrder" />
+          <ScalarProperty Name="ScanInvoiceDate" ColumnName="ScanInvoiceDate" />
+          <ScalarProperty Name="DocumentID" ColumnName="DocumentID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetXeroDocumentToApprove" FunctionName="XS_XEROModel.Store.uspGetXeroDocumentToApprove">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetXeroDocumentToApprove_Result">
+          <ScalarProperty Name="DocumentID" ColumnName="DocumentID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="XeroConnectID" ColumnName="XeroConnectID" />
+          <ScalarProperty Name="XeroInvoiceID" ColumnName="XeroInvoiceID" />
+          <ScalarProperty Name="XeroVendorID" ColumnName="XeroVendorID" />
+          <ScalarProperty Name="XeroVendorName" ColumnName="XeroVendorName" />
+          <ScalarProperty Name="XeroInvoiceDate" ColumnName="XeroInvoiceDate" />
+          <ScalarProperty Name="ScanInvoiceID" ColumnName="ScanInvoiceID" />
+          <ScalarProperty Name="ScanFile_Name" ColumnName="ScanFile_Name" />
+          <ScalarProperty Name="ScanBlob_Url" ColumnName="ScanBlob_Url" />
+          <ScalarProperty Name="ScanABNNumber" ColumnName="ScanABNNumber" />
+          <ScalarProperty Name="ScanRefNumber" ColumnName="ScanRefNumber" />
+          <ScalarProperty Name="ScanDocType" ColumnName="ScanDocType" />
+          <ScalarProperty Name="ScanSubTotal" ColumnName="ScanSubTotal" />
+          <ScalarProperty Name="ScanChargeTotal" ColumnName="ScanChargeTotal" />
+          <ScalarProperty Name="ScanDocumentTotal" ColumnName="ScanDocumentTotal" />
+          <ScalarProperty Name="ScanTag" ColumnName="ScanTag" />
+          <ScalarProperty Name="ScanInvoiceDate" ColumnName="ScanInvoiceDate" />
+          <ScalarProperty Name="ScanPurchaseOrder" ColumnName="ScanPurchaseOrder" />
+          <ScalarProperty Name="ScanVendorName" ColumnName="ScanVendorName" />
+          <ScalarProperty Name="ScanInvoiceTotal" ColumnName="ScanInvoiceTotal" />
+          <ScalarProperty Name="ScanTaxTotal" ColumnName="ScanTaxTotal" />
+          <ScalarProperty Name="ScanDocClassification" ColumnName="ScanDocClassification" />
+          <ScalarProperty Name="ScanServiceStatus" ColumnName="ScanServiceStatus" />
+          <ScalarProperty Name="ScanServiceMessage" ColumnName="ScanServiceMessage" />
+          <ScalarProperty Name="UploadedDate" ColumnName="UploadedDate" />
+          <ScalarProperty Name="XeroError" ColumnName="XeroError" />
+          <ScalarProperty Name="AspSessionID" ColumnName="AspSessionID" />
+          <ScalarProperty Name="Approved" ColumnName="Approved" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="XeroBillAddedOn" ColumnName="XeroBillAddedOn" />
+          <ScalarProperty Name="XeroBillAddedBy" ColumnName="XeroBillAddedBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetXeroDocumentToAuth" FunctionName="XS_XEROModel.Store.uspGetXeroDocumentToAuth">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetXeroDocumentToAuth_Result">
+          <ScalarProperty Name="DocumentLineID" ColumnName="DocumentLineID" />
+          <ScalarProperty Name="DocumentID" ColumnName="DocumentID" />
+          <ScalarProperty Name="XeroAccountID" ColumnName="XeroAccountID" />
+          <ScalarProperty Name="XeroAccountName" ColumnName="XeroAccountName" />
+          <ScalarProperty Name="XeroClassID" ColumnName="XeroClassID" />
+          <ScalarProperty Name="XeroClassName" ColumnName="XeroClassName" />
+          <ScalarProperty Name="XeroJobID" ColumnName="XeroJobID" />
+          <ScalarProperty Name="XeroJobName" ColumnName="XeroJobName" />
+          <ScalarProperty Name="ScanDescription" ColumnName="ScanDescription" />
+          <ScalarProperty Name="ScanArticle_Code" ColumnName="ScanArticle_Code" />
+          <ScalarProperty Name="ScanGL_Code" ColumnName="ScanGL_Code" />
+          <ScalarProperty Name="ScanGST" ColumnName="ScanGST" />
+          <ScalarProperty Name="ScanTax_Code" ColumnName="ScanTax_Code" />
+          <ScalarProperty Name="ScanTracking" ColumnName="ScanTracking" />
+          <ScalarProperty Name="ScanUnit_Measure" ColumnName="ScanUnit_Measure" />
+          <ScalarProperty Name="ScanUnit_Price" ColumnName="ScanUnit_Price" />
+          <ScalarProperty Name="Scan_Quantity" ColumnName="Scan_Quantity" />
+          <ScalarProperty Name="Scan_Total" ColumnName="Scan_Total" />
+          <ScalarProperty Name="XeroVendorName" ColumnName="XeroVendorName" />
+          <ScalarProperty Name="XeroVendorID" ColumnName="XeroVendorID" />
+          <ScalarProperty Name="ScanABNNumber" ColumnName="ScanABNNumber" />
+          <ScalarProperty Name="ScanInvoiceTotal" ColumnName="ScanInvoiceTotal" />
+          <ScalarProperty Name="ScanTaxTotal" ColumnName="ScanTaxTotal" />
+          <ScalarProperty Name="ScanFile_Name" ColumnName="ScanFile_Name" />
+          <ScalarProperty Name="ScanSubTotal" ColumnName="ScanSubTotal" />
+          <ScalarProperty Name="ScanRefNumber" ColumnName="ScanRefNumber" />
+          <ScalarProperty Name="ScanDocClassification" ColumnName="ScanDocClassification" />
+          <ScalarProperty Name="ScanDocType" ColumnName="ScanDocType" />
+          <ScalarProperty Name="ScanBlob_Url" ColumnName="ScanBlob_Url" />
+          <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+          <ScalarProperty Name="ScanInvoiceDate" ColumnName="ScanInvoiceDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="XeroInvoiceID" ColumnName="XeroInvoiceID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetXeroDocumentToBill" FunctionName="XS_XEROModel.Store.uspGetXeroDocumentToBill">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetXeroDocumentToBill_Result">
+          <ScalarProperty Name="DocumentLineID" ColumnName="DocumentLineID" />
+          <ScalarProperty Name="DocumentID" ColumnName="DocumentID" />
+          <ScalarProperty Name="XeroAccountID" ColumnName="XeroAccountID" />
+          <ScalarProperty Name="XeroAccountName" ColumnName="XeroAccountName" />
+          <ScalarProperty Name="XeroClassID" ColumnName="XeroClassID" />
+          <ScalarProperty Name="XeroClassName" ColumnName="XeroClassName" />
+          <ScalarProperty Name="XeroJobID" ColumnName="XeroJobID" />
+          <ScalarProperty Name="XeroJobName" ColumnName="XeroJobName" />
+          <ScalarProperty Name="ScanDescription" ColumnName="ScanDescription" />
+          <ScalarProperty Name="ScanArticle_Code" ColumnName="ScanArticle_Code" />
+          <ScalarProperty Name="ScanGL_Code" ColumnName="ScanGL_Code" />
+          <ScalarProperty Name="ScanGST" ColumnName="ScanGST" />
+          <ScalarProperty Name="ScanTax_Code" ColumnName="ScanTax_Code" />
+          <ScalarProperty Name="ScanTracking" ColumnName="ScanTracking" />
+          <ScalarProperty Name="ScanUnit_Measure" ColumnName="ScanUnit_Measure" />
+          <ScalarProperty Name="ScanUnit_Price" ColumnName="ScanUnit_Price" />
+          <ScalarProperty Name="Scan_Quantity" ColumnName="Scan_Quantity" />
+          <ScalarProperty Name="Scan_Total" ColumnName="Scan_Total" />
+          <ScalarProperty Name="XeroVendorName" ColumnName="XeroVendorName" />
+          <ScalarProperty Name="XeroVendorID" ColumnName="XeroVendorID" />
+          <ScalarProperty Name="ScanABNNumber" ColumnName="ScanABNNumber" />
+          <ScalarProperty Name="ScanInvoiceTotal" ColumnName="ScanInvoiceTotal" />
+          <ScalarProperty Name="ScanTaxTotal" ColumnName="ScanTaxTotal" />
+          <ScalarProperty Name="ScanFile_Name" ColumnName="ScanFile_Name" />
+          <ScalarProperty Name="ScanSubTotal" ColumnName="ScanSubTotal" />
+          <ScalarProperty Name="ScanRefNumber" ColumnName="ScanRefNumber" />
+          <ScalarProperty Name="ScanDocClassification" ColumnName="ScanDocClassification" />
+          <ScalarProperty Name="ScanDocType" ColumnName="ScanDocType" />
+          <ScalarProperty Name="ScanBlob_Url" ColumnName="ScanBlob_Url" />
+          <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+          <ScalarProperty Name="ScanInvoiceDate" ColumnName="ScanInvoiceDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetXeroDocumentToProcess" FunctionName="XS_XEROModel.Store.uspGetXeroDocumentToProcess">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetXeroDocumentToProcess_Result">
+          <ScalarProperty Name="DocumentID" ColumnName="DocumentID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="XeroConnectID" ColumnName="XeroConnectID" />
+          <ScalarProperty Name="XeroInvoiceID" ColumnName="XeroInvoiceID" />
+          <ScalarProperty Name="XeroVendorID" ColumnName="XeroVendorID" />
+          <ScalarProperty Name="XeroVendorName" ColumnName="XeroVendorName" />
+          <ScalarProperty Name="XeroInvoiceDate" ColumnName="XeroInvoiceDate" />
+          <ScalarProperty Name="ScanInvoiceID" ColumnName="ScanInvoiceID" />
+          <ScalarProperty Name="ScanFile_Name" ColumnName="ScanFile_Name" />
+          <ScalarProperty Name="ScanBlob_Url" ColumnName="ScanBlob_Url" />
+          <ScalarProperty Name="ScanABNNumber" ColumnName="ScanABNNumber" />
+          <ScalarProperty Name="ScanRefNumber" ColumnName="ScanRefNumber" />
+          <ScalarProperty Name="ScanDocType" ColumnName="ScanDocType" />
+          <ScalarProperty Name="ScanSubTotal" ColumnName="ScanSubTotal" />
+          <ScalarProperty Name="ScanChargeTotal" ColumnName="ScanChargeTotal" />
+          <ScalarProperty Name="ScanDocumentTotal" ColumnName="ScanDocumentTotal" />
+          <ScalarProperty Name="ScanTag" ColumnName="ScanTag" />
+          <ScalarProperty Name="ScanInvoiceDate" ColumnName="ScanInvoiceDate" />
+          <ScalarProperty Name="ScanPurchaseOrder" ColumnName="ScanPurchaseOrder" />
+          <ScalarProperty Name="ScanVendorName" ColumnName="ScanVendorName" />
+          <ScalarProperty Name="ScanInvoiceTotal" ColumnName="ScanInvoiceTotal" />
+          <ScalarProperty Name="ScanTaxTotal" ColumnName="ScanTaxTotal" />
+          <ScalarProperty Name="ScanDocClassification" ColumnName="ScanDocClassification" />
+          <ScalarProperty Name="ScanServiceStatus" ColumnName="ScanServiceStatus" />
+          <ScalarProperty Name="ScanServiceMessage" ColumnName="ScanServiceMessage" />
+          <ScalarProperty Name="UploadedDate" ColumnName="UploadedDate" />
+          <ScalarProperty Name="XeroError" ColumnName="XeroError" />
+          <ScalarProperty Name="AspSessionID" ColumnName="AspSessionID" />
+          <ScalarProperty Name="Approved" ColumnName="Approved" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="XeroBillAddedOn" ColumnName="XeroBillAddedOn" />
+          <ScalarProperty Name="XeroBillAddedBy" ColumnName="XeroBillAddedBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetXeroDocumentToRead" FunctionName="XS_XEROModel.Store.uspGetXeroDocumentToRead">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetXeroDocumentToRead_Result">
+          <ScalarProperty Name="DocumentID" ColumnName="DocumentID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="XeroConnectID" ColumnName="XeroConnectID" />
+          <ScalarProperty Name="XeroInvoiceID" ColumnName="XeroInvoiceID" />
+          <ScalarProperty Name="XeroVendorID" ColumnName="XeroVendorID" />
+          <ScalarProperty Name="XeroVendorName" ColumnName="XeroVendorName" />
+          <ScalarProperty Name="XeroInvoiceDate" ColumnName="XeroInvoiceDate" />
+          <ScalarProperty Name="ScanInvoiceID" ColumnName="ScanInvoiceID" />
+          <ScalarProperty Name="ScanFile_Name" ColumnName="ScanFile_Name" />
+          <ScalarProperty Name="ScanBlob_Url" ColumnName="ScanBlob_Url" />
+          <ScalarProperty Name="ScanABNNumber" ColumnName="ScanABNNumber" />
+          <ScalarProperty Name="ScanRefNumber" ColumnName="ScanRefNumber" />
+          <ScalarProperty Name="ScanDocType" ColumnName="ScanDocType" />
+          <ScalarProperty Name="ScanSubTotal" ColumnName="ScanSubTotal" />
+          <ScalarProperty Name="ScanChargeTotal" ColumnName="ScanChargeTotal" />
+          <ScalarProperty Name="ScanDocumentTotal" ColumnName="ScanDocumentTotal" />
+          <ScalarProperty Name="ScanTag" ColumnName="ScanTag" />
+          <ScalarProperty Name="ScanInvoiceDate" ColumnName="ScanInvoiceDate" />
+          <ScalarProperty Name="ScanPurchaseOrder" ColumnName="ScanPurchaseOrder" />
+          <ScalarProperty Name="ScanVendorName" ColumnName="ScanVendorName" />
+          <ScalarProperty Name="ScanInvoiceTotal" ColumnName="ScanInvoiceTotal" />
+          <ScalarProperty Name="ScanTaxTotal" ColumnName="ScanTaxTotal" />
+          <ScalarProperty Name="ScanDocClassification" ColumnName="ScanDocClassification" />
+          <ScalarProperty Name="ScanServiceStatus" ColumnName="ScanServiceStatus" />
+          <ScalarProperty Name="ScanServiceMessage" ColumnName="ScanServiceMessage" />
+          <ScalarProperty Name="UploadedDate" ColumnName="UploadedDate" />
+          <ScalarProperty Name="XeroError" ColumnName="XeroError" />
+          <ScalarProperty Name="AspSessionID" ColumnName="AspSessionID" />
+          <ScalarProperty Name="Approved" ColumnName="Approved" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="XeroBillAddedOn" ColumnName="XeroBillAddedOn" />
+          <ScalarProperty Name="XeroBillAddedBy" ColumnName="XeroBillAddedBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetXeroMasterByAccountAndConnectID" FunctionName="XS_XEROModel.Store.uspGetXeroMasterByAccountAndConnectID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetXeroMasterByAccountAndConnectID_Result">
+          <ScalarProperty Name="XeroID" ColumnName="XeroID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="RealmId" ColumnName="RealmId" />
+          <ScalarProperty Name="OAuthToken" ColumnName="OAuthToken" />
+          <ScalarProperty Name="OAuthTokenSec" ColumnName="OAuthTokenSec" />
+          <ScalarProperty Name="AccessToken" ColumnName="AccessToken" />
+          <ScalarProperty Name="AccessTokenExpiresIn" ColumnName="AccessTokenExpiresIn" />
+          <ScalarProperty Name="RefreshToken" ColumnName="RefreshToken" />
+          <ScalarProperty Name="RefreshTokenExpiresIn" ColumnName="RefreshTokenExpiresIn" />
+          <ScalarProperty Name="IdentityToken" ColumnName="IdentityToken" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="LeagalName" ColumnName="LeagalName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PrimaryPhone" ColumnName="PrimaryPhone" />
+          <ScalarProperty Name="WebAddr" ColumnName="WebAddr" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="ShortCode" ColumnName="ShortCode" />
+          <ScalarProperty Name="IsAuthrorize" ColumnName="IsAuthrorize" />
+          <ScalarProperty Name="SessionHandle" ColumnName="SessionHandle" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetXeroMasterByAccountID" FunctionName="XS_XEROModel.Store.uspGetXeroMasterByAccountID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetXeroMasterByAccountID_Result">
+          <ScalarProperty Name="XeroID" ColumnName="XeroID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="RealmId" ColumnName="RealmId" />
+          <ScalarProperty Name="OAuthToken" ColumnName="OAuthToken" />
+          <ScalarProperty Name="OAuthTokenSec" ColumnName="OAuthTokenSec" />
+          <ScalarProperty Name="AccessToken" ColumnName="AccessToken" />
+          <ScalarProperty Name="AccessTokenExpiresIn" ColumnName="AccessTokenExpiresIn" />
+          <ScalarProperty Name="RefreshToken" ColumnName="RefreshToken" />
+          <ScalarProperty Name="RefreshTokenExpiresIn" ColumnName="RefreshTokenExpiresIn" />
+          <ScalarProperty Name="IdentityToken" ColumnName="IdentityToken" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="LeagalName" ColumnName="LeagalName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PrimaryPhone" ColumnName="PrimaryPhone" />
+          <ScalarProperty Name="WebAddr" ColumnName="WebAddr" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="ShortCode" ColumnName="ShortCode" />
+          <ScalarProperty Name="IsAuthrorize" ColumnName="IsAuthrorize" />
+          <ScalarProperty Name="SessionHandle" ColumnName="SessionHandle" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetXeroScanningLogin" FunctionName="XS_XEROModel.Store.uspGetXeroScanningLogin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetXeroScanningLogin_Result">
+          <ScalarProperty Name="XeroEzzyID" ColumnName="XeroEzzyID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="XeroConnectID" ColumnName="XeroConnectID" />
+          <ScalarProperty Name="EzzyUserName" ColumnName="EzzyUserName" />
+          <ScalarProperty Name="EzzyPassword" ColumnName="EzzyPassword" />
+          <ScalarProperty Name="EzzyEmailAddress" ColumnName="EzzyEmailAddress" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetXeroTax" FunctionName="XS_XEROModel.Store.uspGetXeroTax">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetXeroTax_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="XeroConnectID" ColumnName="XeroConnectID" />
+          <ScalarProperty Name="TaxName" ColumnName="TaxName" />
+          <ScalarProperty Name="TaxID" ColumnName="TaxID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetXeroVendor" FunctionName="XS_XEROModel.Store.uspGetXeroVendor">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspGetXeroVendor_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="XeroConnectID" ColumnName="XeroConnectID" />
+          <ScalarProperty Name="XeroAccountID" ColumnName="XeroAccountID" />
+          <ScalarProperty Name="XeroVendorID" ColumnName="XeroVendorID" />
+          <ScalarProperty Name="DisplayNameField" ColumnName="DisplayNameField" />
+          <ScalarProperty Name="CityField" ColumnName="CityField" />
+          <ScalarProperty Name="CountrySubDivisionCodeField" ColumnName="CountrySubDivisionCodeField" />
+          <ScalarProperty Name="PostalCodeField" ColumnName="PostalCodeField" />
+          <ScalarProperty Name="CountryField" ColumnName="CountryField" />
+          <ScalarProperty Name="PrimaryPhone" ColumnName="PrimaryPhone" />
+          <ScalarProperty Name="PrimaryEmailAddr" ColumnName="PrimaryEmailAddr" />
+          <ScalarProperty Name="TaxIdentifier" ColumnName="TaxIdentifier" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspInsertQboDocument" FunctionName="XS_XEROModel.Store.uspInsertQboDocument" />
+    <FunctionImportMapping FunctionImportName="uspInsertQboDocumentLine" FunctionName="XS_XEROModel.Store.uspInsertQboDocumentLine" />
+    <FunctionImportMapping FunctionImportName="uspInsertXeroDocument" FunctionName="XS_XEROModel.Store.uspInsertXeroDocument" />
+    <FunctionImportMapping FunctionImportName="uspInsertXeroDocumentLine" FunctionName="XS_XEROModel.Store.uspInsertXeroDocumentLine" />
+    <FunctionImportMapping FunctionImportName="uspIsEzUploadRequired" FunctionName="XS_XEROModel.Store.uspIsEzUploadRequired" />
+    <FunctionImportMapping FunctionImportName="uspSaveAccount" FunctionName="XS_XEROModel.Store.uspSaveAccount" />
+    <FunctionImportMapping FunctionImportName="uspSaveErrorLog" FunctionName="XS_XEROModel.Store.uspSaveErrorLog" />
+    <FunctionImportMapping FunctionImportName="uspSaveFileSql" FunctionName="XS_XEROModel.Store.uspSaveFileSql" />
+    <FunctionImportMapping FunctionImportName="uspSaveLogin" FunctionName="XS_XEROModel.Store.uspSaveLogin" />
+    <FunctionImportMapping FunctionImportName="uspSavePFX" FunctionName="XS_XEROModel.Store.uspSavePFX" />
+    <FunctionImportMapping FunctionImportName="uspSavePlatform" FunctionName="XS_XEROModel.Store.uspSavePlatform" />
+    <FunctionImportMapping FunctionImportName="uspSaveQboChartOfAccount" FunctionName="XS_XEROModel.Store.uspSaveQboChartOfAccount" />
+    <FunctionImportMapping FunctionImportName="uspSaveQBOEzzyAccount" FunctionName="XS_XEROModel.Store.uspSaveQBOEzzyAccount" />
+    <FunctionImportMapping FunctionImportName="uspSaveQBOMaster" FunctionName="XS_XEROModel.Store.uspSaveQBOMaster" />
+    <FunctionImportMapping FunctionImportName="uspSaveQboTax" FunctionName="XS_XEROModel.Store.uspSaveQboTax" />
+    <FunctionImportMapping FunctionImportName="uspSaveQboVendor" FunctionName="XS_XEROModel.Store.uspSaveQboVendor" />
+    <FunctionImportMapping FunctionImportName="uspSaveReckonDesktop" FunctionName="XS_XEROModel.Store.uspSaveReckonDesktop" />
+    <FunctionImportMapping FunctionImportName="uspSaveReckonDocument" FunctionName="XS_XEROModel.Store.uspSaveReckonDocument" />
+    <FunctionImportMapping FunctionImportName="uspSaveReckonEzzyAccount" FunctionName="XS_XEROModel.Store.uspSaveReckonEzzyAccount" />
+    <FunctionImportMapping FunctionImportName="uspSaveReckonVendorDefault" FunctionName="XS_XEROModel.Store.uspSaveReckonVendorDefault" />
+    <FunctionImportMapping FunctionImportName="uspSaveRefreshedXeroToken" FunctionName="XS_XEROModel.Store.uspSaveRefreshedXeroToken" />
+    <FunctionImportMapping FunctionImportName="uspSaveStripePayment" FunctionName="XS_XEROModel.Store.uspSaveStripePayment" />
+    <FunctionImportMapping FunctionImportName="uspSaveXeroChartOfAccount" FunctionName="XS_XEROModel.Store.uspSaveXeroChartOfAccount" />
+    <FunctionImportMapping FunctionImportName="uspSaveXeroEzzyAccount" FunctionName="XS_XEROModel.Store.uspSaveXeroEzzyAccount" />
+    <FunctionImportMapping FunctionImportName="uspSaveXeroMaster" FunctionName="XS_XEROModel.Store.uspSaveXeroMaster" />
+    <FunctionImportMapping FunctionImportName="uspSaveXeroTax" FunctionName="XS_XEROModel.Store.uspSaveXeroTax" />
+    <FunctionImportMapping FunctionImportName="uspSaveXeroVendor" FunctionName="XS_XEROModel.Store.uspSaveXeroVendor" />
+    <FunctionImportMapping FunctionImportName="uspUpdateIsEzUploadRequired" FunctionName="XS_XEROModel.Store.uspUpdateIsEzUploadRequired" />
+    <FunctionImportMapping FunctionImportName="uspUpdateLogin" FunctionName="XS_XEROModel.Store.uspUpdateLogin" />
+    <FunctionImportMapping FunctionImportName="uspUpdatePhoneByAccountID" FunctionName="XS_XEROModel.Store.uspUpdatePhoneByAccountID" />
+    <FunctionImportMapping FunctionImportName="uspUpdateQboBillID" FunctionName="XS_XEROModel.Store.uspUpdateQboBillID" />
+    <FunctionImportMapping FunctionImportName="uspUpdateQBOCompanyInfo" FunctionName="XS_XEROModel.Store.uspUpdateQBOCompanyInfo" />
+    <FunctionImportMapping FunctionImportName="uspUpdateQboDocument" FunctionName="XS_XEROModel.Store.uspUpdateQboDocument" />
+    <FunctionImportMapping FunctionImportName="uspUpdateQboDocumentLine" FunctionName="XS_XEROModel.Store.uspUpdateQboDocumentLine" />
+    <FunctionImportMapping FunctionImportName="uspUpdateQboVendAcct" FunctionName="XS_XEROModel.Store.uspUpdateQboVendAcct" />
+    <FunctionImportMapping FunctionImportName="uspUpdateReAuthrorizeByAccountID" FunctionName="XS_XEROModel.Store.uspUpdateReAuthrorizeByAccountID" />
+    <FunctionImportMapping FunctionImportName="uspUpdateReckonFileUserAccess" FunctionName="XS_XEROModel.Store.uspUpdateReckonFileUserAccess" />
+    <FunctionImportMapping FunctionImportName="uspUpdateToken" FunctionName="XS_XEROModel.Store.uspUpdateToken" />
+    <FunctionImportMapping FunctionImportName="uspUpdateXeroBillID" FunctionName="XS_XEROModel.Store.uspUpdateXeroBillID" />
+    <FunctionImportMapping FunctionImportName="uspUpdateXeroCompanyInfo" FunctionName="XS_XEROModel.Store.uspUpdateXeroCompanyInfo" />
+    <FunctionImportMapping FunctionImportName="uspUpdateXeroDocument" FunctionName="XS_XEROModel.Store.uspUpdateXeroDocument" />
+    <FunctionImportMapping FunctionImportName="uspUpdateXeroDocumentLine" FunctionName="XS_XEROModel.Store.uspUpdateXeroDocumentLine" />
+    <FunctionImportMapping FunctionImportName="uspUpdateXeroVendAcct" FunctionName="XS_XEROModel.Store.uspUpdateXeroVendAcct" />
+    <FunctionImportMapping FunctionImportName="uspUpgradePlan" FunctionName="XS_XEROModel.Store.uspUpgradePlan" />
+    <FunctionImportMapping FunctionImportName="uspValidateActivationCode" FunctionName="XS_XEROModel.Store.uspValidateActivationCode">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspValidateActivationCode_Result">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ActivationCode" ColumnName="ActivationCode" />
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspVerifyUsernameandPassword" FunctionName="XS_XEROModel.Store.uspVerifyUsernameandPassword">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="XS_XEROModel.uspVerifyUsernameandPassword_Result">
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="AccountMasters">
+      <EntityTypeMapping TypeName="XS_XEROModel.AccountMaster">
+        <MappingFragment StoreEntitySet="AccountMaster">
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="ActivationCode" ColumnName="ActivationCode" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Add3" ColumnName="Add3" />
+          <ScalarProperty Name="Add2" ColumnName="Add2" />
+          <ScalarProperty Name="Add1" ColumnName="Add1" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="CountryOfOrigin" ColumnName="CountryOfOrigin" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="PlatformID" ColumnName="PlatformID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

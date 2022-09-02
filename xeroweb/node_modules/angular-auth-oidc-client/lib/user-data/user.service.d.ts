@@ -1,0 +1,36 @@
+import { Observable } from 'rxjs';
+import { DataService } from '../api/data.service';
+import { ConfigurationProvider } from '../config/provider/config.provider';
+import { LoggerService } from '../logging/logger.service';
+import { PublicEventsService } from '../public-events/public-events.service';
+import { StoragePersistenceService } from '../storage/storage-persistence.service';
+import { FlowHelper } from '../utils/flowHelper/flow-helper.service';
+import { TokenHelperService } from '../utils/tokenHelper/token-helper.service';
+import { UserDataResult } from './userdata-result';
+import * as i0 from "@angular/core";
+export declare class UserService {
+    private oidcDataService;
+    private storagePersistenceService;
+    private eventService;
+    private loggerService;
+    private tokenHelperService;
+    private flowHelper;
+    private configurationProvider;
+    private userDataInternal$;
+    get userData$(): Observable<UserDataResult>;
+    constructor(oidcDataService: DataService, storagePersistenceService: StoragePersistenceService, eventService: PublicEventsService, loggerService: LoggerService, tokenHelperService: TokenHelperService, flowHelper: FlowHelper, configurationProvider: ConfigurationProvider);
+    getAndPersistUserDataInStore(configId: string, isRenewProcess?: boolean, idToken?: any, decodedIdToken?: any): Observable<any>;
+    getUserDataFromStore(configId: string): any;
+    publishUserDataIfExists(configId: string): void;
+    setUserDataToStore(userData: any, configId: string): void;
+    resetUserDataInStore(configId: string): void;
+    private getUserDataOidcFlowAndSave;
+    private getIdentityUserData;
+    private validateUserDataSubIdToken;
+    private fireUserDataEvent;
+    private composeSingleOrMultipleUserDataObject;
+    private composeSingleUserDataResult;
+    private currentConfigIsToUpdate;
+    static ɵfac: i0.ɵɵFactoryDeclaration<UserService, never>;
+    static ɵprov: i0.ɵɵInjectableDeclaration<UserService>;
+}

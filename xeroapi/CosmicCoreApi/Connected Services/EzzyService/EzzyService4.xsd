@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/InvoiceApp.Web.ServiceObjects" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/InvoiceApp.Web.ServiceObjects" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://app.ezzydoc.com/EzzyService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/InvoiceEngine" />
+  <xs:complexType name="EmailRuleSS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="rule" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="service_status" nillable="true" type="tns:Servicestatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EmailRuleSS" nillable="true" type="tns:EmailRuleSS" />
+  <xs:complexType name="Servicestatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="invoice_id" type="xs:int" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/InvoiceEngine" minOccurs="0" name="status" type="q1:servicestatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Servicestatus" nillable="true" type="tns:Servicestatus" />
+  <xs:complexType name="FormDataSS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="blob_url" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/InvoiceEngine" minOccurs="0" name="form_data" nillable="true" type="q2:FormData" />
+      <xs:element minOccurs="0" name="gst_total" type="xs:decimal" />
+      <xs:element minOccurs="0" name="invoice_number" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/InvoiceEngine" minOccurs="0" name="locale" type="q3:userlocale" />
+      <xs:element minOccurs="0" name="pdf_url" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="service_status" nillable="true" type="tns:Servicestatus" />
+      <xs:element minOccurs="0" name="supplier_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thumb_url" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="total" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FormDataSS" nillable="true" type="tns:FormDataSS" />
+  <xs:complexType name="SearchCacheSS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="list" nillable="true" type="tns:ArrayOfSearchCache" />
+      <xs:element minOccurs="0" name="service_status" nillable="true" type="tns:Servicestatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchCacheSS" nillable="true" type="tns:SearchCacheSS" />
+  <xs:complexType name="ArrayOfSearchCache">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SearchCache" nillable="true" type="tns:SearchCache" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSearchCache" nillable="true" type="tns:ArrayOfSearchCache" />
+  <xs:complexType name="SearchCache">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="filter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="filter_type" type="xs:int" />
+      <xs:element minOccurs="0" name="invoiceid" type="xs:int" />
+      <xs:element minOccurs="0" name="rank" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchCache" nillable="true" type="tns:SearchCache" />
+  <xs:complexType name="HandLExportSS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="service_status" nillable="true" type="tns:Servicestatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HandLExportSS" nillable="true" type="tns:HandLExportSS" />
+  <xs:complexType name="InvoiceHeaderValues">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ABNnumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RefNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupplierName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="chargeTotal" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="discountTotal" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="gstTotal" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="invoiceDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="invoiceNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="invoiceTotal" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="origin" type="xs:int" />
+      <xs:element minOccurs="0" name="paymentDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="purchaseOrder" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="subTotal" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InvoiceHeaderValues" nillable="true" type="tns:InvoiceHeaderValues" />
+  <xs:complexType name="ArrayOfInvoiceTrainSetHeader">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InvoiceTrainSetHeader" nillable="true" type="tns:InvoiceTrainSetHeader" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInvoiceTrainSetHeader" nillable="true" type="tns:ArrayOfInvoiceTrainSetHeader" />
+  <xs:complexType name="InvoiceTrainSetHeader">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="anchor" nillable="true" type="tns:InvoiceBlockValues" />
+      <xs:element minOccurs="0" name="block" nillable="true" type="tns:InvoiceBlockValues" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/InvoiceEngine" minOccurs="0" name="header" type="q4:headerfields" />
+      <xs:element minOccurs="0" name="invoice_identifier" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InvoiceTrainSetHeader" nillable="true" type="tns:InvoiceTrainSetHeader" />
+  <xs:complexType name="InvoiceBlockValues">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="header" type="xs:int" />
+      <xs:element minOccurs="0" name="height" type="xs:int" />
+      <xs:element minOccurs="0" name="page" type="xs:int" />
+      <xs:element minOccurs="0" name="text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="width" type="xs:int" />
+      <xs:element minOccurs="0" name="x" type="xs:int" />
+      <xs:element minOccurs="0" name="y" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InvoiceBlockValues" nillable="true" type="tns:InvoiceBlockValues" />
+  <xs:complexType name="QueueStatisticsSS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="in_workflow" type="xs:int" />
+      <xs:element minOccurs="0" name="service_status" nillable="true" type="tns:Servicestatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueueStatisticsSS" nillable="true" type="tns:QueueStatisticsSS" />
+  <xs:complexType name="CreditCountStatusSS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="creditCount" type="xs:int" />
+      <xs:element minOccurs="0" name="service_status" nillable="true" type="tns:Servicestatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CreditCountStatusSS" nillable="true" type="tns:CreditCountStatusSS" />
+  <xs:complexType name="InvoiceTrainSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bounds" nillable="true" type="tns:TrainRowBounds" />
+      <xs:element minOccurs="0" name="cols" nillable="true" type="tns:ArrayOfInvoiceTableColumn" />
+      <xs:element minOccurs="0" name="invoice_identifier" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rows" nillable="true" type="tns:ArrayOfInvoiceRowPosition" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InvoiceTrainSet" nillable="true" type="tns:InvoiceTrainSet" />
+  <xs:complexType name="TrainRowBounds">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bottom" type="xs:int" />
+      <xs:element minOccurs="0" name="bottom_anchor" nillable="true" type="tns:InvoiceBlockValues" />
+      <xs:element minOccurs="0" name="top" type="xs:int" />
+      <xs:element minOccurs="0" name="top2" type="xs:int" />
+      <xs:element minOccurs="0" name="x" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TrainRowBounds" nillable="true" type="tns:TrainRowBounds" />
+  <xs:complexType name="ArrayOfInvoiceTableColumn">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InvoiceTableColumn" nillable="true" type="tns:InvoiceTableColumn" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInvoiceTableColumn" nillable="true" type="tns:ArrayOfInvoiceTableColumn" />
+  <xs:complexType name="InvoiceTableColumn">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="position" nillable="true" type="tns:InvoiceColPosition" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InvoiceTableColumn" nillable="true" type="tns:InvoiceTableColumn" />
+  <xs:complexType name="InvoiceColPosition">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="page" type="xs:int" />
+      <xs:element minOccurs="0" name="width" type="xs:double" />
+      <xs:element minOccurs="0" name="x" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InvoiceColPosition" nillable="true" type="tns:InvoiceColPosition" />
+  <xs:complexType name="ArrayOfInvoiceRowPosition">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InvoiceRowPosition" nillable="true" type="tns:InvoiceRowPosition" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInvoiceRowPosition" nillable="true" type="tns:ArrayOfInvoiceRowPosition" />
+  <xs:complexType name="InvoiceRowPosition">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="height" type="xs:double" />
+      <xs:element minOccurs="0" name="page" type="xs:int" />
+      <xs:element minOccurs="0" name="y" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InvoiceRowPosition" nillable="true" type="tns:InvoiceRowPosition" />
+  <xs:complexType name="VerificationCode">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="batch_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="verification_code" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VerificationCode" nillable="true" type="tns:VerificationCode" />
+  <xs:complexType name="VerificationCodeReplySS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="batch_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="service_status" nillable="true" type="tns:Servicestatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VerificationCodeReplySS" nillable="true" type="tns:VerificationCodeReplySS" />
+  <xs:complexType name="EmailMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="to_email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="to_name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EmailMessage" nillable="true" type="tns:EmailMessage" />
+</xs:schema>

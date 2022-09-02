@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Bjee/pEYnv48LNhkqUcYh+4Kdm5+8NqqaWGLniUIwWMUYfnkQYIJpktyiDwPTfscHMZiScbnyDuc47PQFsny+g==",
+  "success": true,
+  "projectFilePath": "D:\\Projects\\xero_au\\xero_au\\xeroapi\\CosmicDatabaaseLayer\\CosmicDatabaaseLayer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.23\\microsoft.netcore.app.host.win-x64.3.1.23.nupkg.sha512"
+  ],
+  "logs": []
+}

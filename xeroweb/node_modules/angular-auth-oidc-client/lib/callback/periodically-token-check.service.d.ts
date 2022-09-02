@@ -1,0 +1,36 @@
+import { AuthStateService } from '../auth-state/auth-state.service';
+import { ConfigurationProvider } from '../config/provider/config.provider';
+import { FlowsDataService } from '../flows/flows-data.service';
+import { ResetAuthDataService } from '../flows/reset-auth-data.service';
+import { RefreshSessionIframeService } from '../iframe/refresh-session-iframe.service';
+import { LoggerService } from '../logging/logger.service';
+import { PublicEventsService } from '../public-events/public-events.service';
+import { StoragePersistenceService } from '../storage/storage-persistence.service';
+import { UserService } from '../user-data/user.service';
+import { FlowHelper } from '../utils/flowHelper/flow-helper.service';
+import { IntervalService } from './interval.service';
+import { RefreshSessionRefreshTokenService } from './refresh-session-refresh-token.service';
+import * as i0 from "@angular/core";
+export declare class PeriodicallyTokenCheckService {
+    private resetAuthDataService;
+    private flowHelper;
+    private configurationProvider;
+    private flowsDataService;
+    private loggerService;
+    private userService;
+    private authStateService;
+    private refreshSessionIframeService;
+    private refreshSessionRefreshTokenService;
+    private intervalService;
+    private storagePersistenceService;
+    private publicEventsService;
+    constructor(resetAuthDataService: ResetAuthDataService, flowHelper: FlowHelper, configurationProvider: ConfigurationProvider, flowsDataService: FlowsDataService, loggerService: LoggerService, userService: UserService, authStateService: AuthStateService, refreshSessionIframeService: RefreshSessionIframeService, refreshSessionRefreshTokenService: RefreshSessionRefreshTokenService, intervalService: IntervalService, storagePersistenceService: StoragePersistenceService, publicEventsService: PublicEventsService);
+    startTokenValidationPeriodically(): void;
+    private getRefreshEvent;
+    private getSmallestRefreshTimeFromConfigs;
+    private getConfigsWithSilentRenewEnabled;
+    private createRefreshEventForConfig;
+    private shouldStartPeriodicallyCheckForConfig;
+    static ɵfac: i0.ɵɵFactoryDeclaration<PeriodicallyTokenCheckService, never>;
+    static ɵprov: i0.ɵɵInjectableDeclaration<PeriodicallyTokenCheckService>;
+}

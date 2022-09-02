@@ -1,0 +1,451 @@
+Application, INFO - GetXeroMasterByAccountID started,  18:50:48:888
+Application, INFO - GetXeroMasterByAccountID clear,  18:50:48:891
+Application, INFO - GetXeroMasterByAccountID before execute,  18:50:48:892
+Application, INFO - GetXeroMasterByAccountID after execute,  18:50:48:892
+Application, INFO - GetXeroMasterByAccountID data1,  18:50:48:907
+Application, INFO - account.Data count:1,  18:50:48:910
+Application, INFO - AccessToken will Expirde in:30/06/2022 10:06:42 PM,  18:50:48:911
+Application, INFO - UTC time now(DateTime.UtcNow):30/08/2022 1:20:48 PM,  18:50:48:913
+Application, INFO - xero AccessTokenExpird,  18:50:48:913
+Application, ERROR - --------------->
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at CosmicCoreApi.AccessContext.XeroContext.<GetAccount>d__4.MoveNext() in D:\Projects\xero_au\xero_au\xeroapi\CosmicCoreApi\AccessContext\XeroContext.cs:line 75
+   at CosmicCoreApi.AccessContext.XeroContext.<GetAccount>d__4.MoveNext() in D:\Projects\xero_au\xero_au\xeroapi\CosmicCoreApi\AccessContext\XeroContext.cs:line 75
+--------------->
+,  18:50:56:875
+Application, INFO - GetXeroMasterByAccountID started,  18:50:56:916
+Application, INFO - GetXeroMasterByAccountID clear,  18:50:56:916
+Application, INFO - GetXeroMasterByAccountID before execute,  18:50:56:917
+Application, INFO - GetXeroMasterByAccountID after execute,  18:50:56:917
+Application, INFO - GetXeroMasterByAccountID data1,  18:50:56:941
+Application, INFO - GetXeroMasterByAccountID started,  18:50:56:941
+Application, INFO - GetXeroMasterByAccountID clear,  18:50:56:942
+Application, INFO - GetXeroMasterByAccountID before execute,  18:50:56:942
+Application, INFO - GetXeroMasterByAccountID after execute,  18:50:56:942
+Application, INFO - GetXeroMasterByAccountID data1,  18:50:56:955
+Application, INFO - account.Data count:1,  18:50:56:956
+Application, INFO - AccessToken will Expirde in:30/06/2022 10:06:42 PM,  18:50:56:957
+Application, INFO - UTC time now(DateTime.UtcNow):30/08/2022 1:20:56 PM,  18:50:56:959
+Application, INFO - xero AccessTokenExpird,  18:50:56:959
+Application, ERROR - --------------->
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at CosmicCoreApi.AccessContext.XeroContext.<GetAccount>d__4.MoveNext() in D:\Projects\xero_au\xero_au\xeroapi\CosmicCoreApi\AccessContext\XeroContext.cs:line 75
+   at CosmicCoreApi.AccessContext.XeroContext.<GetAccount>d__4.MoveNext() in D:\Projects\xero_au\xero_au\xeroapi\CosmicCoreApi\AccessContext\XeroContext.cs:line 75
+--------------->
+,  18:51:1:202
+Application, INFO - GetXeroMasterByAccountID started,  18:51:1:220
+Application, INFO - GetXeroMasterByAccountID clear,  18:51:1:220
+Application, INFO - GetXeroMasterByAccountID before execute,  18:51:1:221
+Application, INFO - GetXeroMasterByAccountID after execute,  18:51:1:222
+Application, INFO - GetXeroMasterByAccountID data1,  18:51:1:240
+Application, INFO - GetXeroMasterByAccountID started,  18:51:1:241
+Application, INFO - GetXeroMasterByAccountID clear,  18:51:1:241
+Application, INFO - GetXeroMasterByAccountID before execute,  18:51:1:242
+Application, INFO - GetXeroMasterByAccountID after execute,  18:51:1:242
+Application, INFO - GetXeroMasterByAccountID data1,  18:51:1:256
+Application, INFO - account.Data count:1,  18:51:1:256
+Application, INFO - AccessToken will Expirde in:30/06/2022 10:06:42 PM,  18:51:1:257
+Application, INFO - UTC time now(DateTime.UtcNow):30/08/2022 1:21:01 PM,  18:51:1:257
+Application, INFO - xero AccessTokenExpird,  18:51:1:257
+Application, ERROR - --------------->
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at CosmicCoreApi.AccessContext.XeroContext.<GetAccount>d__4.MoveNext() in D:\Projects\xero_au\xero_au\xeroapi\CosmicCoreApi\AccessContext\XeroContext.cs:line 75
+   at CosmicCoreApi.AccessContext.XeroContext.<GetAccount>d__4.MoveNext() in D:\Projects\xero_au\xero_au\xeroapi\CosmicCoreApi\AccessContext\XeroContext.cs:line 75
+--------------->
+,  18:51:4:437
+Application, INFO - GetXeroMasterByAccountID started,  18:51:4:456
+Application, INFO - GetXeroMasterByAccountID clear,  18:51:4:456
+Application, INFO - GetXeroMasterByAccountID before execute,  18:51:4:456
+Application, INFO - GetXeroMasterByAccountID after execute,  18:51:4:456
+Application, INFO - GetXeroMasterByAccountID data1,  18:51:4:475
+Application, INFO - GetXeroMasterByAccountID started,  18:51:4:476
+Application, INFO - GetXeroMasterByAccountID clear,  18:51:4:477
+Application, INFO - GetXeroMasterByAccountID before execute,  18:51:4:477
+Application, INFO - GetXeroMasterByAccountID after execute,  18:51:4:477
+Application, INFO - GetXeroMasterByAccountID data1,  18:51:4:490
+Application, INFO - account.Data count:1,  18:51:4:490
+Application, INFO - AccessToken will Expirde in:30/06/2022 10:06:42 PM,  18:51:4:490
+Application, INFO - UTC time now(DateTime.UtcNow):30/08/2022 1:21:04 PM,  18:51:4:490
+Application, INFO - xero AccessTokenExpird,  18:51:4:490
+Application, ERROR - --------------->
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at CosmicCoreApi.AccessContext.XeroContext.<GetAccount>d__4.MoveNext() in D:\Projects\xero_au\xero_au\xeroapi\CosmicCoreApi\AccessContext\XeroContext.cs:line 75
+   at CosmicCoreApi.AccessContext.XeroContext.<GetAccount>d__4.MoveNext() in D:\Projects\xero_au\xero_au\xeroapi\CosmicCoreApi\AccessContext\XeroContext.cs:line 75
+--------------->
+,  18:51:7:887
+Application, INFO - GetXeroMasterByAccountID started,  18:51:7:903
+Application, INFO - GetXeroMasterByAccountID clear,  18:51:7:904
+Application, INFO - GetXeroMasterByAccountID before execute,  18:51:7:904
+Application, INFO - GetXeroMasterByAccountID after execute,  18:51:7:905
+Application, INFO - GetXeroMasterByAccountID data1,  18:51:7:920
+Application, INFO - GetXeroMasterByAccountID started,  18:51:7:924
+Application, INFO - GetXeroMasterByAccountID clear,  18:51:7:924
+Application, INFO - GetXeroMasterByAccountID before execute,  18:51:7:924
+Application, INFO - GetXeroMasterByAccountID after execute,  18:51:7:925
+Application, INFO - GetXeroMasterByAccountID data1,  18:51:7:937
+Application, INFO - account.Data count:1,  18:51:7:937
+Application, INFO - AccessToken will Expirde in:30/06/2022 10:06:42 PM,  18:51:7:941
+Application, INFO - UTC time now(DateTime.UtcNow):30/08/2022 1:21:07 PM,  18:51:7:942
+Application, INFO - xero AccessTokenExpird,  18:51:7:942
+Application, ERROR - --------------->
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at CosmicCoreApi.AccessContext.XeroContext.<GetAccount>d__4.MoveNext() in D:\Projects\xero_au\xero_au\xeroapi\CosmicCoreApi\AccessContext\XeroContext.cs:line 75
+   at CosmicCoreApi.AccessContext.XeroContext.<GetAccount>d__4.MoveNext() in D:\Projects\xero_au\xero_au\xeroapi\CosmicCoreApi\AccessContext\XeroContext.cs:line 75
+--------------->
+,  18:51:11:956
+Application, INFO - cosmicBillUserToken:ae981e12-fd42-4efb-b3d5-d96c8c973ddc,  18:51:12:56
+Application, INFO - cosmicBillPlatform:3,  18:51:12:56
+Application, INFO - cosmicBillReckonFileID:,  18:51:12:56
+Application, INFO - cosmicBillQboConnectID:,  18:51:12:57
+Application, INFO - string.IsNullOrEmpty(cosmicBillUserToken),  18:51:12:57
+Application, INFO - DecodeCosmicBillUserToken,  18:51:12:57
+Application, INFO - loginMaster.LoginID5424,  18:51:12:71
+Application, INFO - loginMaster.AccountID5424,  18:51:12:71
+Application, INFO - loginMaster.CountryOfOriginUSA,  18:51:12:72
+Application, INFO - Xero/GetAllVendor,  18:51:12:73
+Application, INFO - GetXeroMasterByAccountID started,  18:51:12:75
+Application, INFO - GetXeroMasterByAccountID clear,  18:51:12:75
+Application, INFO - GetXeroMasterByAccountID before execute,  18:51:12:75
+Application, INFO - GetXeroMasterByAccountID after execute,  18:51:12:75
+Application, INFO - GetXeroMasterByAccountID data1,  18:51:12:86
+Application, INFO - account.Data count:1,  18:51:12:86
+Application, INFO - AccessToken will Expirde in:30/06/2022 10:06:42 PM,  18:51:12:86
+Application, INFO - UTC time now(DateTime.UtcNow):30/08/2022 1:21:12 PM,  18:51:12:86
+Application, INFO - xero AccessTokenExpird,  18:51:12:86
+Application, INFO - cosmicBillUserToken:ae981e12-fd42-4efb-b3d5-d96c8c973ddc,  16:40:12:799
+Application, INFO - cosmicBillUserToken:ae981e12-fd42-4efb-b3d5-d96c8c973ddc,  16:40:12:799
+Application, INFO - cosmicBillPlatform:3,  16:40:12:805
+Application, INFO - cosmicBillUserToken:ae981e12-fd42-4efb-b3d5-d96c8c973ddc,  16:40:12:799
+Application, INFO - cosmicBillReckonFileID:,  16:40:12:806
+Application, INFO - cosmicBillPlatform:3,  16:40:12:806
+Application, INFO - cosmicBillReckonFileID:,  16:40:12:807
+Application, INFO - cosmicBillPlatform:3,  16:40:12:804
+Application, INFO - cosmicBillQboConnectID:,  16:40:12:807
+Application, INFO - cosmicBillQboConnectID:,  16:40:12:806
+Application, INFO - string.IsNullOrEmpty(cosmicBillUserToken),  16:40:12:810
+Application, INFO - cosmicBillReckonFileID:,  16:40:12:808
+Application, INFO - string.IsNullOrEmpty(cosmicBillUserToken),  16:40:12:809
+Application, INFO - cosmicBillQboConnectID:,  16:40:12:811
+Application, INFO - string.IsNullOrEmpty(cosmicBillUserToken),  16:40:12:812
+Application, INFO - DecodeCosmicBillUserToken,  16:40:12:814
+Application, INFO - DecodeCosmicBillUserToken,  16:40:12:813
+Application, INFO - DecodeCosmicBillUserToken,  16:40:12:815
+Application, INFO - loginMaster.LoginID5424,  16:40:25:220
+Application, INFO - loginMaster.AccountID5424,  16:40:25:222
+Application, INFO - loginMaster.CountryOfOriginUSA,  16:40:25:223
+Application, INFO - cosmicBillUserToken:ae981e12-fd42-4efb-b3d5-d96c8c973ddc,  16:40:25:225
+Application, INFO - cosmicBillPlatform:3,  16:40:25:225
+Application, INFO - cosmicBillReckonFileID:,  16:40:25:226
+Application, INFO - cosmicBillQboConnectID:,  16:40:25:228
+Application, INFO - string.IsNullOrEmpty(cosmicBillUserToken),  16:40:25:230
+Application, INFO - DecodeCosmicBillUserToken,  16:40:25:231
+Application, INFO - loginMaster.LoginID5424,  16:40:25:249
+Application, INFO - loginMaster.AccountID5424,  16:40:25:250
+Application, INFO - loginMaster.CountryOfOriginUSA,  16:40:25:251
+Application, INFO - cosmicBillUserToken:ae981e12-fd42-4efb-b3d5-d96c8c973ddc,  16:40:25:252
+Application, INFO - cosmicBillPlatform:3,  16:40:25:253
+Application, INFO - cosmicBillReckonFileID:,  16:40:25:255
+Application, INFO - cosmicBillQboConnectID:,  16:40:25:257
+Application, INFO - string.IsNullOrEmpty(cosmicBillUserToken),  16:40:25:258
+Application, INFO - DecodeCosmicBillUserToken,  16:40:25:260
+Application, INFO - loginMaster.LoginID5424,  16:40:25:270
+Application, INFO - loginMaster.AccountID5424,  16:40:25:272
+Application, INFO - loginMaster.CountryOfOriginUSA,  16:40:25:273
+Application, INFO - loginMaster.LoginID5424,  16:40:25:294
+Application, INFO - loginMaster.AccountID5424,  16:40:25:295
+Application, INFO - loginMaster.CountryOfOriginUSA,  16:40:25:298
+Application, INFO - loginMaster.LoginID5424,  16:40:25:320
+Application, INFO - loginMaster.AccountID5424,  16:40:25:320
+Application, INFO - loginMaster.CountryOfOriginUSA,  16:40:25:321
+Application, INFO - GetByAccountID entered,  16:40:25:324
+Application, INFO - GetByAccountID entered,  16:40:25:324
+Application, INFO - GetXeroMasterByAccountID started,  16:40:25:328
+Application, INFO - GetXeroMasterByAccountID clear,  16:40:25:329
+Application, INFO - GetXeroMasterByAccountID before execute,  16:40:25:330
+Application, INFO - GetXeroMasterByAccountID after execute,  16:40:25:332
+Application, INFO - GetXeroMasterByAccountID data1,  16:40:25:666
+Application, INFO - GetXeroMasterByAccountID started,  16:40:25:668
+Application, INFO - GetByAccountID StatusCode Ok,  16:40:25:668
+Application, INFO - GetXeroMasterByAccountID clear,  16:40:25:669
+Application, INFO - GetXeroMasterByAccountID before execute,  16:40:25:671
+Application, INFO - GetXeroMasterByAccountID after execute,  16:40:25:672
+Application, INFO - GetXeroMasterByAccountID data1,  16:40:25:690
+Application, INFO - GetByAccountID StatusCode Ok,  16:40:25:692
+Application, INFO - cosmicBillUserToken:,  16:40:26:457
+Application, INFO - cosmicBillPlatform:3,  16:40:26:460
+Application, INFO - cosmicBillReckonFileID:,  16:40:26:462
+Application, INFO - cosmicBillQboConnectID:,  16:40:26:463
+Application, INFO - cosmicBillUserToken:,  16:40:26:471
+Application, INFO - cosmicBillPlatform:3,  16:40:26:472
+Application, INFO - cosmicBillReckonFileID:,  16:40:26:473
+Application, INFO - cosmicBillQboConnectID:,  16:40:26:473
+Application, INFO - GetXeroMasterByAccountID started,  16:40:26:611
+Application, INFO - GetXeroMasterByAccountID clear,  16:40:26:611
+Application, INFO - GetXeroMasterByAccountID before execute,  16:40:26:612
+Application, INFO - GetXeroMasterByAccountID after execute,  16:40:26:614
+Application, INFO - GetXeroMasterByAccountID data1,  16:40:26:633
+Application, INFO - GetXeroMasterByAccountID started,  16:40:26:658
+Application, INFO - GetXeroMasterByAccountID clear,  16:40:26:659
+Application, INFO - GetXeroMasterByAccountID before execute,  16:40:26:660
+Application, INFO - GetXeroMasterByAccountID after execute,  16:40:26:661
+Application, INFO - GetXeroMasterByAccountID data1,  16:40:26:681
+Application, INFO - account.Data count:1,  16:40:26:682
+Application, INFO - AccessToken will Expirde in:30/03/2022 8:38:42 PM,  16:40:26:685
+Application, INFO - UTC time now(DateTime.UtcNow):02/09/2022 11:10:26 AM,  16:40:26:686
+Application, INFO - xero AccessTokenExpird,  16:40:26:687
+Application, ERROR - --------------->
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at CosmicCoreApi.AccessContext.XeroContext.<GetAccount>d__4.MoveNext() in D:\Projects\xero_au\xero_au\xeroapi\CosmicCoreApi\AccessContext\XeroContext.cs:line 75
+   at CosmicCoreApi.AccessContext.XeroContext.<GetAccount>d__4.MoveNext() in D:\Projects\xero_au\xero_au\xeroapi\CosmicCoreApi\AccessContext\XeroContext.cs:line 75
+--------------->
+,  16:40:36:126
+Application, INFO - GetXeroMasterByAccountID started,  16:40:36:149
+Application, INFO - GetXeroMasterByAccountID clear,  16:40:36:153
+Application, INFO - GetXeroMasterByAccountID before execute,  16:40:36:155
+Application, INFO - GetXeroMasterByAccountID after execute,  16:40:36:156
+Application, INFO - GetXeroMasterByAccountID data1,  16:40:36:179
+Application, INFO - GetXeroMasterByAccountID started,  16:40:36:201
+Application, INFO - GetXeroMasterByAccountID clear,  16:40:36:204
+Application, INFO - GetXeroMasterByAccountID before execute,  16:40:36:207
+Application, INFO - GetXeroMasterByAccountID after execute,  16:40:36:209
+Application, INFO - GetXeroMasterByAccountID data1,  16:40:36:239
+Application, INFO - account.Data count:1,  16:40:36:240
+Application, INFO - AccessToken will Expirde in:30/03/2022 8:38:42 PM,  16:40:36:240
+Application, INFO - UTC time now(DateTime.UtcNow):02/09/2022 11:10:36 AM,  16:40:36:240
+Application, INFO - xero AccessTokenExpird,  16:40:36:240
+Application, ERROR - --------------->
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at CosmicCoreApi.AccessContext.XeroContext.<GetAccount>d__4.MoveNext() in D:\Projects\xero_au\xero_au\xeroapi\CosmicCoreApi\AccessContext\XeroContext.cs:line 75
+   at CosmicCoreApi.AccessContext.XeroContext.<GetAccount>d__4.MoveNext() in D:\Projects\xero_au\xero_au\xeroapi\CosmicCoreApi\AccessContext\XeroContext.cs:line 75
+--------------->
+,  16:40:39:588
+Application, INFO - GetXeroMasterByAccountID started,  16:40:39:614
+Application, INFO - GetXeroMasterByAccountID clear,  16:40:39:615
+Application, INFO - GetXeroMasterByAccountID before execute,  16:40:39:616
+Application, INFO - GetXeroMasterByAccountID after execute,  16:40:39:617
+Application, INFO - GetXeroMasterByAccountID data1,  16:40:39:637
+Application, INFO - GetXeroMasterByAccountID started,  16:40:39:638
+Application, INFO - GetXeroMasterByAccountID clear,  16:40:39:638
+Application, INFO - GetXeroMasterByAccountID before execute,  16:40:39:640
+Application, INFO - GetXeroMasterByAccountID after execute,  16:40:39:640
+Application, INFO - GetXeroMasterByAccountID data1,  16:40:39:652
+Application, INFO - account.Data count:1,  16:40:39:654
+Application, INFO - AccessToken will Expirde in:30/03/2022 8:38:42 PM,  16:40:39:654
+Application, INFO - UTC time now(DateTime.UtcNow):02/09/2022 11:10:39 AM,  16:40:39:655
+Application, INFO - xero AccessTokenExpird,  16:40:39:655
+Application, ERROR - --------------->
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at CosmicCoreApi.AccessContext.XeroContext.<GetAccount>d__4.MoveNext() in D:\Projects\xero_au\xero_au\xeroapi\CosmicCoreApi\AccessContext\XeroContext.cs:line 75
+   at CosmicCoreApi.AccessContext.XeroContext.<GetAccount>d__4.MoveNext() in D:\Projects\xero_au\xero_au\xeroapi\CosmicCoreApi\AccessContext\XeroContext.cs:line 75
+--------------->
+,  16:40:43:166
+Application, INFO - GetXeroMasterByAccountID started,  16:40:43:180
+Application, INFO - GetXeroMasterByAccountID clear,  16:40:43:181
+Application, INFO - GetXeroMasterByAccountID before execute,  16:40:43:184
+Application, INFO - GetXeroMasterByAccountID after execute,  16:40:43:186
+Application, INFO - GetXeroMasterByAccountID data1,  16:40:43:202
+Application, INFO - GetXeroMasterByAccountID started,  16:40:43:202
+Application, INFO - GetXeroMasterByAccountID clear,  16:40:43:203
+Application, INFO - GetXeroMasterByAccountID before execute,  16:40:43:203
+Application, INFO - GetXeroMasterByAccountID after execute,  16:40:43:203
+Application, INFO - GetXeroMasterByAccountID data1,  16:40:43:217
+Application, INFO - account.Data count:1,  16:40:43:218
+Application, INFO - AccessToken will Expirde in:30/03/2022 8:38:42 PM,  16:40:43:218
+Application, INFO - UTC time now(DateTime.UtcNow):02/09/2022 11:10:43 AM,  16:40:43:219
+Application, INFO - xero AccessTokenExpird,  16:40:43:220
+Application, ERROR - --------------->
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at CosmicCoreApi.AccessContext.XeroContext.<GetAccount>d__4.MoveNext() in D:\Projects\xero_au\xero_au\xeroapi\CosmicCoreApi\AccessContext\XeroContext.cs:line 75
+   at CosmicCoreApi.AccessContext.XeroContext.<GetAccount>d__4.MoveNext() in D:\Projects\xero_au\xero_au\xeroapi\CosmicCoreApi\AccessContext\XeroContext.cs:line 75
+--------------->
+,  16:40:46:144
+Application, INFO - GetXeroMasterByAccountID started,  16:40:46:161
+Application, INFO - GetXeroMasterByAccountID clear,  16:40:46:161
+Application, INFO - GetXeroMasterByAccountID before execute,  16:40:46:162
+Application, INFO - GetXeroMasterByAccountID after execute,  16:40:46:163
+Application, INFO - GetXeroMasterByAccountID data1,  16:40:46:180
+Application, INFO - GetXeroMasterByAccountID started,  16:40:46:182
+Application, INFO - GetXeroMasterByAccountID clear,  16:40:46:182
+Application, INFO - GetXeroMasterByAccountID before execute,  16:40:46:183
+Application, INFO - GetXeroMasterByAccountID after execute,  16:40:46:183
+Application, INFO - GetXeroMasterByAccountID data1,  16:40:46:196
+Application, INFO - account.Data count:1,  16:40:46:198
+Application, INFO - AccessToken will Expirde in:30/03/2022 8:38:42 PM,  16:40:46:199
+Application, INFO - UTC time now(DateTime.UtcNow):02/09/2022 11:10:46 AM,  16:40:46:200
+Application, INFO - xero AccessTokenExpird,  16:40:46:200
+Application, ERROR - --------------->
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at CosmicCoreApi.AccessContext.XeroContext.<GetAccount>d__4.MoveNext() in D:\Projects\xero_au\xero_au\xeroapi\CosmicCoreApi\AccessContext\XeroContext.cs:line 75
+   at CosmicCoreApi.AccessContext.XeroContext.<GetAccount>d__4.MoveNext() in D:\Projects\xero_au\xero_au\xeroapi\CosmicCoreApi\AccessContext\XeroContext.cs:line 75
+--------------->
+,  16:40:51:396
+Application, INFO - cosmicBillUserToken:,  16:40:51:609
+Application, INFO - cosmicBillPlatform:3,  16:40:51:610
+Application, INFO - cosmicBillReckonFileID:,  16:40:51:610
+Application, INFO - cosmicBillQboConnectID:,  16:40:51:611
+Application, INFO - Xero/GetAllVendor,  16:40:51:618
+Application, INFO - GetXeroMasterByAccountID started,  16:40:51:621
+Application, INFO - GetXeroMasterByAccountID clear,  16:40:51:621
+Application, INFO - GetXeroMasterByAccountID before execute,  16:40:51:622
+Application, INFO - GetXeroMasterByAccountID after execute,  16:40:51:622
+Application, INFO - GetXeroMasterByAccountID data1,  16:40:51:637
+Application, INFO - account.Data count:1,  16:40:51:638
+Application, INFO - AccessToken will Expirde in:30/03/2022 8:38:42 PM,  16:40:51:639
+Application, INFO - UTC time now(DateTime.UtcNow):02/09/2022 11:10:51 AM,  16:40:51:639
+Application, INFO - xero AccessTokenExpird,  16:40:51:639
+Application, INFO - cosmicBillUserToken:,  16:42:8:398
+Application, INFO - cosmicBillPlatform:3,  16:42:8:402
+Application, INFO - cosmicBillReckonFileID:,  16:42:8:403
+Application, INFO - cosmicBillQboConnectID:,  16:42:8:404
+Application, INFO - AccountController save enterted,  16:42:9:135
+Application, INFO - accountMaster,  16:42:19:784
+Application, INFO - ebReplacement.Password,  16:42:19:961
+Application, INFO - ,  16:42:19:962
+Application, INFO - emailBody,  16:42:19:965
+Application, INFO - <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+
+<body bgcolor="#f2f2f2">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f2f2f2">
+        <tr>
+            <td>
+                <table width="600" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" align="center">
+                    <tr>
+                        <td>
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <!-- <td width="50"><a href="" target="_blank"><img src="http://api.cosmicinv.com/EmailImages/PROMO-GREEN2_01_01.jpg" width="61" height="76" border="0" alt="" /></a></td> -->
+                                    <td width="518">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td height="46" align="right" valign="middle">
+                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td width="67%" align="right"><font style="font-family:'Myriad Pro', Helvetica, Arial, sans-serif; color:#68696a; font-size:8px; text-transform:uppercase">
+															<a href="" style="color:#68696a; text-decoration:none"><strong></strong></a></font></td>
+                                                            <td width="29%" align="right"><font style="font-family:'Myriad Pro', Helvetica, Arial, sans-serif; color:#68696a; font-size:8px"><a href="" style="color:#68696a; text-decoration:none; text-transform:uppercase"><strong></strong></a></font></td>
+                                                            <td width="4%">&nbsp;</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <!-- <tr> -->
+                                                <!-- <td height="30"><img src="http://api.cosmicinv.com/EmailImages/PROMO-GREEN2_01_04.jpg" width="500" height="30" border="0" alt="" /></td> -->
+                                            <!-- </tr> -->
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td width="10%">&nbsp;</td>
+                                    <td width="80%" align="left" valign="top">
+                                        <font style="font-family: Georgia, 'Times New Roman', Times, serif; color:#010101; font-size:24px"><strong><em>Hello,</em></strong></font><br /><br />
+                                        <font style="font-family: Verdana, Geneva, sans-serif; color:#666766; font-size:13px; line-height:21px">
+                                            Welcome to Cosmic Bills - Xero !! 
+                                            <br /><br />
+											Thank you for registering. <b> You have 500 Bills/Pdfs Free to Scan</b><br />
+											We are here to help you . Please call us if you need further help <br /><br />
+											
+                                            User Name : <b>pareshparsh</b><br />
+											Email : <b>aaaaaaa@aaaaaaff.com</b>  <br /><br />
+                                           
+											<b> Chandra Wasan </b><br/>
+											&#128222; +61407068942 <br/>
+											&#128231; chandra@cosmicinnovations.com <br/>
+											Skype :   chandra710<br/><br/>
+											
+                                          
+                                        </font>
+                                        <br /><br />
+                                        <!-- <img src="http://api.cosmicinv.com/EmailImages/PROMO-GREEN2_01_02.png" width="170" height="90" border="0" alt="" /> -->
+                                    </td>
+                                </tr>
+								<tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing:
+									border-box; font-size: 14px; margin: 0;">
+										 <td>&nbsp;</td>
+										 <td class="content-block" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing:
+                            border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top">
+                                            <a href="https://cosmicbills.com/xero/#/login" class="btn-primary" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+                                            box-sizing: border-box; font-size: 14px; color: #FFF; text-decoration: none; line-height: 2em; font-weight: bold;
+                                            text-align: center; cursor: pointer; display: inline-block; border-radius: 5px;text-transform:capitalize;
+                                            background-color: #348eda; margin: 0; border-color: #348eda; border-style: solid; border-width: 10px 20px;">
+                                                Login to Cosmic Bills</a>
+                                        </td>
+                                    </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td align="left" valign="top">
+									<font style="font-family: Verdana, Geneva, sans-serif; color:#666766; font-size:13px; line-height:21px">
+                                        <b>
+                                            On behalf of the Company<br />
+                                            CosmicBills</b>
+											</font>
+                                    </td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <!--<tr>
+                      <td><img src="images/PROMO-GREEN2_07.jpg" width="598" height="7" style="display:block" border="0" alt=""/></td>
+                    </tr>-->
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <!--<tr>
+                      <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td width="13%" align="center">&nbsp;</td>
+                            <td width="14%" align="center"><font style="font-family:'Myriad Pro', Helvetica, Arial, sans-serif; color:#010203; font-size:9px; text-transform:uppercase"><a href= "http://yourlink" style="color:#010203; text-decoration:none"><strong>UNSUBSCRIBE </strong></a></font></td>
+                            <td width="2%" align="center"><font style="font-family:'Myriad Pro', Helvetica, Arial, sans-serif; color:#010203; font-size:9px; text-transform:uppercase"><strong>|</strong></font></td>
+                            <td width="9%" align="center"><font style="font-family:'Myriad Pro', Helvetica, Arial, sans-serif; color:#010203; font-size:9px; text-transform:uppercase"><a href= "http://yourlink" style="color:#010203; text-decoration:none"><strong>ABOUT </strong></a></font></td>
+                            <td width="2%" align="center"><font style="font-family:'Myriad Pro', Helvetica, Arial, sans-serif; color:#010203; font-size:9px; text-transform:uppercase"><strong>|</strong></font></td>
+                            <td width="10%" align="center"><font style="font-family:'Myriad Pro', Helvetica, Arial, sans-serif; color:#010203; font-size:9px; text-transform:uppercase"><a href= "http://yourlink" style="color:#010203; text-decoration:none"><strong>PRESS </strong></a></font></td>
+                            <td width="2%" align="center"><font style="font-family:'Myriad Pro', Helvetica, Arial, sans-serif; color:#010203; font-size:9px; text-transform:uppercase"><strong>|</strong></font></td>
+                            <td width="11%" align="center"><font style="font-family:'Myriad Pro', Helvetica, Arial, sans-serif; color:#010203; font-size:9px; text-transform:uppercase"><a href= "http://yourlink" style="color:#010203; text-decoration:none"><strong>CONTACT </strong></a></font></td>
+                            <td width="2%" align="center"><font style="font-family:'Myriad Pro', Helvetica, Arial, sans-serif; color:#010203; font-size:9px; text-transform:uppercase"><strong>|</strong></font></td>
+                            <td width="17%" align="center"><font style="font-family:'Myriad Pro', Helvetica, Arial, sans-serif; color:#010203; font-size:9px; text-transform:uppercase"><a href= "http://yourlink" style="color:#010203; text-decoration:none"><strong>STAY CONNECTED</strong></a></font></td>
+                            <td width="4%" align="right"><a href="https://www.facebook.com/" target="_blank"><img src="images/PROMO-GREEN2_09_01.jpg" alt="facebook" width="23" height="19" border="0" /></a></td>
+                            <td width="5%" align="right"><a href="https://twitter.com/" target="_blank"><img src="images/PROMO-GREEN2_09_02.jpg" alt="twitter" width="27" height="19" border="0" /></a></td>
+                            <td width="4%" align="right"><a href="http://www.linkedin.com/" target="_blank"><img src="images/PROMO-GREEN2_09_03.jpg" alt="linkedin" width="25" height="19" border="0" /></a></td>
+                            <td width="5%">&nbsp;</td>
+                          </tr>
+                        </table></td>
+                    </tr>-->
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td align="center"><font style="font-family:'Myriad Pro', Helvetica, Arial, sans-serif; color:#231f20; font-size:8px"><strong>Head Office &amp; Registered Office | Cosmic Accounting Group & Cosmic Innovations, 29 Wardell Drive, BARDEN RIDGE NSW 2234| Tel: 02 95411338 | <a href="http://cosmicbills.com/" style="color:#348eda; text-decoration:none">www.cosmicbills.com</a></strong></font></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+,  16:42:19:966

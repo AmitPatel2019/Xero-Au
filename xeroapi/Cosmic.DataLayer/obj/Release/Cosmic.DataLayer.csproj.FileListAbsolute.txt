@@ -1,0 +1,14 @@
+D:\Projects\xero_au\xero_au\xeroapi\Cosmic.DataLayer\bin\Release\Cosmic.DataLayer.dll.config
+D:\Projects\xero_au\xero_au\xeroapi\Cosmic.DataLayer\bin\Release\Cosmic.DataLayer.dll
+D:\Projects\xero_au\xero_au\xeroapi\Cosmic.DataLayer\bin\Release\Cosmic.DataLayer.pdb
+D:\Projects\xero_au\xero_au\xeroapi\Cosmic.DataLayer\bin\Release\EntityFramework.dll
+D:\Projects\xero_au\xero_au\xeroapi\Cosmic.DataLayer\bin\Release\EntityFramework.SqlServer.dll
+D:\Projects\xero_au\xero_au\xeroapi\Cosmic.DataLayer\bin\Release\EntityFramework.xml
+D:\Projects\xero_au\xero_au\xeroapi\Cosmic.DataLayer\bin\Release\EntityFramework.SqlServer.xml
+D:\Projects\xero_au\xero_au\xeroapi\Cosmic.DataLayer\obj\Release\Cosmic.DataLayer.csproj.AssemblyReference.cache
+D:\Projects\xero_au\xero_au\xeroapi\Cosmic.DataLayer\obj\Release\Cosmic.DataLayer.Properties.Resources.resources
+D:\Projects\xero_au\xero_au\xeroapi\Cosmic.DataLayer\obj\Release\Cosmic.DataLayer.csproj.GenerateResource.cache
+D:\Projects\xero_au\xero_au\xeroapi\Cosmic.DataLayer\obj\Release\Cosmic.DataLayer.csproj.CoreCompileInputs.cache
+D:\Projects\xero_au\xero_au\xeroapi\Cosmic.DataLayer\obj\Release\Cosmic.DataLayer.csproj.CopyComplete
+D:\Projects\xero_au\xero_au\xeroapi\Cosmic.DataLayer\obj\Release\Cosmic.DataLayer.dll
+D:\Projects\xero_au\xero_au\xeroapi\Cosmic.DataLayer\obj\Release\Cosmic.DataLayer.pdb

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e88c388b5233414d963e3b2f162a8b72" Name="Diagram1">
+        <EntityTypeShape EntityType="XS_XEROModel.ConfigSetting" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="XS_XEROModel.ErrorLog" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="XS_XEROModel.FileSQLMaster" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="XS_XEROModel.LoginMaster" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="XS_XEROModel.PlanMaster" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="XS_XEROModel.PlatformMaster" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="XS_XEROModel.QboChartOfAccount" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="XS_XEROModel.QBODocument" Width="1.5" PointX="6.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="XS_XEROModel.QboDocumentLine" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="XS_XEROModel.QBOEzzyAccount" Width="1.5" PointX="8.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="XS_XEROModel.QBOMaster" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="XS_XEROModel.QboTax" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="XS_XEROModel.QboVendor" Width="1.5" PointX="2.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="XS_XEROModel.ReckonDesktopMaster" Width="1.5" PointX="10.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="XS_XEROModel.ReckonDocument" Width="1.5" PointX="8.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="XS_XEROModel.ReckonEzzyAccount" Width="1.5" PointX="10.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="XS_XEROModel.ReckonFileUserAccess" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="XS_XEROModel.ReckonVendorDefault" Width="1.5" PointX="12.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="XS_XEROModel.StripePayment" Width="1.5" PointX="12.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="XS_XEROModel.SubscriptionMaster" Width="1.5" PointX="12.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="XS_XEROModel.XeroChartOfAccount" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="XS_XEROModel.XeroDocument" Width="1.5" PointX="14.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="XS_XEROModel.XeroDocumentLine" Width="1.5" PointX="14.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="XS_XEROModel.XeroEzzyAccount" Width="1.5" PointX="4.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="XS_XEROModel.XeroMaster" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="XS_XEROModel.XeroTax" Width="1.5" PointX="0.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="XS_XEROModel.XeroVendor" Width="1.5" PointX="16.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="XS_XEROModel.AccountMaster" Width="1.5" PointX="7.375" PointY="16.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

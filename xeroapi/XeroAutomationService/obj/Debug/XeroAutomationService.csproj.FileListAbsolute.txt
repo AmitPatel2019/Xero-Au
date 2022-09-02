@@ -1,0 +1,7 @@
+D:\Projects\xero_au\xero_au\xeroapi\XeroAutomationService\obj\Debug\XeroAutomationService.csproj.AssemblyReference.cache
+D:\Projects\xero_au\xero_au\xeroapi\XeroAutomationService\obj\Debug\XeroAutomationService.exe.config
+D:\Projects\xero_au\xero_au\xeroapi\XeroAutomationService\obj\Debug\XeroAutomationService.ProjectInstaller.resources
+D:\Projects\xero_au\xero_au\xeroapi\XeroAutomationService\obj\Debug\XeroAutomationService.csproj.GenerateResource.cache
+D:\Projects\xero_au\xero_au\xeroapi\XeroAutomationService\obj\Debug\XeroAutomationService.csproj.CoreCompileInputs.cache
+D:\Projects\xero_au\xero_au\xeroapi\XeroAutomationService\obj\Debug\XeroAutomationService.exe
+D:\Projects\xero_au\xero_au\xeroapi\XeroAutomationService\obj\Debug\XeroAutomationService.pdb

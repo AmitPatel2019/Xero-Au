@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://app.ezzydoc.com/EzzyService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EasyDoc.Web" />
+  <xs:import schemaLocation="http://app.ezzydoc.com/EzzyService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/InvoiceApp.Web.ServiceObjects" />
+  <xs:import schemaLocation="http://app.ezzydoc.com/EzzyService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/InvoiceEngine" />
+  <xs:element name="Login">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="user" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pwd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LoginResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginDevice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="user" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="code" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginDeviceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LoginDeviceResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginToken">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="webhooktoken" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginTokenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LoginTokenResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getMyInvoiceQueue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="page" type="xs:int" />
+        <xs:element minOccurs="0" name="size" type="xs:int" />
+        <xs:element minOccurs="0" name="filter" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getMyInvoiceQueueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/EasyDoc.Web" minOccurs="0" name="getMyInvoiceQueueResult" nillable="true" type="q1:InvoiceQueueSS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getInvoiceHeaderBlocks">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="invoiceid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getInvoiceHeaderBlocksResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/EasyDoc.Web" minOccurs="0" name="getInvoiceHeaderBlocksResult" nillable="true" type="q2:InvoiceBlocksSS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getInvoiceRows">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="invoiceid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getInvoiceRowsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/EasyDoc.Web" minOccurs="0" name="getInvoiceRowsResult" nillable="true" type="q3:InvoiceRowsSS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addLearningCorrection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="invoiceid" type="xs:int" />
+        <xs:element minOccurs="0" name="field" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="newvalue" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="hint" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addLearningCorrectionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/EasyDoc.Web" minOccurs="0" name="addLearningCorrectionResult" nillable="true" type="q4:Servicestatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getInvoiceDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="invoiceid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getInvoiceDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/EasyDoc.Web" minOccurs="0" name="getInvoiceDetailsResult" nillable="true" type="q5:InvoiceDetailsSS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getEmailMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="invoiceid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getEmailMessageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/EasyDoc.Web" minOccurs="0" name="getEmailMessageResult" nillable="true" type="q6:EmailMessageSS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mySettingsForm">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mySettingsFormResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/EasyDoc.Web" minOccurs="0" name="mySettingsFormResult" nillable="true" type="q7:SettingsFormSS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getFormData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="invoiceid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getFormDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/InvoiceApp.Web.ServiceObjects" minOccurs="0" name="getFormDataResult" nillable="true" type="q8:FormDataSS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addLearning">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="invoiceid" type="xs:int" />
+        <xs:element minOccurs="0" name="field" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="newvalue" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="hint" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addLearningResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/EasyDoc.Web" minOccurs="0" name="addLearningResult" nillable="true" type="q9:Servicestatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addLicense">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addLicenseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="addLicenseResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="checkLicense">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="checkLicenseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="checkLicenseResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateLicenseUsage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usage" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateLicenseUsageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="updateLicenseUsageResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDocumentClassification">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="invoiceid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDocumentClassificationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/EasyDoc.Web" minOccurs="0" name="getDocumentClassificationResult" nillable="true" type="q10:DocumentClassificationSS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="workflowStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="invoiceid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="workflowStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/EasyDoc.Web" minOccurs="0" name="workflowStatusResult" nillable="true" type="q11:WorkflowStatusSS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MyEnterpriseUsage">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MyEnterpriseUsageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/EasyDoc.Web" minOccurs="0" name="MyEnterpriseUsageResult" nillable="true" type="q12:EnerpiseUsageSS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MyEnterpriseUsageDetailed">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MyEnterpriseUsageDetailedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/EasyDoc.Web" minOccurs="0" name="MyEnterpriseUsageDetailedResult" nillable="true" type="q13:EnerpiseUsageSS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="moveToRecycleBin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="invoiceid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="moveToRecycleBinResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/EasyDoc.Web" minOccurs="0" name="moveToRecycleBinResult" nillable="true" type="q14:Servicestatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addAllContacts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/EasyDoc.Web" minOccurs="0" name="contacts" nillable="true" type="q15:ArrayOfContactDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addAllContactsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/EasyDoc.Web" minOccurs="0" name="addAllContactsResult" nillable="true" type="q16:Servicestatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="uploadInvoiceImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/EasyDoc.Web" minOccurs="0" name="picture" nillable="true" type="q17:PictureFileSS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="uploadInvoiceImageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/EasyDoc.Web" minOccurs="0" name="uploadInvoiceImageResult" nillable="true" type="q18:Servicestatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addInvoicePayment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/InvoiceEngine" minOccurs="0" name="payment" nillable="true" type="q19:ArrayOfInvoicePayment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addInvoicePaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/EasyDoc.Web" minOccurs="0" name="addInvoicePaymentResult" nillable="true" type="q20:Servicestatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="uploadAppImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/EasyDoc.Web" minOccurs="0" name="picture" nillable="true" type="q21:PictureFileSS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="uploadAppImageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/EasyDoc.Web" minOccurs="0" name="uploadAppImageResult" nillable="true" type="q22:Servicestatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addLearningRule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="invoiceid" type="xs:int" />
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/InvoiceEngine" minOccurs="0" name="rule" nillable="true" type="q23:LearningRule" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addLearningRuleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/EasyDoc.Web" minOccurs="0" name="addLearningRuleResult" nillable="true" type="q24:Servicestatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updatePayment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="target" type="xs:int" />
+        <xs:element minOccurs="0" name="state" type="xs:int" />
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/InvoiceEngine" minOccurs="0" name="pd" nillable="true" type="q25:PaymentState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updatePaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/EasyDoc.Web" minOccurs="0" name="updatePaymentResult" nillable="true" type="q26:Servicestatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="uploadPhoto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/EasyDoc.Web" minOccurs="0" name="picture" nillable="true" type="q27:PictureFileSS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="uploadPhotoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/EasyDoc.Web" minOccurs="0" name="uploadPhotoResult" nillable="true" type="q28:uploadStatusSS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="uploadPhotoReview">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/EasyDoc.Web" minOccurs="0" name="picture" nillable="true" type="q29:PictureFileSS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="uploadPhotoReviewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/EasyDoc.Web" minOccurs="0" name="uploadPhotoReviewResult" nillable="true" type="q30:uploadStatusSS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="uploadPhotoWithNotes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/EasyDoc.Web" minOccurs="0" name="picture" nillable="true" type="q31:PictureFileSS" />
+        <xs:element minOccurs="0" name="notes" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="review" type="xs:boolean" />
+        <xs:element minOccurs="0" name="locale" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="uploadPhotoWithNotesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/EasyDoc.Web" minOccurs="0" name="uploadPhotoWithNotesResult" nillable="true" type="q32:uploadStatusSS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="removeContacts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/InvoiceEngine" minOccurs="0" name="exportid" type="q33:exporttarget" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="removeContactsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/EasyDoc.Web" minOccurs="0" name="removeContactsResult" nillable="true" type="q34:Servicestatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="approve">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="invoiceid" type="xs:int" />
+        <xs:element minOccurs="0" name="supplier" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="total" type="xs:decimal" />
+        <xs:element minOccurs="0" name="tax" type="xs:decimal" />
+        <xs:element minOccurs="0" name="number" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="approveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/EasyDoc.Web" minOccurs="0" name="approveResult" nillable="true" type="q35:Servicestatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="rejectInvoice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="invoiceid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="note" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="rejectInvoiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/EasyDoc.Web" minOccurs="0" name="rejectInvoiceResult" nillable="true" type="q36:Servicestatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="finishExternalTask">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="invoiceid" type="xs:int" />
+        <xs:element minOccurs="0" name="state" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="finishExternalTaskResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/EasyDoc.Web" minOccurs="0" name="finishExternalTaskResult" nillable="true" type="q37:Servicestatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

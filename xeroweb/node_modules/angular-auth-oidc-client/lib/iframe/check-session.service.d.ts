@@ -1,0 +1,38 @@
+import { NgZone } from '@angular/core';
+import { Observable } from 'rxjs';
+import { ConfigurationProvider } from '../config/provider/config.provider';
+import { LoggerService } from '../logging/logger.service';
+import { PublicEventsService } from '../public-events/public-events.service';
+import { StoragePersistenceService } from '../storage/storage-persistence.service';
+import { IFrameService } from './existing-iframe.service';
+import * as i0 from "@angular/core";
+export declare class CheckSessionService {
+    private storagePersistenceService;
+    private loggerService;
+    private iFrameService;
+    private eventService;
+    private configurationProvider;
+    private zone;
+    private checkSessionReceived;
+    private scheduledHeartBeatRunning;
+    private lastIFrameRefresh;
+    private outstandingMessages;
+    private heartBeatInterval;
+    private iframeRefreshInterval;
+    private checkSessionChangedInternal$;
+    get checkSessionChanged$(): Observable<boolean>;
+    constructor(storagePersistenceService: StoragePersistenceService, loggerService: LoggerService, iFrameService: IFrameService, eventService: PublicEventsService, configurationProvider: ConfigurationProvider, zone: NgZone);
+    isCheckSessionConfigured(configId: string): boolean;
+    start(configId: string): void;
+    stop(): void;
+    serverStateChanged(configId: string): boolean;
+    getExistingIframe(): HTMLIFrameElement;
+    private init;
+    private pollServerSession;
+    private clearScheduledHeartBeat;
+    private messageHandler;
+    private bindMessageEventToIframe;
+    private getOrCreateIframe;
+    static ɵfac: i0.ɵɵFactoryDeclaration<CheckSessionService, never>;
+    static ɵprov: i0.ɵɵInjectableDeclaration<CheckSessionService>;
+}

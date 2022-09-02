@@ -1,0 +1,9 @@
+Application, INFO - SendEmail,  16:42:19:993
+Application, INFO - smtpSetting,  16:42:20:74
+Application, INFO - msgHtml,  16:42:20:79
+Application, INFO - cosmicBillUserToken:,  16:42:27:653
+Application, INFO - cosmicBillPlatform:3,  16:42:27:654
+Application, INFO - cosmicBillReckonFileID:,  16:42:27:655
+Application, INFO - cosmicBillQboConnectID:,  16:42:27:656
+Application, INFO - DoLogin Enterted,  16:42:27:690
+Application, INFO - DoLogin loginResponse:{"Data":{"LoginID":5425,"AccountID":5425,"ReckonFileID":null,"PlatformID":3,"UserName":"pareshparsh","EmailAddress":"aaaaaaa@aaaaaaff.com","Password":"","Name":null,"Active":true,"Token":"0e865ff0-8758-4ff6-aab6-51fb795e06b2","TokenExpiredDate":"2022-09-03T16:42:27.7553198+05:30","IPAddress":null,"LastLogin":null,"RoleID":1,"DeActivetedOn":null,"AddedBy":null,"AddedOn":null,"UpdatedBy":null,"UpdatedOn":null,"ActivationCode":null,"TokenAvailFor":null,"ExistsPassword":null,"NewPassword":null,"CountryOfOrigin":null,"IsAccess":null,"IsEzUploadRequired":null},"Error":"","StatusCode":0,"Message":"Your request is processed sucessfully"},  16:42:27:912

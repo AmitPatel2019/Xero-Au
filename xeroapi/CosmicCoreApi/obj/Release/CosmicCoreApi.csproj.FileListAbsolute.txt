@@ -1,0 +1,2 @@
+D:\Projects\xero_au\xero_au\xeroapi\CosmicCoreApi\obj\Release\CosmicCoreApi.csproj.AssemblyReference.cache
+D:\Projects\xero_au\xero_au\xeroapi\CosmicCoreApi\obj\Release\CosmicCoreApi.csproj.CoreCompileInputs.cache

@@ -1,0 +1,14 @@
+D:\Projects\xero_au\xero_au\xeroapi\CosmicApiHelper\bin\Debug\CosmicApiHelper.dll.config
+D:\Projects\xero_au\xero_au\xeroapi\CosmicApiHelper\bin\Debug\CosmicApiHelper.dll
+D:\Projects\xero_au\xero_au\xeroapi\CosmicApiHelper\bin\Debug\CosmicApiHelper.pdb
+D:\Projects\xero_au\xero_au\xeroapi\CosmicApiHelper\bin\Debug\CosmicApiModel.dll
+D:\Projects\xero_au\xero_au\xeroapi\CosmicApiHelper\bin\Debug\Flexis.Log.dll
+D:\Projects\xero_au\xero_au\xeroapi\CosmicApiHelper\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\xero_au\xero_au\xeroapi\CosmicApiHelper\bin\Debug\System.Net.Http.Formatting.dll
+D:\Projects\xero_au\xero_au\xeroapi\CosmicApiHelper\bin\Debug\CosmicApiModel.pdb
+D:\Projects\xero_au\xero_au\xeroapi\CosmicApiHelper\bin\Debug\Newtonsoft.Json.xml
+D:\Projects\xero_au\xero_au\xeroapi\CosmicApiHelper\obj\Debug\CosmicApiHelper.csproj.AssemblyReference.cache
+D:\Projects\xero_au\xero_au\xeroapi\CosmicApiHelper\obj\Debug\CosmicApiHelper.csproj.CoreCompileInputs.cache
+D:\Projects\xero_au\xero_au\xeroapi\CosmicApiHelper\obj\Debug\CosmicApiHelper.csproj.CopyComplete
+D:\Projects\xero_au\xero_au\xeroapi\CosmicApiHelper\obj\Debug\CosmicApiHelper.dll
+D:\Projects\xero_au\xero_au\xeroapi\CosmicApiHelper\obj\Debug\CosmicApiHelper.pdb

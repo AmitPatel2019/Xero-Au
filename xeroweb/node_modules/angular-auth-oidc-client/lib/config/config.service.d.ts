@@ -1,0 +1,31 @@
+import { Observable } from 'rxjs';
+import { LoggerService } from '../logging/logger.service';
+import { PublicEventsService } from '../public-events/public-events.service';
+import { StoragePersistenceService } from '../storage/storage-persistence.service';
+import { PlatformProvider } from '../utils/platform-provider/platform.provider';
+import { DefaultSessionStorageService } from './../storage/default-sessionstorage.service';
+import { AuthWellKnownService } from './auth-well-known/auth-well-known.service';
+import { OpenIdConfiguration } from './openid-configuration';
+import { ConfigurationProvider } from './provider/config.provider';
+import { ConfigValidationService } from './validation/config-validation.service';
+import * as i0 from "@angular/core";
+export declare class OidcConfigService {
+    private loggerService;
+    private publicEventsService;
+    private configurationProvider;
+    private authWellKnownService;
+    private storagePersistenceService;
+    private configValidationService;
+    private platformProvider;
+    private defaultSessionStorageService;
+    constructor(loggerService: LoggerService, publicEventsService: PublicEventsService, configurationProvider: ConfigurationProvider, authWellKnownService: AuthWellKnownService, storagePersistenceService: StoragePersistenceService, configValidationService: ConfigValidationService, platformProvider: PlatformProvider, defaultSessionStorageService: DefaultSessionStorageService);
+    withConfigs(passedConfigs: OpenIdConfiguration[]): Observable<OpenIdConfiguration[]>;
+    private createUniqueIds;
+    private handleConfig;
+    private prepareConfig;
+    private setSpecialCases;
+    private setStorage;
+    private hasBrowserStorage;
+    static ɵfac: i0.ɵɵFactoryDeclaration<OidcConfigService, never>;
+    static ɵprov: i0.ɵɵInjectableDeclaration<OidcConfigService>;
+}

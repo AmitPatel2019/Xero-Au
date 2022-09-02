@@ -1,0 +1,5 @@
+D:\Projects\xero_au\xero_au\xeroapi\CosmicApiModel\bin\Debug\CosmicApiModel.dll
+D:\Projects\xero_au\xero_au\xeroapi\CosmicApiModel\bin\Debug\CosmicApiModel.pdb
+D:\Projects\xero_au\xero_au\xeroapi\CosmicApiModel\obj\Debug\CosmicApiModel.csproj.CoreCompileInputs.cache
+D:\Projects\xero_au\xero_au\xeroapi\CosmicApiModel\obj\Debug\CosmicApiModel.dll
+D:\Projects\xero_au\xero_au\xeroapi\CosmicApiModel\obj\Debug\CosmicApiModel.pdb

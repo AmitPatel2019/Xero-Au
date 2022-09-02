@@ -1,0 +1,1665 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="/Imports">
+      <xsd:import schemaLocation="http://app.ezzydoc.com/EzzyService.svc?xsd=xsd0" />
+      <xsd:import schemaLocation="http://app.ezzydoc.com/EzzyService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://app.ezzydoc.com/EzzyService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EasyDoc.Web" />
+      <xsd:import schemaLocation="http://app.ezzydoc.com/EzzyService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/InvoiceEngine" />
+      <xsd:import schemaLocation="http://app.ezzydoc.com/EzzyService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://app.ezzydoc.com/EzzyService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/InvoiceApp.Web.ServiceObjects" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IEzzyService_getSubscriptionDateEnterprise_InputMessage">
+    <wsdl:part name="parameters" element="getSubscriptionDateEnterprise" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getSubscriptionDateEnterprise_OutputMessage">
+    <wsdl:part name="parameters" element="getSubscriptionDateEnterpriseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_setUpXero_InputMessage">
+    <wsdl:part name="parameters" element="setUpXero" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_setUpXero_OutputMessage">
+    <wsdl:part name="parameters" element="setUpXeroResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_setUpMYOB_InputMessage">
+    <wsdl:part name="parameters" element="setUpMYOB" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_setUpMYOB_OutputMessage">
+    <wsdl:part name="parameters" element="setUpMYOBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_savePromotionCode_InputMessage">
+    <wsdl:part name="parameters" element="savePromotionCode" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_savePromotionCode_OutputMessage">
+    <wsdl:part name="parameters" element="savePromotionCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_removeGroup_InputMessage">
+    <wsdl:part name="parameters" element="removeGroup" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_removeGroup_OutputMessage">
+    <wsdl:part name="parameters" element="removeGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_moveToRecycleBin_InputMessage">
+    <wsdl:part name="parameters" element="moveToRecycleBin" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_moveToRecycleBin_OutputMessage">
+    <wsdl:part name="parameters" element="moveToRecycleBinResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_emptyRecycleBin_InputMessage">
+    <wsdl:part name="parameters" element="emptyRecycleBin" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_emptyRecycleBin_OutputMessage">
+    <wsdl:part name="parameters" element="emptyRecycleBinResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_restoreDocuments_InputMessage">
+    <wsdl:part name="parameters" element="restoreDocuments" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_restoreDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="restoreDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_deleteInvoice_InputMessage">
+    <wsdl:part name="parameters" element="deleteInvoice" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_deleteInvoice_OutputMessage">
+    <wsdl:part name="parameters" element="deleteInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_searchDocuments_InputMessage">
+    <wsdl:part name="parameters" element="searchDocuments" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_searchDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="searchDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_searchMyDocuments_InputMessage">
+    <wsdl:part name="parameters" element="searchMyDocuments" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_searchMyDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="searchMyDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getMyTemplates_InputMessage">
+    <wsdl:part name="parameters" element="getMyTemplates" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getMyTemplates_OutputMessage">
+    <wsdl:part name="parameters" element="getMyTemplatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getMyDocuments_InputMessage">
+    <wsdl:part name="parameters" element="getMyDocuments" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getMyDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="getMyDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getMyRecentDocuments_InputMessage">
+    <wsdl:part name="parameters" element="getMyRecentDocuments" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getMyRecentDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="getMyRecentDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getMyInvoiceQueue_InputMessage">
+    <wsdl:part name="parameters" element="getMyInvoiceQueue" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getMyInvoiceQueue_OutputMessage">
+    <wsdl:part name="parameters" element="getMyInvoiceQueueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_addLearningRule_InputMessage">
+    <wsdl:part name="parameters" element="addLearningRule" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_addLearningRule_OutputMessage">
+    <wsdl:part name="parameters" element="addLearningRuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_addLearningCorrection_InputMessage">
+    <wsdl:part name="parameters" element="addLearningCorrection" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_addLearningCorrection_OutputMessage">
+    <wsdl:part name="parameters" element="addLearningCorrectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_deleteLearningRule_InputMessage">
+    <wsdl:part name="parameters" element="deleteLearningRule" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_deleteLearningRule_OutputMessage">
+    <wsdl:part name="parameters" element="deleteLearningRuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_addLearning_InputMessage">
+    <wsdl:part name="parameters" element="addLearning" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_addLearning_OutputMessage">
+    <wsdl:part name="parameters" element="addLearningResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_addLicense_InputMessage">
+    <wsdl:part name="parameters" element="addLicense" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_addLicense_OutputMessage">
+    <wsdl:part name="parameters" element="addLicenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_checkLicense_InputMessage">
+    <wsdl:part name="parameters" element="checkLicense" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_checkLicense_OutputMessage">
+    <wsdl:part name="parameters" element="checkLicenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_updateLicenseUsage_InputMessage">
+    <wsdl:part name="parameters" element="updateLicenseUsage" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_updateLicenseUsage_OutputMessage">
+    <wsdl:part name="parameters" element="updateLicenseUsageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getAllMyInvoiceQueue_InputMessage">
+    <wsdl:part name="parameters" element="getAllMyInvoiceQueue" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getAllMyInvoiceQueue_OutputMessage">
+    <wsdl:part name="parameters" element="getAllMyInvoiceQueueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getMyAttachments_InputMessage">
+    <wsdl:part name="parameters" element="getMyAttachments" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getMyAttachments_OutputMessage">
+    <wsdl:part name="parameters" element="getMyAttachmentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getAttachments_InputMessage">
+    <wsdl:part name="parameters" element="getAttachments" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getAttachments_OutputMessage">
+    <wsdl:part name="parameters" element="getAttachmentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getDocumentByName_InputMessage">
+    <wsdl:part name="parameters" element="getDocumentByName" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getDocumentByName_OutputMessage">
+    <wsdl:part name="parameters" element="getDocumentByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getDocumentClassification_InputMessage">
+    <wsdl:part name="parameters" element="getDocumentClassification" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getDocumentClassification_OutputMessage">
+    <wsdl:part name="parameters" element="getDocumentClassificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getDeletedDocuments_InputMessage">
+    <wsdl:part name="parameters" element="getDeletedDocuments" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getDeletedDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="getDeletedDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_subscriptionDetails_InputMessage">
+    <wsdl:part name="parameters" element="subscriptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_subscriptionDetails_OutputMessage">
+    <wsdl:part name="parameters" element="subscriptionDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_subscriptionDetails2_InputMessage">
+    <wsdl:part name="parameters" element="subscriptionDetails2" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_subscriptionDetails2_OutputMessage">
+    <wsdl:part name="parameters" element="subscriptionDetails2Response" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_subscriptionDetailsEnterprise_InputMessage">
+    <wsdl:part name="parameters" element="subscriptionDetailsEnterprise" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_subscriptionDetailsEnterprise_OutputMessage">
+    <wsdl:part name="parameters" element="subscriptionDetailsEnterpriseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getMyDocumentTree_InputMessage">
+    <wsdl:part name="parameters" element="getMyDocumentTree" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getMyDocumentTree_OutputMessage">
+    <wsdl:part name="parameters" element="getMyDocumentTreeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getReviewDocument_InputMessage">
+    <wsdl:part name="parameters" element="getReviewDocument" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getReviewDocument_OutputMessage">
+    <wsdl:part name="parameters" element="getReviewDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_generatReviewDocument_InputMessage">
+    <wsdl:part name="parameters" element="generatReviewDocument" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_generatReviewDocument_OutputMessage">
+    <wsdl:part name="parameters" element="generatReviewDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_MyGroupsUsers_InputMessage">
+    <wsdl:part name="parameters" element="MyGroupsUsers" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_MyGroupsUsers_OutputMessage">
+    <wsdl:part name="parameters" element="MyGroupsUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_setReviewComplete_InputMessage">
+    <wsdl:part name="parameters" element="setReviewComplete" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_setReviewComplete_OutputMessage">
+    <wsdl:part name="parameters" element="setReviewCompleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getMyDocumentTypes_InputMessage">
+    <wsdl:part name="parameters" element="getMyDocumentTypes" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getMyDocumentTypes_OutputMessage">
+    <wsdl:part name="parameters" element="getMyDocumentTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getMyApplications_InputMessage">
+    <wsdl:part name="parameters" element="getMyApplications" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getMyApplications_OutputMessage">
+    <wsdl:part name="parameters" element="getMyApplicationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_disconnectMYOB_InputMessage">
+    <wsdl:part name="parameters" element="disconnectMYOB" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_disconnectMYOB_OutputMessage">
+    <wsdl:part name="parameters" element="disconnectMYOBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getMySuppliers_InputMessage">
+    <wsdl:part name="parameters" element="getMySuppliers" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getMySuppliers_OutputMessage">
+    <wsdl:part name="parameters" element="getMySuppliersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getMySuppliers2_InputMessage">
+    <wsdl:part name="parameters" element="getMySuppliers2" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getMySuppliers2_OutputMessage">
+    <wsdl:part name="parameters" element="getMySuppliers2Response" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getMyPurchaseOrders_InputMessage">
+    <wsdl:part name="parameters" element="getMyPurchaseOrders" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getMyPurchaseOrders_OutputMessage">
+    <wsdl:part name="parameters" element="getMyPurchaseOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_verifyTLS_InputMessage">
+    <wsdl:part name="parameters" element="verifyTLS" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_verifyTLS_OutputMessage">
+    <wsdl:part name="parameters" element="verifyTLSResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getSupplierPortal_InputMessage">
+    <wsdl:part name="parameters" element="getSupplierPortal" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getSupplierPortal_OutputMessage">
+    <wsdl:part name="parameters" element="getSupplierPortalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_createAPIKey_InputMessage">
+    <wsdl:part name="parameters" element="createAPIKey" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_createAPIKey_OutputMessage">
+    <wsdl:part name="parameters" element="createAPIKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_createSupplierPortal_InputMessage">
+    <wsdl:part name="parameters" element="createSupplierPortal" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_createSupplierPortal_OutputMessage">
+    <wsdl:part name="parameters" element="createSupplierPortalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_saveMySettingsForm_InputMessage">
+    <wsdl:part name="parameters" element="saveMySettingsForm" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_saveMySettingsForm_OutputMessage">
+    <wsdl:part name="parameters" element="saveMySettingsFormResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_MyUsers_InputMessage">
+    <wsdl:part name="parameters" element="MyUsers" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_MyUsers_OutputMessage">
+    <wsdl:part name="parameters" element="MyUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_MyGroupsUsage_InputMessage">
+    <wsdl:part name="parameters" element="MyGroupsUsage" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_MyGroupsUsage_OutputMessage">
+    <wsdl:part name="parameters" element="MyGroupsUsageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_MyInvitedUsers_InputMessage">
+    <wsdl:part name="parameters" element="MyInvitedUsers" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_MyInvitedUsers_OutputMessage">
+    <wsdl:part name="parameters" element="MyInvitedUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_AddUserToGroup_InputMessage">
+    <wsdl:part name="parameters" element="AddUserToGroup" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_AddUserToGroup_OutputMessage">
+    <wsdl:part name="parameters" element="AddUserToGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_cancelSubscription_InputMessage">
+    <wsdl:part name="parameters" element="cancelSubscription" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_cancelSubscription_OutputMessage">
+    <wsdl:part name="parameters" element="cancelSubscriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_inviteUser_InputMessage">
+    <wsdl:part name="parameters" element="inviteUser" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_inviteUser_OutputMessage">
+    <wsdl:part name="parameters" element="inviteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_registerNewUser_InputMessage">
+    <wsdl:part name="parameters" element="registerNewUser" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_registerNewUser_OutputMessage">
+    <wsdl:part name="parameters" element="registerNewUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_registerNewUser2_InputMessage">
+    <wsdl:part name="parameters" element="registerNewUser2" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_registerNewUser2_OutputMessage">
+    <wsdl:part name="parameters" element="registerNewUser2Response" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_registerNewUser3_InputMessage">
+    <wsdl:part name="parameters" element="registerNewUser3" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_registerNewUser3_OutputMessage">
+    <wsdl:part name="parameters" element="registerNewUser3Response" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_registerNewUser4_InputMessage">
+    <wsdl:part name="parameters" element="registerNewUser4" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_registerNewUser4_OutputMessage">
+    <wsdl:part name="parameters" element="registerNewUser4Response" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_upgradeToPartnerPlan_InputMessage">
+    <wsdl:part name="parameters" element="upgradeToPartnerPlan" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_upgradeToPartnerPlan_OutputMessage">
+    <wsdl:part name="parameters" element="upgradeToPartnerPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_upgradeToHQ_InputMessage">
+    <wsdl:part name="parameters" element="upgradeToHQ" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_upgradeToHQ_OutputMessage">
+    <wsdl:part name="parameters" element="upgradeToHQResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_addNewUser_InputMessage">
+    <wsdl:part name="parameters" element="addNewUser" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_addNewUser_OutputMessage">
+    <wsdl:part name="parameters" element="addNewUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getWaitingApprovalBatch_InputMessage">
+    <wsdl:part name="parameters" element="getWaitingApprovalBatch" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getWaitingApprovalBatch_OutputMessage">
+    <wsdl:part name="parameters" element="getWaitingApprovalBatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_approveBatch_InputMessage">
+    <wsdl:part name="parameters" element="approveBatch" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_approveBatch_OutputMessage">
+    <wsdl:part name="parameters" element="approveBatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_revokeUsers_InputMessage">
+    <wsdl:part name="parameters" element="revokeUsers" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_revokeUsers_OutputMessage">
+    <wsdl:part name="parameters" element="revokeUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getExportTarget_InputMessage">
+    <wsdl:part name="parameters" element="getExportTarget" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getExportTarget_OutputMessage">
+    <wsdl:part name="parameters" element="getExportTargetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getWorktaskStatus_InputMessage">
+    <wsdl:part name="parameters" element="getWorktaskStatus" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getWorktaskStatus_OutputMessage">
+    <wsdl:part name="parameters" element="getWorktaskStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_testExportConnection_InputMessage">
+    <wsdl:part name="parameters" element="testExportConnection" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_testExportConnection_OutputMessage">
+    <wsdl:part name="parameters" element="testExportConnectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_checkConnection_InputMessage">
+    <wsdl:part name="parameters" element="checkConnection" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_checkConnection_OutputMessage">
+    <wsdl:part name="parameters" element="checkConnectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_disconnectConnection_InputMessage">
+    <wsdl:part name="parameters" element="disconnectConnection" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_disconnectConnection_OutputMessage">
+    <wsdl:part name="parameters" element="disconnectConnectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_disconnectExport_InputMessage">
+    <wsdl:part name="parameters" element="disconnectExport" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_disconnectExport_OutputMessage">
+    <wsdl:part name="parameters" element="disconnectExportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_isSupportUser_InputMessage">
+    <wsdl:part name="parameters" element="isSupportUser" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_isSupportUser_OutputMessage">
+    <wsdl:part name="parameters" element="isSupportUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_saveEmailRule_InputMessage">
+    <wsdl:part name="parameters" element="saveEmailRule" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_saveEmailRule_OutputMessage">
+    <wsdl:part name="parameters" element="saveEmailRuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getEmailRule_InputMessage">
+    <wsdl:part name="parameters" element="getEmailRule" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getEmailRule_OutputMessage">
+    <wsdl:part name="parameters" element="getEmailRuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_addWorkTask_InputMessage">
+    <wsdl:part name="parameters" element="addWorkTask" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_addWorkTask_OutputMessage">
+    <wsdl:part name="parameters" element="addWorkTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_trialSubsciption_InputMessage">
+    <wsdl:part name="parameters" element="trialSubsciption" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_trialSubsciption_OutputMessage">
+    <wsdl:part name="parameters" element="trialSubsciptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_mySettingsForm_InputMessage">
+    <wsdl:part name="parameters" element="mySettingsForm" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_mySettingsForm_OutputMessage">
+    <wsdl:part name="parameters" element="mySettingsFormResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_approverSettingsForm_InputMessage">
+    <wsdl:part name="parameters" element="approverSettingsForm" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_approverSettingsForm_OutputMessage">
+    <wsdl:part name="parameters" element="approverSettingsFormResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_deleteWorkflow_InputMessage">
+    <wsdl:part name="parameters" element="deleteWorkflow" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_deleteWorkflow_OutputMessage">
+    <wsdl:part name="parameters" element="deleteWorkflowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_updateWorkflow_InputMessage">
+    <wsdl:part name="parameters" element="updateWorkflow" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_updateWorkflow_OutputMessage">
+    <wsdl:part name="parameters" element="updateWorkflowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_saveWorkflow_InputMessage">
+    <wsdl:part name="parameters" element="saveWorkflow" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_saveWorkflow_OutputMessage">
+    <wsdl:part name="parameters" element="saveWorkflowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_activateWorkflow_InputMessage">
+    <wsdl:part name="parameters" element="activateWorkflow" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_activateWorkflow_OutputMessage">
+    <wsdl:part name="parameters" element="activateWorkflowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_Login2_InputMessage">
+    <wsdl:part name="parameters" element="Login2" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_Login2_OutputMessage">
+    <wsdl:part name="parameters" element="Login2Response" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_Login_InputMessage">
+    <wsdl:part name="parameters" element="Login" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getUser_InputMessage">
+    <wsdl:part name="parameters" element="getUser" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getUser_OutputMessage">
+    <wsdl:part name="parameters" element="getUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_logOut_InputMessage">
+    <wsdl:part name="parameters" element="logOut" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_logOut_OutputMessage">
+    <wsdl:part name="parameters" element="logOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_approve_InputMessage">
+    <wsdl:part name="parameters" element="approve" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_approve_OutputMessage">
+    <wsdl:part name="parameters" element="approveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_approveInvoice_InputMessage">
+    <wsdl:part name="parameters" element="approveInvoice" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_approveInvoice_OutputMessage">
+    <wsdl:part name="parameters" element="approveInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_restartInvoice_InputMessage">
+    <wsdl:part name="parameters" element="restartInvoice" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_restartInvoice_OutputMessage">
+    <wsdl:part name="parameters" element="restartInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_finishReview_InputMessage">
+    <wsdl:part name="parameters" element="finishReview" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_finishReview_OutputMessage">
+    <wsdl:part name="parameters" element="finishReviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_closeAllReview_InputMessage">
+    <wsdl:part name="parameters" element="closeAllReview" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_closeAllReview_OutputMessage">
+    <wsdl:part name="parameters" element="closeAllReviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_approvePortalInvoice_InputMessage">
+    <wsdl:part name="parameters" element="approvePortalInvoice" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_approvePortalInvoice_OutputMessage">
+    <wsdl:part name="parameters" element="approvePortalInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_updateFormData_InputMessage">
+    <wsdl:part name="parameters" element="updateFormData" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_updateFormData_OutputMessage">
+    <wsdl:part name="parameters" element="updateFormDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getFormData_InputMessage">
+    <wsdl:part name="parameters" element="getFormData" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getFormData_OutputMessage">
+    <wsdl:part name="parameters" element="getFormDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_saveLabel_InputMessage">
+    <wsdl:part name="parameters" element="saveLabel" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_saveLabel_OutputMessage">
+    <wsdl:part name="parameters" element="saveLabelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_myLabels_InputMessage">
+    <wsdl:part name="parameters" element="myLabels" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_myLabels_OutputMessage">
+    <wsdl:part name="parameters" element="myLabelsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_searchCache_InputMessage">
+    <wsdl:part name="parameters" element="searchCache" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_searchCache_OutputMessage">
+    <wsdl:part name="parameters" element="searchCacheResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_reclassifyInvoice_InputMessage">
+    <wsdl:part name="parameters" element="reclassifyInvoice" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_reclassifyInvoice_OutputMessage">
+    <wsdl:part name="parameters" element="reclassifyInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_cancelApproveInvoice_InputMessage">
+    <wsdl:part name="parameters" element="cancelApproveInvoice" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_cancelApproveInvoice_OutputMessage">
+    <wsdl:part name="parameters" element="cancelApproveInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_rejectInvoice_InputMessage">
+    <wsdl:part name="parameters" element="rejectInvoice" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_rejectInvoice_OutputMessage">
+    <wsdl:part name="parameters" element="rejectInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_checkChecksum_InputMessage">
+    <wsdl:part name="parameters" element="checkChecksum" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_checkChecksum_OutputMessage">
+    <wsdl:part name="parameters" element="checkChecksumResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_addCRMUser_InputMessage">
+    <wsdl:part name="parameters" element="addCRMUser" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_addCRMUser_OutputMessage">
+    <wsdl:part name="parameters" element="addCRMUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_addCRMNote_InputMessage">
+    <wsdl:part name="parameters" element="addCRMNote" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_addCRMNote_OutputMessage">
+    <wsdl:part name="parameters" element="addCRMNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getQueueHash_InputMessage">
+    <wsdl:part name="parameters" element="getQueueHash" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getQueueHash_OutputMessage">
+    <wsdl:part name="parameters" element="getQueueHashResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_workflowStatus_InputMessage">
+    <wsdl:part name="parameters" element="workflowStatus" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_workflowStatus_OutputMessage">
+    <wsdl:part name="parameters" element="workflowStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_allQueueStates_InputMessage">
+    <wsdl:part name="parameters" element="allQueueStates" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_allQueueStates_OutputMessage">
+    <wsdl:part name="parameters" element="allQueueStatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_connectToXero_InputMessage">
+    <wsdl:part name="parameters" element="connectToXero" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_connectToXero_OutputMessage">
+    <wsdl:part name="parameters" element="connectToXeroResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_returnAllToWorkflow_InputMessage">
+    <wsdl:part name="parameters" element="returnAllToWorkflow" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_returnAllToWorkflow_OutputMessage">
+    <wsdl:part name="parameters" element="returnAllToWorkflowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_removeContacts_InputMessage">
+    <wsdl:part name="parameters" element="removeContacts" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_removeContacts_OutputMessage">
+    <wsdl:part name="parameters" element="removeContactsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_MyEnterpriseUsage_InputMessage">
+    <wsdl:part name="parameters" element="MyEnterpriseUsage" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_MyEnterpriseUsage_OutputMessage">
+    <wsdl:part name="parameters" element="MyEnterpriseUsageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_addContacts_InputMessage">
+    <wsdl:part name="parameters" element="addContacts" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_addContacts_OutputMessage">
+    <wsdl:part name="parameters" element="addContactsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_appendContacts_InputMessage">
+    <wsdl:part name="parameters" element="appendContacts" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_appendContacts_OutputMessage">
+    <wsdl:part name="parameters" element="appendContactsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_addPurchaseOrders_InputMessage">
+    <wsdl:part name="parameters" element="addPurchaseOrders" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_addPurchaseOrders_OutputMessage">
+    <wsdl:part name="parameters" element="addPurchaseOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_addFuzzyCodes_InputMessage">
+    <wsdl:part name="parameters" element="addFuzzyCodes" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_addFuzzyCodes_OutputMessage">
+    <wsdl:part name="parameters" element="addFuzzyCodesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_saveInvoice_InputMessage">
+    <wsdl:part name="parameters" element="saveInvoice" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_saveInvoice_OutputMessage">
+    <wsdl:part name="parameters" element="saveInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getMyStatistics_InputMessage">
+    <wsdl:part name="parameters" element="getMyStatistics" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getMyStatistics_OutputMessage">
+    <wsdl:part name="parameters" element="getMyStatisticsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getMyCaptures_InputMessage">
+    <wsdl:part name="parameters" element="getMyCaptures" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getMyCaptures_OutputMessage">
+    <wsdl:part name="parameters" element="getMyCapturesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_savePictureForm_InputMessage">
+    <wsdl:part name="parameters" element="savePictureForm" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_savePictureForm_OutputMessage">
+    <wsdl:part name="parameters" element="savePictureFormResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_updateAllTags_InputMessage">
+    <wsdl:part name="parameters" element="updateAllTags" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_updateAllTags_OutputMessage">
+    <wsdl:part name="parameters" element="updateAllTagsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getTracking_InputMessage">
+    <wsdl:part name="parameters" element="getTracking" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getTracking_OutputMessage">
+    <wsdl:part name="parameters" element="getTrackingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getTracking2_InputMessage">
+    <wsdl:part name="parameters" element="getTracking2" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getTracking2_OutputMessage">
+    <wsdl:part name="parameters" element="getTracking2Response" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getUserNotes_InputMessage">
+    <wsdl:part name="parameters" element="getUserNotes" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getUserNotes_OutputMessage">
+    <wsdl:part name="parameters" element="getUserNotesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getCRMNotes_InputMessage">
+    <wsdl:part name="parameters" element="getCRMNotes" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getCRMNotes_OutputMessage">
+    <wsdl:part name="parameters" element="getCRMNotesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_updateUser_InputMessage">
+    <wsdl:part name="parameters" element="updateUser" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_updateUser_OutputMessage">
+    <wsdl:part name="parameters" element="updateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_renameUser_InputMessage">
+    <wsdl:part name="parameters" element="renameUser" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_renameUser_OutputMessage">
+    <wsdl:part name="parameters" element="renameUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getGLCodes_InputMessage">
+    <wsdl:part name="parameters" element="getGLCodes" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getGLCodes_OutputMessage">
+    <wsdl:part name="parameters" element="getGLCodesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_refreshGLCache_InputMessage">
+    <wsdl:part name="parameters" element="refreshGLCache" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_refreshGLCache_OutputMessage">
+    <wsdl:part name="parameters" element="refreshGLCacheResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_saveCorrespondenceForm_InputMessage">
+    <wsdl:part name="parameters" element="saveCorrespondenceForm" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_saveCorrespondenceForm_OutputMessage">
+    <wsdl:part name="parameters" element="saveCorrespondenceFormResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_saveTag_InputMessage">
+    <wsdl:part name="parameters" element="saveTag" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_saveTag_OutputMessage">
+    <wsdl:part name="parameters" element="saveTagResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_validatePaypal_InputMessage">
+    <wsdl:part name="parameters" element="validatePaypal" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_validatePaypal_OutputMessage">
+    <wsdl:part name="parameters" element="validatePaypalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_twoFactorEnabled_InputMessage">
+    <wsdl:part name="parameters" element="twoFactorEnabled" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_twoFactorEnabled_OutputMessage">
+    <wsdl:part name="parameters" element="twoFactorEnabledResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_addUserNote_InputMessage">
+    <wsdl:part name="parameters" element="addUserNote" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_addUserNote_OutputMessage">
+    <wsdl:part name="parameters" element="addUserNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getCreditCount_InputMessage">
+    <wsdl:part name="parameters" element="getCreditCount" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getCreditCount_OutputMessage">
+    <wsdl:part name="parameters" element="getCreditCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getSubscriptionDate_InputMessage">
+    <wsdl:part name="parameters" element="getSubscriptionDate" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getSubscriptionDate_OutputMessage">
+    <wsdl:part name="parameters" element="getSubscriptionDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_saveDocumentStream_InputMessage">
+    <wsdl:part name="parameters" element="saveDocumentStream" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_saveDocumentStream_OutputMessage">
+    <wsdl:part name="parameters" element="saveDocumentStreamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_saveInvoiceHeaderandTable_InputMessage">
+    <wsdl:part name="parameters" element="saveInvoiceHeaderandTable" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_saveInvoiceHeaderandTable_OutputMessage">
+    <wsdl:part name="parameters" element="saveInvoiceHeaderandTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_saveInvoiceTable_InputMessage">
+    <wsdl:part name="parameters" element="saveInvoiceTable" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_saveInvoiceTable_OutputMessage">
+    <wsdl:part name="parameters" element="saveInvoiceTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_sendVerificationCode_InputMessage">
+    <wsdl:part name="parameters" element="sendVerificationCode" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_sendVerificationCode_OutputMessage">
+    <wsdl:part name="parameters" element="sendVerificationCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getDocumentStream_InputMessage">
+    <wsdl:part name="parameters" element="getDocumentStream" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getDocumentStream_OutputMessage">
+    <wsdl:part name="parameters" element="getDocumentStreamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_transferSubscription_InputMessage">
+    <wsdl:part name="parameters" element="transferSubscription" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_transferSubscription_OutputMessage">
+    <wsdl:part name="parameters" element="transferSubscriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_updateGlobalLearning_InputMessage">
+    <wsdl:part name="parameters" element="updateGlobalLearning" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_updateGlobalLearning_OutputMessage">
+    <wsdl:part name="parameters" element="updateGlobalLearningResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_deleteLearning_InputMessage">
+    <wsdl:part name="parameters" element="deleteLearning" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_deleteLearning_OutputMessage">
+    <wsdl:part name="parameters" element="deleteLearningResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_notJunkEmail_InputMessage">
+    <wsdl:part name="parameters" element="notJunkEmail" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_notJunkEmail_OutputMessage">
+    <wsdl:part name="parameters" element="notJunkEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_newInvoiceImage_InputMessage">
+    <wsdl:part name="parameters" element="newInvoiceImage" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_newInvoiceImage_OutputMessage">
+    <wsdl:part name="parameters" element="newInvoiceImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_addServer_InputMessage">
+    <wsdl:part name="parameters" element="addServer" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_addServer_OutputMessage">
+    <wsdl:part name="parameters" element="addServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_addApplication_InputMessage">
+    <wsdl:part name="parameters" element="addApplication" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_addApplication_OutputMessage">
+    <wsdl:part name="parameters" element="addApplicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_uploadAppImage_InputMessage">
+    <wsdl:part name="parameters" element="uploadAppImage" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_uploadAppImage_OutputMessage">
+    <wsdl:part name="parameters" element="uploadAppImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_startApp_InputMessage">
+    <wsdl:part name="parameters" element="startApp" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_startApp_OutputMessage">
+    <wsdl:part name="parameters" element="startAppResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_uploadInvoiceImage_InputMessage">
+    <wsdl:part name="parameters" element="uploadInvoiceImage" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_uploadInvoiceImage_OutputMessage">
+    <wsdl:part name="parameters" element="uploadInvoiceImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getMyApprovers_InputMessage">
+    <wsdl:part name="parameters" element="getMyApprovers" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getMyApprovers_OutputMessage">
+    <wsdl:part name="parameters" element="getMyApproversResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getApproverList_InputMessage">
+    <wsdl:part name="parameters" element="getApproverList" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getApproverList_OutputMessage">
+    <wsdl:part name="parameters" element="getApproverListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_saveApproverList_InputMessage">
+    <wsdl:part name="parameters" element="saveApproverList" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_saveApproverList_OutputMessage">
+    <wsdl:part name="parameters" element="saveApproverListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_changeApprover_InputMessage">
+    <wsdl:part name="parameters" element="changeApprover" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_changeApprover_OutputMessage">
+    <wsdl:part name="parameters" element="changeApproverResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getInvoiceHeaderBlocks_InputMessage">
+    <wsdl:part name="parameters" element="getInvoiceHeaderBlocks" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getInvoiceHeaderBlocks_OutputMessage">
+    <wsdl:part name="parameters" element="getInvoiceHeaderBlocksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getInvoiceRows_InputMessage">
+    <wsdl:part name="parameters" element="getInvoiceRows" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getInvoiceRows_OutputMessage">
+    <wsdl:part name="parameters" element="getInvoiceRowsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getAllInvoiceBlocks_InputMessage">
+    <wsdl:part name="parameters" element="getAllInvoiceBlocks" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getAllInvoiceBlocks_OutputMessage">
+    <wsdl:part name="parameters" element="getAllInvoiceBlocksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getInvoiceDetails_InputMessage">
+    <wsdl:part name="parameters" element="getInvoiceDetails" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getInvoiceDetails_OutputMessage">
+    <wsdl:part name="parameters" element="getInvoiceDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getLogDetails_InputMessage">
+    <wsdl:part name="parameters" element="getLogDetails" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getLogDetails_OutputMessage">
+    <wsdl:part name="parameters" element="getLogDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getCorrespondenceForm_InputMessage">
+    <wsdl:part name="parameters" element="getCorrespondenceForm" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getCorrespondenceForm_OutputMessage">
+    <wsdl:part name="parameters" element="getCorrespondenceFormResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getPictureForm_InputMessage">
+    <wsdl:part name="parameters" element="getPictureForm" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getPictureForm_OutputMessage">
+    <wsdl:part name="parameters" element="getPictureFormResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_SendEmail_InputMessage">
+    <wsdl:part name="parameters" element="SendEmail" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_SendEmail_OutputMessage">
+    <wsdl:part name="parameters" element="SendEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getWorkflowDetails_InputMessage">
+    <wsdl:part name="parameters" element="getWorkflowDetails" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getWorkflowDetails_OutputMessage">
+    <wsdl:part name="parameters" element="getWorkflowDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_allMyWorkflows_InputMessage">
+    <wsdl:part name="parameters" element="allMyWorkflows" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_allMyWorkflows_OutputMessage">
+    <wsdl:part name="parameters" element="allMyWorkflowsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_addWorkTaskDetails_InputMessage">
+    <wsdl:part name="parameters" element="addWorkTaskDetails" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_addWorkTaskDetails_OutputMessage">
+    <wsdl:part name="parameters" element="addWorkTaskDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getEmailMessage_InputMessage">
+    <wsdl:part name="parameters" element="getEmailMessage" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_getEmailMessage_OutputMessage">
+    <wsdl:part name="parameters" element="getEmailMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_registerWorkflow_InputMessage">
+    <wsdl:part name="parameters" element="registerWorkflow" />
+  </wsdl:message>
+  <wsdl:message name="IEzzyService_registerWorkflow_OutputMessage">
+    <wsdl:part name="parameters" element="registerWorkflowResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IEzzyService">
+    <wsdl:operation name="getSubscriptionDateEnterprise">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getSubscriptionDateEnterprise" message="IEzzyService_getSubscriptionDateEnterprise_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getSubscriptionDateEnterpriseResponse" message="IEzzyService_getSubscriptionDateEnterprise_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setUpXero">
+      <wsdl:input wsaw:Action="urn:IEzzyService/setUpXero" message="IEzzyService_setUpXero_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/setUpXeroResponse" message="IEzzyService_setUpXero_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setUpMYOB">
+      <wsdl:input wsaw:Action="urn:IEzzyService/setUpMYOB" message="IEzzyService_setUpMYOB_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/setUpMYOBResponse" message="IEzzyService_setUpMYOB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="savePromotionCode">
+      <wsdl:input wsaw:Action="urn:IEzzyService/savePromotionCode" message="IEzzyService_savePromotionCode_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/savePromotionCodeResponse" message="IEzzyService_savePromotionCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="removeGroup">
+      <wsdl:input wsaw:Action="urn:IEzzyService/removeGroup" message="IEzzyService_removeGroup_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/removeGroupResponse" message="IEzzyService_removeGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="moveToRecycleBin">
+      <wsdl:input wsaw:Action="urn:IEzzyService/moveToRecycleBin" message="IEzzyService_moveToRecycleBin_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/moveToRecycleBinResponse" message="IEzzyService_moveToRecycleBin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="emptyRecycleBin">
+      <wsdl:input wsaw:Action="urn:IEzzyService/emptyRecycleBin" message="IEzzyService_emptyRecycleBin_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/emptyRecycleBinResponse" message="IEzzyService_emptyRecycleBin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="restoreDocuments">
+      <wsdl:input wsaw:Action="urn:IEzzyService/restoreDocuments" message="IEzzyService_restoreDocuments_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/restoreDocumentsResponse" message="IEzzyService_restoreDocuments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteInvoice">
+      <wsdl:input wsaw:Action="urn:IEzzyService/deleteInvoice" message="IEzzyService_deleteInvoice_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/deleteInvoiceResponse" message="IEzzyService_deleteInvoice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="searchDocuments">
+      <wsdl:input wsaw:Action="urn:IEzzyService/searchDocuments" message="IEzzyService_searchDocuments_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/searchDocumentsResponse" message="IEzzyService_searchDocuments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="searchMyDocuments">
+      <wsdl:input wsaw:Action="urn:IEzzyService/searchMyDocuments" message="IEzzyService_searchMyDocuments_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/searchMyDocumentsResponse" message="IEzzyService_searchMyDocuments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMyTemplates">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getMyTemplates" message="IEzzyService_getMyTemplates_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getMyTemplatesResponse" message="IEzzyService_getMyTemplates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMyDocuments">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getMyDocuments" message="IEzzyService_getMyDocuments_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getMyDocumentsResponse" message="IEzzyService_getMyDocuments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMyRecentDocuments">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getMyRecentDocuments" message="IEzzyService_getMyRecentDocuments_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getMyRecentDocumentsResponse" message="IEzzyService_getMyRecentDocuments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMyInvoiceQueue">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getMyInvoiceQueue" message="IEzzyService_getMyInvoiceQueue_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getMyInvoiceQueueResponse" message="IEzzyService_getMyInvoiceQueue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addLearningRule">
+      <wsdl:input wsaw:Action="urn:IEzzyService/addLearningRule" message="IEzzyService_addLearningRule_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/addLearningRuleResponse" message="IEzzyService_addLearningRule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addLearningCorrection">
+      <wsdl:input wsaw:Action="urn:IEzzyService/addLearningCorrection" message="IEzzyService_addLearningCorrection_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/addLearningCorrectionResponse" message="IEzzyService_addLearningCorrection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteLearningRule">
+      <wsdl:input wsaw:Action="urn:IEzzyService/deleteLearningRule" message="IEzzyService_deleteLearningRule_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/deleteLearningRuleResponse" message="IEzzyService_deleteLearningRule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addLearning">
+      <wsdl:input wsaw:Action="urn:IEzzyService/addLearning" message="IEzzyService_addLearning_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/addLearningResponse" message="IEzzyService_addLearning_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addLicense">
+      <wsdl:input wsaw:Action="urn:IEzzyService/addLicense" message="IEzzyService_addLicense_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/addLicenseResponse" message="IEzzyService_addLicense_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkLicense">
+      <wsdl:input wsaw:Action="urn:IEzzyService/checkLicense" message="IEzzyService_checkLicense_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/checkLicenseResponse" message="IEzzyService_checkLicense_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateLicenseUsage">
+      <wsdl:input wsaw:Action="urn:IEzzyService/updateLicenseUsage" message="IEzzyService_updateLicenseUsage_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/updateLicenseUsageResponse" message="IEzzyService_updateLicenseUsage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllMyInvoiceQueue">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getAllMyInvoiceQueue" message="IEzzyService_getAllMyInvoiceQueue_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getAllMyInvoiceQueueResponse" message="IEzzyService_getAllMyInvoiceQueue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMyAttachments">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getMyAttachments" message="IEzzyService_getMyAttachments_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getMyAttachmentsResponse" message="IEzzyService_getMyAttachments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAttachments">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getAttachments" message="IEzzyService_getAttachments_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getAttachmentsResponse" message="IEzzyService_getAttachments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDocumentByName">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getDocumentByName" message="IEzzyService_getDocumentByName_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getDocumentByNameResponse" message="IEzzyService_getDocumentByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDocumentClassification">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getDocumentClassification" message="IEzzyService_getDocumentClassification_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getDocumentClassificationResponse" message="IEzzyService_getDocumentClassification_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDeletedDocuments">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getDeletedDocuments" message="IEzzyService_getDeletedDocuments_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getDeletedDocumentsResponse" message="IEzzyService_getDeletedDocuments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="subscriptionDetails">
+      <wsdl:input wsaw:Action="urn:IEzzyService/subscriptionDetails" message="IEzzyService_subscriptionDetails_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/subscriptionDetailsResponse" message="IEzzyService_subscriptionDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="subscriptionDetails2">
+      <wsdl:input wsaw:Action="urn:IEzzyService/subscriptionDetails2" message="IEzzyService_subscriptionDetails2_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/subscriptionDetails2Response" message="IEzzyService_subscriptionDetails2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="subscriptionDetailsEnterprise">
+      <wsdl:input wsaw:Action="urn:IEzzyService/subscriptionDetailsEnterprise" message="IEzzyService_subscriptionDetailsEnterprise_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/subscriptionDetailsEnterpriseResponse" message="IEzzyService_subscriptionDetailsEnterprise_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMyDocumentTree">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getMyDocumentTree" message="IEzzyService_getMyDocumentTree_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getMyDocumentTreeResponse" message="IEzzyService_getMyDocumentTree_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getReviewDocument">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getReviewDocument" message="IEzzyService_getReviewDocument_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getReviewDocumentResponse" message="IEzzyService_getReviewDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="generatReviewDocument">
+      <wsdl:input wsaw:Action="urn:IEzzyService/generatReviewDocument" message="IEzzyService_generatReviewDocument_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/generatReviewDocumentResponse" message="IEzzyService_generatReviewDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MyGroupsUsers">
+      <wsdl:input wsaw:Action="urn:IEzzyService/MyGroupsUsers" message="IEzzyService_MyGroupsUsers_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/MyGroupsUsersResponse" message="IEzzyService_MyGroupsUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setReviewComplete">
+      <wsdl:input wsaw:Action="urn:IEzzyService/setReviewComplete" message="IEzzyService_setReviewComplete_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/setReviewCompleteResponse" message="IEzzyService_setReviewComplete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMyDocumentTypes">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getMyDocumentTypes" message="IEzzyService_getMyDocumentTypes_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getMyDocumentTypesResponse" message="IEzzyService_getMyDocumentTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMyApplications">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getMyApplications" message="IEzzyService_getMyApplications_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getMyApplicationsResponse" message="IEzzyService_getMyApplications_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="disconnectMYOB">
+      <wsdl:input wsaw:Action="urn:IEzzyService/disconnectMYOB" message="IEzzyService_disconnectMYOB_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/disconnectMYOBResponse" message="IEzzyService_disconnectMYOB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMySuppliers">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getMySuppliers" message="IEzzyService_getMySuppliers_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getMySuppliersResponse" message="IEzzyService_getMySuppliers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMySuppliers2">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getMySuppliers2" message="IEzzyService_getMySuppliers2_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getMySuppliers2Response" message="IEzzyService_getMySuppliers2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMyPurchaseOrders">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getMyPurchaseOrders" message="IEzzyService_getMyPurchaseOrders_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getMyPurchaseOrdersResponse" message="IEzzyService_getMyPurchaseOrders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="verifyTLS">
+      <wsdl:input wsaw:Action="urn:IEzzyService/verifyTLS" message="IEzzyService_verifyTLS_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/verifyTLSResponse" message="IEzzyService_verifyTLS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getSupplierPortal">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getSupplierPortal" message="IEzzyService_getSupplierPortal_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getSupplierPortalResponse" message="IEzzyService_getSupplierPortal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="createAPIKey">
+      <wsdl:input wsaw:Action="urn:IEzzyService/createAPIKey" message="IEzzyService_createAPIKey_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/createAPIKeyResponse" message="IEzzyService_createAPIKey_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="createSupplierPortal">
+      <wsdl:input wsaw:Action="urn:IEzzyService/createSupplierPortal" message="IEzzyService_createSupplierPortal_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/createSupplierPortalResponse" message="IEzzyService_createSupplierPortal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="saveMySettingsForm">
+      <wsdl:input wsaw:Action="urn:IEzzyService/saveMySettingsForm" message="IEzzyService_saveMySettingsForm_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/saveMySettingsFormResponse" message="IEzzyService_saveMySettingsForm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MyUsers">
+      <wsdl:input wsaw:Action="urn:IEzzyService/MyUsers" message="IEzzyService_MyUsers_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/MyUsersResponse" message="IEzzyService_MyUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MyGroupsUsage">
+      <wsdl:input wsaw:Action="urn:IEzzyService/MyGroupsUsage" message="IEzzyService_MyGroupsUsage_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/MyGroupsUsageResponse" message="IEzzyService_MyGroupsUsage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MyInvitedUsers">
+      <wsdl:input wsaw:Action="urn:IEzzyService/MyInvitedUsers" message="IEzzyService_MyInvitedUsers_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/MyInvitedUsersResponse" message="IEzzyService_MyInvitedUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUserToGroup">
+      <wsdl:input wsaw:Action="urn:IEzzyService/AddUserToGroup" message="IEzzyService_AddUserToGroup_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/AddUserToGroupResponse" message="IEzzyService_AddUserToGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelSubscription">
+      <wsdl:input wsaw:Action="urn:IEzzyService/cancelSubscription" message="IEzzyService_cancelSubscription_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/cancelSubscriptionResponse" message="IEzzyService_cancelSubscription_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="inviteUser">
+      <wsdl:input wsaw:Action="urn:IEzzyService/inviteUser" message="IEzzyService_inviteUser_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/inviteUserResponse" message="IEzzyService_inviteUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="registerNewUser">
+      <wsdl:input wsaw:Action="urn:IEzzyService/registerNewUser" message="IEzzyService_registerNewUser_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/registerNewUserResponse" message="IEzzyService_registerNewUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="registerNewUser2">
+      <wsdl:input wsaw:Action="urn:IEzzyService/registerNewUser2" message="IEzzyService_registerNewUser2_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/registerNewUser2Response" message="IEzzyService_registerNewUser2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="registerNewUser3">
+      <wsdl:input wsaw:Action="urn:IEzzyService/registerNewUser3" message="IEzzyService_registerNewUser3_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/registerNewUser3Response" message="IEzzyService_registerNewUser3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="registerNewUser4">
+      <wsdl:input wsaw:Action="urn:IEzzyService/registerNewUser4" message="IEzzyService_registerNewUser4_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/registerNewUser4Response" message="IEzzyService_registerNewUser4_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="upgradeToPartnerPlan">
+      <wsdl:input wsaw:Action="urn:IEzzyService/upgradeToPartnerPlan" message="IEzzyService_upgradeToPartnerPlan_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/upgradeToPartnerPlanResponse" message="IEzzyService_upgradeToPartnerPlan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="upgradeToHQ">
+      <wsdl:input wsaw:Action="urn:IEzzyService/upgradeToHQ" message="IEzzyService_upgradeToHQ_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/upgradeToHQResponse" message="IEzzyService_upgradeToHQ_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addNewUser">
+      <wsdl:input wsaw:Action="urn:IEzzyService/addNewUser" message="IEzzyService_addNewUser_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/addNewUserResponse" message="IEzzyService_addNewUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getWaitingApprovalBatch">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getWaitingApprovalBatch" message="IEzzyService_getWaitingApprovalBatch_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getWaitingApprovalBatchResponse" message="IEzzyService_getWaitingApprovalBatch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="approveBatch">
+      <wsdl:input wsaw:Action="urn:IEzzyService/approveBatch" message="IEzzyService_approveBatch_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/approveBatchResponse" message="IEzzyService_approveBatch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="revokeUsers">
+      <wsdl:input wsaw:Action="urn:IEzzyService/revokeUsers" message="IEzzyService_revokeUsers_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/revokeUsersResponse" message="IEzzyService_revokeUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getExportTarget">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getExportTarget" message="IEzzyService_getExportTarget_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getExportTargetResponse" message="IEzzyService_getExportTarget_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getWorktaskStatus">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getWorktaskStatus" message="IEzzyService_getWorktaskStatus_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getWorktaskStatusResponse" message="IEzzyService_getWorktaskStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="testExportConnection">
+      <wsdl:input wsaw:Action="urn:IEzzyService/testExportConnection" message="IEzzyService_testExportConnection_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/testExportConnectionResponse" message="IEzzyService_testExportConnection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkConnection">
+      <wsdl:input wsaw:Action="urn:IEzzyService/checkConnection" message="IEzzyService_checkConnection_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/checkConnectionResponse" message="IEzzyService_checkConnection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="disconnectConnection">
+      <wsdl:input wsaw:Action="urn:IEzzyService/disconnectConnection" message="IEzzyService_disconnectConnection_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/disconnectConnectionResponse" message="IEzzyService_disconnectConnection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="disconnectExport">
+      <wsdl:input wsaw:Action="urn:IEzzyService/disconnectExport" message="IEzzyService_disconnectExport_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/disconnectExportResponse" message="IEzzyService_disconnectExport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="isSupportUser">
+      <wsdl:input wsaw:Action="urn:IEzzyService/isSupportUser" message="IEzzyService_isSupportUser_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/isSupportUserResponse" message="IEzzyService_isSupportUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="saveEmailRule">
+      <wsdl:input wsaw:Action="urn:IEzzyService/saveEmailRule" message="IEzzyService_saveEmailRule_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/saveEmailRuleResponse" message="IEzzyService_saveEmailRule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getEmailRule">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getEmailRule" message="IEzzyService_getEmailRule_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getEmailRuleResponse" message="IEzzyService_getEmailRule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addWorkTask">
+      <wsdl:input wsaw:Action="urn:IEzzyService/addWorkTask" message="IEzzyService_addWorkTask_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/addWorkTaskResponse" message="IEzzyService_addWorkTask_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="trialSubsciption">
+      <wsdl:input wsaw:Action="urn:IEzzyService/trialSubsciption" message="IEzzyService_trialSubsciption_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/trialSubsciptionResponse" message="IEzzyService_trialSubsciption_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="mySettingsForm">
+      <wsdl:input wsaw:Action="urn:IEzzyService/mySettingsForm" message="IEzzyService_mySettingsForm_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/mySettingsFormResponse" message="IEzzyService_mySettingsForm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="approverSettingsForm">
+      <wsdl:input wsaw:Action="urn:IEzzyService/approverSettingsForm" message="IEzzyService_approverSettingsForm_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/approverSettingsFormResponse" message="IEzzyService_approverSettingsForm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteWorkflow">
+      <wsdl:input wsaw:Action="urn:IEzzyService/deleteWorkflow" message="IEzzyService_deleteWorkflow_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/deleteWorkflowResponse" message="IEzzyService_deleteWorkflow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateWorkflow">
+      <wsdl:input wsaw:Action="urn:IEzzyService/updateWorkflow" message="IEzzyService_updateWorkflow_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/updateWorkflowResponse" message="IEzzyService_updateWorkflow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="saveWorkflow">
+      <wsdl:input wsaw:Action="urn:IEzzyService/saveWorkflow" message="IEzzyService_saveWorkflow_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/saveWorkflowResponse" message="IEzzyService_saveWorkflow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="activateWorkflow">
+      <wsdl:input wsaw:Action="urn:IEzzyService/activateWorkflow" message="IEzzyService_activateWorkflow_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/activateWorkflowResponse" message="IEzzyService_activateWorkflow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="urn:IEzzyService/DoWork" message="IEzzyService_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/DoWorkResponse" message="IEzzyService_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login2">
+      <wsdl:input wsaw:Action="urn:IEzzyService/Login2" message="IEzzyService_Login2_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/Login2Response" message="IEzzyService_Login2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="urn:IEzzyService/Login" message="IEzzyService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/LoginResponse" message="IEzzyService_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUser">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getUser" message="IEzzyService_getUser_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getUserResponse" message="IEzzyService_getUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="logOut">
+      <wsdl:input wsaw:Action="urn:IEzzyService/logOut" message="IEzzyService_logOut_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/logOutResponse" message="IEzzyService_logOut_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="approve">
+      <wsdl:input wsaw:Action="urn:IEzzyService/approve" message="IEzzyService_approve_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/approveResponse" message="IEzzyService_approve_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="approveInvoice">
+      <wsdl:input wsaw:Action="urn:IEzzyService/approveInvoice" message="IEzzyService_approveInvoice_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/approveInvoiceResponse" message="IEzzyService_approveInvoice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="restartInvoice">
+      <wsdl:input wsaw:Action="urn:IEzzyService/restartInvoice" message="IEzzyService_restartInvoice_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/restartInvoiceResponse" message="IEzzyService_restartInvoice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="finishReview">
+      <wsdl:input wsaw:Action="urn:IEzzyService/finishReview" message="IEzzyService_finishReview_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/finishReviewResponse" message="IEzzyService_finishReview_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="closeAllReview">
+      <wsdl:input wsaw:Action="urn:IEzzyService/closeAllReview" message="IEzzyService_closeAllReview_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/closeAllReviewResponse" message="IEzzyService_closeAllReview_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="approvePortalInvoice">
+      <wsdl:input wsaw:Action="urn:IEzzyService/approvePortalInvoice" message="IEzzyService_approvePortalInvoice_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/approvePortalInvoiceResponse" message="IEzzyService_approvePortalInvoice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateFormData">
+      <wsdl:input wsaw:Action="urn:IEzzyService/updateFormData" message="IEzzyService_updateFormData_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/updateFormDataResponse" message="IEzzyService_updateFormData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getFormData">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getFormData" message="IEzzyService_getFormData_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getFormDataResponse" message="IEzzyService_getFormData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="saveLabel">
+      <wsdl:input wsaw:Action="urn:IEzzyService/saveLabel" message="IEzzyService_saveLabel_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/saveLabelResponse" message="IEzzyService_saveLabel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="myLabels">
+      <wsdl:input wsaw:Action="urn:IEzzyService/myLabels" message="IEzzyService_myLabels_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/myLabelsResponse" message="IEzzyService_myLabels_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="searchCache">
+      <wsdl:input wsaw:Action="urn:IEzzyService/searchCache" message="IEzzyService_searchCache_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/searchCacheResponse" message="IEzzyService_searchCache_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="reclassifyInvoice">
+      <wsdl:input wsaw:Action="urn:IEzzyService/reclassifyInvoice" message="IEzzyService_reclassifyInvoice_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/reclassifyInvoiceResponse" message="IEzzyService_reclassifyInvoice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelApproveInvoice">
+      <wsdl:input wsaw:Action="urn:IEzzyService/cancelApproveInvoice" message="IEzzyService_cancelApproveInvoice_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/cancelApproveInvoiceResponse" message="IEzzyService_cancelApproveInvoice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="rejectInvoice">
+      <wsdl:input wsaw:Action="urn:IEzzyService/rejectInvoice" message="IEzzyService_rejectInvoice_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/rejectInvoiceResponse" message="IEzzyService_rejectInvoice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkChecksum">
+      <wsdl:input wsaw:Action="urn:IEzzyService/checkChecksum" message="IEzzyService_checkChecksum_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/checkChecksumResponse" message="IEzzyService_checkChecksum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addCRMUser">
+      <wsdl:input wsaw:Action="urn:IEzzyService/addCRMUser" message="IEzzyService_addCRMUser_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/addCRMUserResponse" message="IEzzyService_addCRMUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addCRMNote">
+      <wsdl:input wsaw:Action="urn:IEzzyService/addCRMNote" message="IEzzyService_addCRMNote_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/addCRMNoteResponse" message="IEzzyService_addCRMNote_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getQueueHash">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getQueueHash" message="IEzzyService_getQueueHash_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getQueueHashResponse" message="IEzzyService_getQueueHash_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="workflowStatus">
+      <wsdl:input wsaw:Action="urn:IEzzyService/workflowStatus" message="IEzzyService_workflowStatus_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/workflowStatusResponse" message="IEzzyService_workflowStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="allQueueStates">
+      <wsdl:input wsaw:Action="urn:IEzzyService/allQueueStates" message="IEzzyService_allQueueStates_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/allQueueStatesResponse" message="IEzzyService_allQueueStates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="connectToXero">
+      <wsdl:input wsaw:Action="urn:IEzzyService/connectToXero" message="IEzzyService_connectToXero_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/connectToXeroResponse" message="IEzzyService_connectToXero_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="returnAllToWorkflow">
+      <wsdl:input wsaw:Action="urn:IEzzyService/returnAllToWorkflow" message="IEzzyService_returnAllToWorkflow_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/returnAllToWorkflowResponse" message="IEzzyService_returnAllToWorkflow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="removeContacts">
+      <wsdl:input wsaw:Action="urn:IEzzyService/removeContacts" message="IEzzyService_removeContacts_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/removeContactsResponse" message="IEzzyService_removeContacts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MyEnterpriseUsage">
+      <wsdl:input wsaw:Action="urn:IEzzyService/MyEnterpriseUsage" message="IEzzyService_MyEnterpriseUsage_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/MyEnterpriseUsageResponse" message="IEzzyService_MyEnterpriseUsage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addContacts">
+      <wsdl:input wsaw:Action="urn:IEzzyService/addContacts" message="IEzzyService_addContacts_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/addContactsResponse" message="IEzzyService_addContacts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="appendContacts">
+      <wsdl:input wsaw:Action="urn:IEzzyService/appendContacts" message="IEzzyService_appendContacts_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/appendContactsResponse" message="IEzzyService_appendContacts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addPurchaseOrders">
+      <wsdl:input wsaw:Action="urn:IEzzyService/addPurchaseOrders" message="IEzzyService_addPurchaseOrders_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/addPurchaseOrdersResponse" message="IEzzyService_addPurchaseOrders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addFuzzyCodes">
+      <wsdl:input wsaw:Action="urn:IEzzyService/addFuzzyCodes" message="IEzzyService_addFuzzyCodes_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/addFuzzyCodesResponse" message="IEzzyService_addFuzzyCodes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="saveInvoice">
+      <wsdl:input wsaw:Action="urn:IEzzyService/saveInvoice" message="IEzzyService_saveInvoice_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/saveInvoiceResponse" message="IEzzyService_saveInvoice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMyStatistics">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getMyStatistics" message="IEzzyService_getMyStatistics_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getMyStatisticsResponse" message="IEzzyService_getMyStatistics_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMyCaptures">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getMyCaptures" message="IEzzyService_getMyCaptures_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getMyCapturesResponse" message="IEzzyService_getMyCaptures_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="savePictureForm">
+      <wsdl:input wsaw:Action="urn:IEzzyService/savePictureForm" message="IEzzyService_savePictureForm_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/savePictureFormResponse" message="IEzzyService_savePictureForm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateAllTags">
+      <wsdl:input wsaw:Action="urn:IEzzyService/updateAllTags" message="IEzzyService_updateAllTags_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/updateAllTagsResponse" message="IEzzyService_updateAllTags_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getTracking">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getTracking" message="IEzzyService_getTracking_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getTrackingResponse" message="IEzzyService_getTracking_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getTracking2">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getTracking2" message="IEzzyService_getTracking2_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getTracking2Response" message="IEzzyService_getTracking2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserNotes">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getUserNotes" message="IEzzyService_getUserNotes_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getUserNotesResponse" message="IEzzyService_getUserNotes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCRMNotes">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getCRMNotes" message="IEzzyService_getCRMNotes_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getCRMNotesResponse" message="IEzzyService_getCRMNotes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateUser">
+      <wsdl:input wsaw:Action="urn:IEzzyService/updateUser" message="IEzzyService_updateUser_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/updateUserResponse" message="IEzzyService_updateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="renameUser">
+      <wsdl:input wsaw:Action="urn:IEzzyService/renameUser" message="IEzzyService_renameUser_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/renameUserResponse" message="IEzzyService_renameUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getGLCodes">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getGLCodes" message="IEzzyService_getGLCodes_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getGLCodesResponse" message="IEzzyService_getGLCodes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="refreshGLCache">
+      <wsdl:input wsaw:Action="urn:IEzzyService/refreshGLCache" message="IEzzyService_refreshGLCache_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/refreshGLCacheResponse" message="IEzzyService_refreshGLCache_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="saveCorrespondenceForm">
+      <wsdl:input wsaw:Action="urn:IEzzyService/saveCorrespondenceForm" message="IEzzyService_saveCorrespondenceForm_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/saveCorrespondenceFormResponse" message="IEzzyService_saveCorrespondenceForm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="saveTag">
+      <wsdl:input wsaw:Action="urn:IEzzyService/saveTag" message="IEzzyService_saveTag_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/saveTagResponse" message="IEzzyService_saveTag_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="validatePaypal">
+      <wsdl:input wsaw:Action="urn:IEzzyService/validatePaypal" message="IEzzyService_validatePaypal_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/validatePaypalResponse" message="IEzzyService_validatePaypal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="twoFactorEnabled">
+      <wsdl:input wsaw:Action="urn:IEzzyService/twoFactorEnabled" message="IEzzyService_twoFactorEnabled_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/twoFactorEnabledResponse" message="IEzzyService_twoFactorEnabled_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addUserNote">
+      <wsdl:input wsaw:Action="urn:IEzzyService/addUserNote" message="IEzzyService_addUserNote_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/addUserNoteResponse" message="IEzzyService_addUserNote_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCreditCount">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getCreditCount" message="IEzzyService_getCreditCount_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getCreditCountResponse" message="IEzzyService_getCreditCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getSubscriptionDate">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getSubscriptionDate" message="IEzzyService_getSubscriptionDate_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getSubscriptionDateResponse" message="IEzzyService_getSubscriptionDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="saveDocumentStream">
+      <wsdl:input wsaw:Action="urn:IEzzyService/saveDocumentStream" message="IEzzyService_saveDocumentStream_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/saveDocumentStreamResponse" message="IEzzyService_saveDocumentStream_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="saveInvoiceHeaderandTable">
+      <wsdl:input wsaw:Action="urn:IEzzyService/saveInvoiceHeaderandTable" message="IEzzyService_saveInvoiceHeaderandTable_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/saveInvoiceHeaderandTableResponse" message="IEzzyService_saveInvoiceHeaderandTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="saveInvoiceTable">
+      <wsdl:input wsaw:Action="urn:IEzzyService/saveInvoiceTable" message="IEzzyService_saveInvoiceTable_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/saveInvoiceTableResponse" message="IEzzyService_saveInvoiceTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sendVerificationCode">
+      <wsdl:input wsaw:Action="urn:IEzzyService/sendVerificationCode" message="IEzzyService_sendVerificationCode_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/sendVerificationCodeResponse" message="IEzzyService_sendVerificationCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDocumentStream">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getDocumentStream" message="IEzzyService_getDocumentStream_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getDocumentStreamResponse" message="IEzzyService_getDocumentStream_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="transferSubscription">
+      <wsdl:input wsaw:Action="urn:IEzzyService/transferSubscription" message="IEzzyService_transferSubscription_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/transferSubscriptionResponse" message="IEzzyService_transferSubscription_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateGlobalLearning">
+      <wsdl:input wsaw:Action="urn:IEzzyService/updateGlobalLearning" message="IEzzyService_updateGlobalLearning_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/updateGlobalLearningResponse" message="IEzzyService_updateGlobalLearning_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteLearning">
+      <wsdl:input wsaw:Action="urn:IEzzyService/deleteLearning" message="IEzzyService_deleteLearning_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/deleteLearningResponse" message="IEzzyService_deleteLearning_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="notJunkEmail">
+      <wsdl:input wsaw:Action="urn:IEzzyService/notJunkEmail" message="IEzzyService_notJunkEmail_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/notJunkEmailResponse" message="IEzzyService_notJunkEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="newInvoiceImage">
+      <wsdl:input wsaw:Action="urn:IEzzyService/newInvoiceImage" message="IEzzyService_newInvoiceImage_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/newInvoiceImageResponse" message="IEzzyService_newInvoiceImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addServer">
+      <wsdl:input wsaw:Action="urn:IEzzyService/addServer" message="IEzzyService_addServer_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/addServerResponse" message="IEzzyService_addServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addApplication">
+      <wsdl:input wsaw:Action="urn:IEzzyService/addApplication" message="IEzzyService_addApplication_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/addApplicationResponse" message="IEzzyService_addApplication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="uploadAppImage">
+      <wsdl:input wsaw:Action="urn:IEzzyService/uploadAppImage" message="IEzzyService_uploadAppImage_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/uploadAppImageResponse" message="IEzzyService_uploadAppImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="startApp">
+      <wsdl:input wsaw:Action="urn:IEzzyService/startApp" message="IEzzyService_startApp_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/startAppResponse" message="IEzzyService_startApp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="uploadInvoiceImage">
+      <wsdl:input wsaw:Action="urn:IEzzyService/uploadInvoiceImage" message="IEzzyService_uploadInvoiceImage_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/uploadInvoiceImageResponse" message="IEzzyService_uploadInvoiceImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMyApprovers">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getMyApprovers" message="IEzzyService_getMyApprovers_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getMyApproversResponse" message="IEzzyService_getMyApprovers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getApproverList">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getApproverList" message="IEzzyService_getApproverList_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getApproverListResponse" message="IEzzyService_getApproverList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="saveApproverList">
+      <wsdl:input wsaw:Action="urn:IEzzyService/saveApproverList" message="IEzzyService_saveApproverList_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/saveApproverListResponse" message="IEzzyService_saveApproverList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="changeApprover">
+      <wsdl:input wsaw:Action="urn:IEzzyService/changeApprover" message="IEzzyService_changeApprover_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/changeApproverResponse" message="IEzzyService_changeApprover_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getInvoiceHeaderBlocks">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getInvoiceHeaderBlocks" message="IEzzyService_getInvoiceHeaderBlocks_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getInvoiceHeaderBlocksResponse" message="IEzzyService_getInvoiceHeaderBlocks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getInvoiceRows">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getInvoiceRows" message="IEzzyService_getInvoiceRows_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getInvoiceRowsResponse" message="IEzzyService_getInvoiceRows_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllInvoiceBlocks">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getAllInvoiceBlocks" message="IEzzyService_getAllInvoiceBlocks_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getAllInvoiceBlocksResponse" message="IEzzyService_getAllInvoiceBlocks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getInvoiceDetails">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getInvoiceDetails" message="IEzzyService_getInvoiceDetails_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getInvoiceDetailsResponse" message="IEzzyService_getInvoiceDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getLogDetails">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getLogDetails" message="IEzzyService_getLogDetails_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getLogDetailsResponse" message="IEzzyService_getLogDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCorrespondenceForm">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getCorrespondenceForm" message="IEzzyService_getCorrespondenceForm_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getCorrespondenceFormResponse" message="IEzzyService_getCorrespondenceForm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPictureForm">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getPictureForm" message="IEzzyService_getPictureForm_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getPictureFormResponse" message="IEzzyService_getPictureForm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail">
+      <wsdl:input wsaw:Action="urn:IEzzyService/SendEmail" message="IEzzyService_SendEmail_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/SendEmailResponse" message="IEzzyService_SendEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getWorkflowDetails">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getWorkflowDetails" message="IEzzyService_getWorkflowDetails_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getWorkflowDetailsResponse" message="IEzzyService_getWorkflowDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="allMyWorkflows">
+      <wsdl:input wsaw:Action="urn:IEzzyService/allMyWorkflows" message="IEzzyService_allMyWorkflows_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/allMyWorkflowsResponse" message="IEzzyService_allMyWorkflows_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addWorkTaskDetails">
+      <wsdl:input wsaw:Action="urn:IEzzyService/addWorkTaskDetails" message="IEzzyService_addWorkTaskDetails_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/addWorkTaskDetailsResponse" message="IEzzyService_addWorkTaskDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getEmailMessage">
+      <wsdl:input wsaw:Action="urn:IEzzyService/getEmailMessage" message="IEzzyService_getEmailMessage_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/getEmailMessageResponse" message="IEzzyService_getEmailMessage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="registerWorkflow">
+      <wsdl:input wsaw:Action="urn:IEzzyService/registerWorkflow" message="IEzzyService_registerWorkflow_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IEzzyService/registerWorkflowResponse" message="IEzzyService_registerWorkflow_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

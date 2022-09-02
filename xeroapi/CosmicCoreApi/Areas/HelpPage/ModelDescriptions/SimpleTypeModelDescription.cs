@@ -1,0 +1,6 @@
+namespace CosmicCoreApi.Areas.HelpPage.ModelDescriptions
+{
+    public class SimpleTypeModelDescription : ModelDescription
+    {
+    }
+}

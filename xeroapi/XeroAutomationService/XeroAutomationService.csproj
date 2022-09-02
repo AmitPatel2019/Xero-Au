@@ -1,0 +1,616 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{64B0B932-2B8E-4E0F-BD40-E89E8A2BAEAA}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>XeroAutomationService</RootNamespace>
+    <AssemblyName>XeroAutomationService</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>302F1323374764C24C8A7F91DEF1911083ECA868</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>XeroAutomationService_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>xero.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.5\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Flexis.Log">
+      <HintPath>..\Dependcies\Flexis.Log.dll</HintPath>
+    </Reference>
+    <Reference Include="FlexisLog.Log">
+      <HintPath>..\Dependcies\FlexisLog.Log.dll</HintPath>
+    </Reference>
+    <Reference Include="Intuit.Ipp.Core">
+      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.5.3.0\lib\Intuit.Ipp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Intuit.Ipp.Data">
+      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.5.3.0\lib\Intuit.Ipp.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Intuit.Ipp.DataService">
+      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.5.3.0\lib\Intuit.Ipp.DataService.dll</HintPath>
+    </Reference>
+    <Reference Include="Intuit.Ipp.Diagnostics">
+      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.5.3.0\lib\Intuit.Ipp.Diagnostics.dll</HintPath>
+    </Reference>
+    <Reference Include="Intuit.Ipp.Exception">
+      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.5.3.0\lib\Intuit.Ipp.Exception.dll</HintPath>
+    </Reference>
+    <Reference Include="Intuit.Ipp.GlobalTaxService">
+      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.5.3.0\lib\Intuit.Ipp.GlobalTaxService.dll</HintPath>
+    </Reference>
+    <Reference Include="Intuit.Ipp.LinqExtender">
+      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.5.3.0\lib\Intuit.Ipp.LinqExtender.dll</HintPath>
+    </Reference>
+    <Reference Include="Intuit.Ipp.OAuth2PlatformClient">
+      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.5.3.0\lib\Intuit.Ipp.OAuth2PlatformClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Intuit.Ipp.PlatformService">
+      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.5.3.0\lib\Intuit.Ipp.PlatformService.dll</HintPath>
+    </Reference>
+    <Reference Include="Intuit.Ipp.QueryFilter">
+      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.5.3.0\lib\Intuit.Ipp.QueryFilter.dll</HintPath>
+    </Reference>
+    <Reference Include="Intuit.Ipp.ReportService">
+      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.5.3.0\lib\Intuit.Ipp.ReportService.dll</HintPath>
+    </Reference>
+    <Reference Include="Intuit.Ipp.Retry">
+      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.5.3.0\lib\Intuit.Ipp.Retry.dll</HintPath>
+    </Reference>
+    <Reference Include="Intuit.Ipp.Security">
+      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.5.3.0\lib\Intuit.Ipp.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Intuit.Ipp.Utility">
+      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.5.3.0\lib\Intuit.Ipp.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="Intuit.Ipp.WebHooksService">
+      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.5.3.0\lib\Intuit.Ipp.WebHooksService.dll</HintPath>
+    </Reference>
+    <Reference Include="MailKit, Version=2.9.0.0, Culture=neutral, PublicKeyToken=4e064fe7c44a8f1b, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailKit.2.9.0\lib\net46\MailKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.1\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.0\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.SqlClient, Version=1.13.20136.2, Culture=neutral, PublicKeyToken=23ec7fc2d6eaa4a5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.SqlClient.1.1.3\lib\net46\Microsoft.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore, Version=3.1.9.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.3.1.9\lib\netstandard2.0\Microsoft.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.Abstractions, Version=3.1.9.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.Abstractions.3.1.9\lib\netstandard2.0\Microsoft.EntityFrameworkCore.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.Relational, Version=3.1.9.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.Relational.3.1.9\lib\netstandard2.0\Microsoft.EntityFrameworkCore.Relational.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.SqlServer, Version=3.1.9.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.SqlServer.3.1.9\lib\netstandard2.0\Microsoft.EntityFrameworkCore.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Abstractions, Version=3.1.9.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Abstractions.3.1.9\lib\netstandard2.0\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Memory, Version=3.1.9.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Memory.3.1.9\lib\netstandard2.0\Microsoft.Extensions.Caching.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration, Version=3.1.9.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.3.1.9\lib\netstandard2.0\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=3.1.9.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.3.1.9\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=3.1.9.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Binder.3.1.9\lib\netstandard2.0\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=3.1.9.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.3.1.9\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=3.1.9.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.3.1.9\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=3.1.9.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.3.1.9\lib\netstandard2.0\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=3.1.9.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.3.1.9\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=3.1.9.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.3.1.9\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=3.1.9.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.3.1.9\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client, Version=3.0.8.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Identity.Client.3.0.8\lib\net45\Microsoft.Identity.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=5.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.JsonWebTokens.5.5.0\lib\net461\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=5.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.5.5.0\lib\net461\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols, Version=5.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Protocols.5.5.0\lib\net461\Microsoft.IdentityModel.Protocols.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect, Version=5.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Protocols.OpenIdConnect.5.5.0\lib\net461\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.5.5.0\lib\net461\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="MimeKit, Version=2.9.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL">
+      <HintPath>..\packages\MimeKit.2.9.2\lib\net46\MimeKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Namotion.Reflection, Version=1.0.6.0, Culture=neutral, PublicKeyToken=c2f9c3bdfae56102, processorArchitecture=MSIL">
+      <HintPath>..\packages\Namotion.Reflection.1.0.6\lib\net45\Namotion.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NJsonSchema, Version=10.0.22.0, Culture=neutral, PublicKeyToken=c2f9c3bdfae56102, processorArchitecture=MSIL">
+      <HintPath>..\packages\NJsonSchema.10.0.22\lib\net45\NJsonSchema.dll</HintPath>
+    </Reference>
+    <Reference Include="Polly, Version=7.0.0.0, Culture=neutral, PublicKeyToken=c8a3ffc3f8f825cc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Polly.7.1.0\lib\netstandard2.0\Polly.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=1.2.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.7.1\lib\net461\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.7.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Common, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.Common.4.3.0\lib\net451\System.Data.Common.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.7.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.5.5.0\lib\net461\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\Dependcies\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.1\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XeroApi">
+      <HintPath>..\packages\XeroAPI.Net.1.1.0.34\lib\XeroApi.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessContext\EzzyContext.cs" />
+    <Compile Include="AccessContext\XeroContext.cs" />
+    <Compile Include="AccessContext\XeroOwnerFlowWebClient.cs" />
+    <Compile Include="Common\AutomationEmailModel.cs" />
+    <Compile Include="Common\EmailScans.cs" />
+    <Compile Include="Common\EmailSender.cs" />
+    <Compile Include="Common\EmailSettingModel.cs" />
+    <Compile Include="Common\ExceptionHandler.cs" />
+    <Compile Include="Common\EzzyScans.cs" />
+    <Compile Include="Common\EzzyServiceNew.cs" />
+    <Compile Include="Common\HtmlUtility.cs" />
+    <Compile Include="Common\Settings.cs" />
+    <Compile Include="Common\SMTPHelper.cs" />
+    <Compile Include="Common\Utils.cs" />
+    <Compile Include="Connected Services\EzzyService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="CustomModel\CBDocument.cs" />
+    <Compile Include="CustomModel\CBDocumentLine.cs" />
+    <Compile Include="CustomModel\CBQboDocument.cs" />
+    <Compile Include="EmailsModel\MailAttachements.cs" />
+    <Compile Include="EmailsModel\MailAttachmentData.cs" />
+    <Compile Include="EzzyModel\ScanInvoiceData.cs" />
+    <Compile Include="ProjectInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProjectInstaller.Designer.cs">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XeroService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XeroService.Designer.cs">
+      <DependentUpon>XeroService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Connected Services\EzzyService\EzzyService.wsdl" />
+    <None Include="Connected Services\EzzyService\EzzyService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EzzyService\EzzyService1.wsdl" />
+    <None Include="Connected Services\EzzyService\EzzyService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EzzyService\EzzyService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EzzyService\EzzyService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EzzyService\EzzyService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EzzyService\EzzyService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EzzyService\EzzyService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.APIKeySS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.ApproverListSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.CapturesQueueSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.CorrespondenceFormSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.CreditCountStatusSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.DeletedDocumentQueueSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.DocumentClassificationSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.DocumentImageSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.DocumentQueueSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.DocumentRecentSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.DocumentTemplateSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.DocumentTreeSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.DocumentTypesSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.EmailMessageSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.EmailRuleSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.EnerpiseUsageSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.ExportReplySS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.ExportTargetSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.FileCheckSumSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.FormDataSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.GLCodeInfoSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.HandLExportSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.InvoiceBatchSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.InvoiceBlocksSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.InvoiceDetailsSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.InvoiceDetailsSS2.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.InvoiceQueueSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.InvoiceQueueSS2.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.InvoiceRowsSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.LogDetailsSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.MyApplicationsSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.MyGroupsSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.MyLabelSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.MyUsersSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.MyWorkflowsSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.PaypalCompleteStatusSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.PictureFormSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.PurchaseOrderSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.queueHashSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.QueueStatesSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.QueueStatisticsSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.ReviewDocumentSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.SearchCacheSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.SearchQueueSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.Servicestatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.SettingsFormSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.StripeCustomerSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.SubscriptionDetailsSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.SubscriptionStatusSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.SupplierFilterListSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.SupplierListSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.SupplierPortalSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.TrackingInfoSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.uploadStatusSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.UserNotesSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.userSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.VerificationCodeReplySS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.WorkflowDetailsSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.WorkflowSettings.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.Workflowstatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.WorkflowStatusSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EzzyService\XeroAutomationService.EzzyService.WorktaskStatusSS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="xero.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\EzzyService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EzzyService\EzzyService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EzzyService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EzzyService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EzzyService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cosmic.DataLayer.Logic\Cosmic.DataLayer.Logic.csproj">
+      <Project>{f95f49a6-205c-4aa7-84d0-8718fe5bafa2}</Project>
+      <Name>Cosmic.DataLayer.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cosmic.DataLayer\Cosmic.DataLayer.csproj">
+      <Project>{7fef58af-fe09-4efd-9a97-ae6aca1e24d7}</Project>
+      <Name>Cosmic.DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CosmicApiHelper\CosmicApiHelper.csproj">
+      <Project>{39205e86-ec0d-468f-a4fe-7eab1aa50ed2}</Project>
+      <Name>CosmicApiHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CosmicApiModel\CosmicApiModel.csproj">
+      <Project>{16d41318-5858-422d-ab43-fb5a6a5cc6ac}</Project>
+      <Name>CosmicApiModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ProjectInstaller.resx">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MailTemplate\PostSuccess.html" />
+    <Content Include="MailTemplate\ScanError.html" />
+    <Content Include="MailTemplate\ScanSuccess.html" />
+    <Content Include="MailTemplate\TrialPDF.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Data.SqlClient.SNI.1.1.0\build\net46\Microsoft.Data.SqlClient.SNI.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Data.SqlClient.SNI.1.1.0\build\net46\Microsoft.Data.SqlClient.SNI.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.1.1.0\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.1.1.0\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />
+</Project>
